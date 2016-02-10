@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require core/libraries/bootstrap.min.js
 //= require core/libraries/jasny_bootstrap.min.js
+//= require plugins/slick/slick.min.js
+//= require custom.js
 
