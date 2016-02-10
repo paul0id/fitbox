@@ -17,6 +17,7 @@ gem 'devise'
 gem 'haml', '~> 4.0.5'
 gem 'pg'
 gem 'slim-rails'
+gem 'carrierwave'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
