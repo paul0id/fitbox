@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require core/libraries/bootstrap.min.js
+//= require core/libraries/jasny_bootstrap.min.js
+
