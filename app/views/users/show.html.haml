@@ -1,0 +1,39 @@
+= @user.first_name
+= @user.last_name
+.br
+  = @user.email
+- if @user == current_user
+  .br
+    = link_to 'Edit Profile', edit_registration_path(current_user)
+- unless current_user.type == 'Admin'
+  .br
+    - if @user.fit_boxes.count > 0
+      %h3 Fit Boxes
+      - @user.fit_boxes.each do |box|
+        %h3 Name
+        %p= box.name
+        %h3 Description
+        %p= box.description
+        - if @user == current_user
+          %p
+            = link_to 'Show', box
+            = link_to 'Edit', edit_fit_box_path(box)
+            = link_to 'Destroy', fit_box_path(box), method: :delete
+    - else
+      No FitBoxes
+  .br
+    - if @user.type == 'Client'
+      %h3 New FitBox
+      = form_for(FitBox.new) do |f|
+        .br
+          = f.label :name
+        .br
+          = f.text_field :name
+          = f.hidden_field :manager_id, value: "#{current_user.id}"
+          = f.hidden_field :client_id, value: "#{@user.id}"
+        .br
+          = f.label :description
+        .br
+          = f.text_area :description
+        .br
+          = f.submit
