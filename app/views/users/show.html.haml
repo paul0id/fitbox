@@ -9,16 +9,23 @@
   .br
     - if @user.fit_boxes.count > 0
       %h3 Fit Boxes
-      - @user.fit_boxes.each do |box|
-        %h3 Name
-        %p= box.name
-        %h3 Description
-        %p= box.description
-        - if @user == current_user
-          %p
-            = link_to 'Show', box
-            = link_to 'Edit', edit_fit_box_path(box)
-            = link_to 'Destroy', fit_box_path(box), method: :delete
+      %table
+        %thead
+          %th num
+          %th Name
+          %th Description
+          %th
+          %th
+          %th
+        %tbody
+          - @user.fit_boxes.each_with_index do |box, i|
+            %td= i+1
+            %td= box.name
+            %td= box.description
+            - if @user == current_user
+              %td= link_to 'Show', box
+              %td= link_to 'Edit', edit_fit_box_path(box)
+              %td= link_to 'Destroy', fit_box_path(box), method: :delete
     - else
       No FitBoxes
   .br
