@@ -1,0 +1,18 @@
+%table
+  %thead
+    %th Name
+    %th Desciption
+    %th UPC
+    %th Kind
+    %th Color
+    %th Size
+  %tbody
+    %tr
+      %td= @item.name        if @item.name
+      %td= @item.description if @item.description
+      %td= @item.upc         if @item.upc
+      %td= @item.kind        if @item.kind
+      %td= @item.color       if @item.color
+      %td= @item.size        if @item.size
+      %td= link_to 'Edit', edit_item_path(@item)
+= link_to 'All items', items_path
