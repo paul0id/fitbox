@@ -2,3 +2,6 @@
   = @fit_box.name
 %p
   = @fit_box.description
+%p
+  = link_to 'Edit', edit_fit_box_path(@fit_box)
+  = link_to 'Destroy', fit_box_path(@fit_box), method: :delete

@@ -12,7 +12,7 @@
   <%= link_to_unless_current 'Sign Up', new_user_registration_path %>
 <% else %>
   <%= link_to_unless_current 'Home', root_path %>
-  <% if current_user.type == ('Admin' ||'Manager') %>
+  <% if current_user.type == 'Admin' || current_user.type == 'Manager' %>
     <%= link_to_unless_current 'Clients', users_path %>
   <% end %>
   <%= link_to_unless_current 'My Profile', user_path(current_user) %>
