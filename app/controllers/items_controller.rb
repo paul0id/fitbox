@@ -44,6 +44,13 @@ class ItemsController < ApplicationController
     end
   end
 
+  def items_to_box(params = {})
+    if params
+      box = FitBox.create(client_id: params[:client_id], manager_id: params[:manager_id])
+      box.items = FitBox.where(id: params[:arr])
+    end
+  end
+
   private
 
   def item_params

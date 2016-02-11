@@ -25,9 +25,13 @@ html lang='en'
               i.caret
             ul.dropdown-menu.dropdown-menu-right
               li
-                a href="/users" 
+                a href= clients_path 
                   i.fa.fa-users
                   | Clients
+              li
+                a href= managers_path 
+                  i.glyphicon.glyphicon-lock
+                  | Managers
               li
                 a href="/items" 
                   span.badge.bg-teal-400.pull-right 58
