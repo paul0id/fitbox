@@ -1,0 +1,102 @@
+doctype html 
+html lang='en'
+  head
+    title Fitbox
+    = stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    /! Main navbar
+    .navbar.navbar-inverse
+      .navbar-header
+        a.navbar-brand href="index.html" 
+          img alt="" src=image_path("logo_light.png") /
+      ul.nav.navbar-nav.navbar-right
+        - unless current_user
+          li
+            = link_to_unless_current 'Log In', new_user_session_path
+          li
+            = link_to_unless_current 'Sign Up', new_user_registration_path
+        - else
+          li.dropdown.dropdown-user
+            a.dropdown-toggle data-toggle="dropdown" 
+              i.fa.fa-user
+              span= current_user.email if current_user
+              i.caret
+            ul.dropdown-menu.dropdown-menu-right
+              li
+                a href="/usrs" 
+                  i.fa.fa-users
+                  | Clients
+              li
+                a href="/items" 
+                  span.badge.bg-teal-400.pull-right 58
+                  i.glyphicon.glyphicon-th
+                  | Items
+              li.divider
+              li
+                a href="/users/#{current_user.id}"
+                  i.icon-user-plus
+                  | My profile
+              li
+                a data-method="delete" href="/users/sign_out" rel="nofollow"
+                  i.icon-switch2
+                  | Logout
+    /! /main navbar
+
+    /! Page header
+    .page-header
+      .breadcrumb-line.breadcrumb-line-wide
+        ul.breadcrumb
+          li
+            a href="index.html" 
+              i.icon-home2.position-left
+              | Home
+        ul.breadcrumb-elements
+          li
+            a href="#" 
+              i.icon-comment-discussion.position-left
+              | Support
+          li.dropdown
+            a.dropdown-toggle data-toggle="dropdown" href="#" 
+              i.icon-gear.position-left
+              | Settings
+              span.caret
+            ul.dropdown-menu.dropdown-menu-right
+              li
+                a href="#" 
+                  i.icon-user-lock
+                  | Account security
+              li
+                a href="#" 
+                  i.icon-statistics
+                  | Analytics
+              li
+                a href="#" 
+                  i.icon-accessibility
+                  | Accessibility
+              li.divider
+              li
+                a href="#" 
+                  i.icon-gear
+                  | All settings
+      .page-header-content
+        .page-title
+          h4 Home
+        .heading-elements
+          .heading-btn-group
+            a.btn.btn-link.btn-float.has-text href="#" 
+              i.icon-bars-alt.text-primary
+              span Statistics
+            a.btn.btn-link.btn-float.has-text href="#" 
+              i.icon-calculator.text-primary
+              span Invoices
+            a.btn.btn-link.btn-float.has-text href="#" 
+              i.icon-calendar5.text-primary
+              span Schedule
+    /! /page header
+    /! Page container
+    .page-container
+      /! Page content
+      .page-content
+        == yield
