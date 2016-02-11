@@ -1,7 +1,0 @@
-- User.where(type: 'Client').each do |client|
-  %p
-    = client.first_name
-    = client.last_name
-    = link_to 'Show', my_user_path(client)
-    - if current_user.type == 'Admin'
-      =link_to 'Destroy', my_user_path(client), method: :delete

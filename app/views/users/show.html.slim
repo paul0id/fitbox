@@ -1,21 +1,22 @@
-.panel
-  .container-fluid
+.panel.panel-white
+  .panel-heading
+    h2.panel-title
+      = @user.first_name
+      | &nbsp;profile page
+  .panel-body
     .row
-      .col-lg-2.col-md-2
-        - if @user.avatar
-          img src= @user.avatar_url  width='120' alt='' /
-        - else
-          img src=image_path('placeholder.jpg') width='120' alt='' /
-      .col-lg-4.col-md-4
-        h4
+      .col-md-3
+        = image_tag @user.avatar_url if @user.avatar?
+      .col-md-9
+        h2
           = @user.first_name
-        h5
-        = @user.last_name
-      .col-lg-6.col-md-6
-.panel
-  .container-fluid
-    .row
-      .col-lg-12
+          | &nbsp;
+          = @user.last_name
+        p
+          = @user.email
+        - if @user == current_user
+            = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
+        hr
         - if current_user.type == 'Admin'
           = render 'admin_show'
           
