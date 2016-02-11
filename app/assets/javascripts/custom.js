@@ -61,34 +61,50 @@ $(document).on('ready', function(){
 
         });
       // console.log( tabs.length )
+   // head :ok
       // }
   }
 
   function selectProduct(){}
   function unselectProduct(){}
+
   $('#sendToFitbox').on('click', function(){
+
     var 
         managerId = $(this).data('manager-id'),
         clientId = $(this).data('client-id'),
-        ids = [];
+        ids = new Array();
 
-        
         if ($('.product-item.select').size()) {
           $('.product-item.select')
             .each(function( _idx, _item ){
-              ids.push( $(_item).attr('id') );
+              // console.log( $(_item).attr('id') );
+              ids.push( $(_item).attr('id')  );
           })
         }
-      var _data = {
-            'arr': ids,
-            'manager_id': managerId,
-            'client_id': clientId
-        };
+        console.log(ids)
+        // var _data =  "manager_id" + managerId,
+        // "client_id" clientId,
+        //   'arr': ids 
+        // }; 
 
+        // = managerId,
+        // _data['client_id']= clientId
+
+        // _data.arr.push(ids);
+        // console.log(_data);
+        // console.log(JSON.stringify(_data));
+        // $.post( '/fit_boxes/new_box', { arr : ids } );
+        // $.post( '/fit_boxes/new_box', { 'arr[]': ids, 'manager_id' : managerId, 'client_id' : clientId } );
+        // $.post( '/fit_boxes/new_box', {data:_data} );
         $.ajax({
           url: '/fit_boxes/new_box',
-          data: JSON.stringify( _data ),
-          // dataType: 'script',
+      //     // data:  _data ),
+          data: {
+            'client_id':clientId,'manager_id':managerId,'arr': ids
+          },
+
+          dataType: 'JSON',
           type: 'POST',
           success: function(d){
             console.log(d)
@@ -101,29 +117,30 @@ $(document).on('ready', function(){
 
   });
 
-  function addToFitbox(arr, manager_id, client_id){
+  // function addToFitbox(arr, manager_id, client_id){
 
-    $.ajax({
-      url: '/fit_boxes/new_box',
-      data: {
-        'ids': arr,
-        'manager_id': manager_id,
-        'client_id': client_id
+  //   $.ajax({
+  //     url: '/fit_boxes/new_box',
+  //     data: {
+  //       'ids': arr,
+  //       'manager_id': manager_id,
+  //       'client_id': client_id
 
-      },
-      // dataType: 'script',
-      type: 'POST',
-      success: function(d){
-        console.log(d)
-      },
-      error: function(err){
-        console.log(err)
-      }
-    });
+  //     },
+  //     // dataType: 'script',
+  //     type: 'POST',
+  //     success: function(d){
+  //       console.log(d)
+  //     },
+  //     error: function(err){
+  //       console.log(err)
+  //     }
+  //   });
 
-  }
+  // }
 
   $('.product-item').on('click', function(e) {
+    e.preventDefault();
     var $product = $(this); 
 
       $product
