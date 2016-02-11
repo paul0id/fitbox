@@ -2,33 +2,34 @@
 -#   = link_to 'New FitBox', new_fit_box_path
 - if @user.fit_boxes.count > 0
   %h3 Fit Boxes
-  %table
+  %table.table
     %thead
-      %th num
-      %th Name
-      %th Description
+      %th Id
+      %th USer
       %th
       %th
       %th
     %tbody
       - @user.fit_boxes.each_with_index do |box, i|
         %tr
-          %td= i+1
-          %td= box.name
-          %td= box.description
+          %td= box.id
+          %td
+            = box.client.first_name
+            &nbsp;
+            = box.client.last_name
           - if @user == current_user
             %td= link_to 'Show', box
             %td= link_to 'Edit', edit_fit_box_path(box)
             %td= link_to 'Destroy', fit_box_path(box), method: :delete
 - else
   No FitBoxes
-
+%h3 Create fitbox
 .panel
   - if current_user != @user
     .panel-heading
       %h6.panel-title Items
       .heading-elements
-        %a.btn.btn-success{:id => 'sendToFitbox',:href => "#", 'data-client-id' => @user.id, 'data-manager-id' => current_user.id } Done
+        %a.btn.btn-success{:id => 'sendToFitbox',:href => "#", 'data-client-id' => @user.id, 'data-manager-id' => current_user.id } Send
     .panel-body
       .tabbable
         %ul.nav.nav-tabs.nav-tabs-bottom
