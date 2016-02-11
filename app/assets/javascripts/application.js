@@ -13,8 +13,60 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require_tree ./core/libraries/jquery_ui/
 //= require core/libraries/bootstrap.min.js
 //= require core/libraries/jasny_bootstrap.min.js
+
+/* velocity */
+// = require_tree ./plugins/velocity
+
+/* notifications */
+// = require_tree ./plugins/notifications
+
+/* loaders */
+// = require_tree ./plugins/loaders
+
+/* styling */
+// = require_tree ./plugins/styling
+
+/* ui */
+// = require ./plugins/ui/moment/moment.min.js
+// = require ./plugins/ui/moment/moment_locales.min.js
+// = require_tree ./plugins/ui/fullcalendar
+// = require_tree ./plugins/ui/headroom
+// = require ./plugins/ui/dragula.min.js
+// = require ./plugins/ui/drilldown.js
+// = require ./plugins/ui/nicescroll.min.js
+// = require ./plugins/ui/prism.min.js
+
+/* pickers */
+// = require ./plugins/pickers/pickadate/picker.js
+// = require ./plugins/pickers/pickadate/picker.date.js
+// = require ./plugins/pickers/pickadate/picker.time.js
+// = require ./plugins/pickers/pickadate/legacy.js
+// = require ./plugins/pickers/datepicker.js
+// = require ./plugins/pickers/anytime.min.js
+// = require ./plugins/pickers/daterangepicker.js
+
+/* validate */
+// = require ./plugins/validate.min.js
+
+/* fomrs */
+// = require_tree ./plugins/forms/
+
+/* tables */
+
+// = require_tree ./plugins/tables/
+
+/* pages */
+// = require_tree ./pages
+
+/* slick */
 //= require plugins/slick/slick.min.js
-//= require custom.js
+
+/* app */
+// = require ./core/app.js
+/* custom */
+// = require ./custom.js
+
 
