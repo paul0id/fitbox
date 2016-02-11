@@ -14,9 +14,11 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
+gem 'cancancan', '~> 1.10'
 gem 'haml', '~> 4.0.5'
 gem 'pg'
 gem 'slim-rails'
+gem 'carrierwave'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

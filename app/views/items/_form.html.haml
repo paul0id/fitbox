@@ -12,6 +12,9 @@
     = f.label :color
     = f.text_field :color
   .br
+    = f.label :picture
+    = f.file_field :picture
+  .br
     = f.label :kind
     = f.select :kind, options_for_select(Item.kinds.keys, @item.kind), include_blank: true
   .br
