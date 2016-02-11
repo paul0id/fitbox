@@ -1,10 +1,9 @@
 class ItemsController < ApplicationController
-  
-  before_action :check_if_manager
+  load_and_authorize_resource
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    @items = Item.all.order(created_at: :desc)
   end
 
   def show
@@ -53,14 +52,6 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
-  end
-
-  def check_if_manager
-    if current_user.type == 'Manager'
-      true
-    else
-      false
-    end
   end
 
 end

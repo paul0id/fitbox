@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'users#main'
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :destroy], as: :my_user
+  get '/managers' => 'users#managers'
+  get '/clients' => 'users#clients'
+  scope "/admin" do
+    resources :users, only: :create, as: :create_user
+  end
   resources :fit_boxes
   resources :items
   # The priority is based upon order of creation: first created -> highest priority.
