@@ -1,0 +1,31 @@
+.row
+  .col-md-12
+    .panel.panel-white
+      .panel-heading
+        h2.panel-title
+          | Fitbox #
+          = @fit_box.id
+          | for  
+          = @fit_box.client.first_name
+          | &nbsp;
+          = @fit_box.client.last_name
+      table.table
+        tr
+          th
+          th Name
+          th Description
+          th Category
+          th Upc
+          th Color
+          th Size
+        - @fit_box.items.each do |i|
+          tr
+            td = image_tag i.picture_url, style: 'width: 200px' if i.picture
+            td = i.name
+            td =i.description
+            td =i.kind
+            td =i.upc
+            td =i.color
+            td =i.size
+
+
