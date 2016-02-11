@@ -1,0 +1,122 @@
+- if current_user.type == 'Client'
+
+  %h2 Edit Profile
+
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+    = devise_error_messages!
+    %fieldset.content-group
+      .row
+        .col-md-4
+          .form-group
+            = f.label :first_name, class: 'control-label'
+            = f.text_field :first_name, class: 'form-control'
+          .form-group
+            = f.label :last_name, class: 'control-label'
+            = f.text_field :last_name, class: 'form-control'
+          .form-group
+            = f.label :avatar, class: 'control-label'
+            = f.text_field :avatar, class: 'form-control'
+          .form-group
+            = f.label :sport, class: 'control-label'
+            = f.text_field :sport, class: 'form-control'
+          .form-group
+            = f.label :where, class: 'control-label'
+            = f.text_field :where, class: 'form-control'
+          .form-group
+            = f.label :body, class: 'control-label'
+            = f.text_field :body, class: 'form-control'
+          .form-group
+            = f.label :up_size, class: 'control-label'
+            = f.text_field :up_size, class: 'form-control'
+          .form-group
+            = f.label :down_size, class: 'control-label'
+            = f.text_field :down_size, class: 'form-control'
+          .form-group
+            = f.label :foot_size, class: 'control-label'
+            = f.text_field :foot_size, class: 'form-control'
+          .form-group
+            = f.label :address, class: 'control-label'
+            = f.text_area :address, class: 'form-control'
+          .form-group
+            = f.label :phone, class: 'control-label'
+            = f.text_field :phone, class: 'form-control'
+          .form-group
+            = f.label :city, class: 'control-label'
+            = f.text_field :city, class: 'form-control'
+          .form-group
+            = f.label :country, class: 'control-label'
+            = f.text_field :country, class: 'form-control'
+          .form-group
+            = f.label :zip, class: 'control-label'
+            = f.text_field :zip, class: 'form-control'
+
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            %div
+              Currently waiting confirmation for:
+              = resource.unconfirmed_email
+          .form-group
+            = f.label :password, class: 'control-label'
+            %i (leave blank if you don't want to change it)
+            = f.password_field :password, autocomplete: "off", class: 'form-control'
+          .form-group
+            = f.label :password_confirmation, class: 'control-label'
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+          .form-group
+            = f.label :current_password, class: 'control-label'
+            %i (we need your current password to confirm your changes)
+            = f.password_field :current_password, autocomplete: "off", class: 'form-control'
+
+          = f.submit value: "Update", class: 'btn btn-primary'
+  %p Unhappy?
+  = button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-warning'
+  %br
+  = button_to "Back", :back, class: 'btn btn-primary'
+
+- unless current_user.type == 'Client'
+  %h2 Edit Profile
+
+  = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+
+    = devise_error_messages!
+    %fieldset.content-group
+      .row
+        .col-md-4
+          .form-group
+            = f.label :first_name, class: 'control-label'
+            = f.text_field :first_name, class: 'form-control'
+
+          .form-group
+            = f.label :last_name, class: 'control-label'
+            = f.text_field :last_name, class: 'form-control'
+          .form-group
+            = f.label :avatar, class: 'control-label'
+            = f.file_field :avatar, class: 'form-control'
+          .form-group
+            = f.label :email, class: 'control-label'
+            = f.email_field :email, autofocus: true, class: 'form-control'
+
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            %div 
+              Currently waiting confirmation for:
+              = resource.unconfirmed_email
+
+          .form-group
+            = f.label :password, class: 'control-label'
+            %i (leave blank if you don't want to change it)
+            = f.password_field :password, autocomplete: "off", class: 'form-control'
+
+          .form-group
+            = f.label :password_confirmation, class: 'control-label'
+            = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+
+          .form-group
+            = f.label :current_password, class: 'control-label'
+            %i (we need your current password to confirm your changes)
+            = f.password_field :current_password, autocomplete: "off", class: 'form-control'
+
+          = f.submit value: "Update", class: 'btn btn-primary'
+  %br
+  %p Unhappy?
+  = button_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-warning'
+  %br
+  = button_to "Back", :back, class: 'btn btn-primary'
