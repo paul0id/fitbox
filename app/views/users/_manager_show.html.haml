@@ -1,60 +1,76 @@
-- if current_user != @user
-  = link_to 'New FitBox', new_fit_box_path
+-# - if current_user != @user
+-#   = link_to 'New FitBox', new_fit_box_path
 - if @user.fit_boxes.count > 0
   %h3 Fit Boxes
-  %table
+  %table.table
     %thead
-      %th num
-      %th Name
-      %th Description
+      %th Id
+      %th USer
       %th
       %th
       %th
     %tbody
       - @user.fit_boxes.each_with_index do |box, i|
         %tr
-          %td= i+1
-          %td= box.name
-          %td= box.description
+          %td= box.id
+          %td
+            = box.client.first_name
+            &nbsp;
+            = box.client.last_name
           - if @user == current_user
             %td= link_to 'Show', box
             %td= link_to 'Edit', edit_fit_box_path(box)
             %td= link_to 'Destroy', fit_box_path(box), method: :delete
 - else
   No FitBoxes
-- if current_user != @user
-  %h3 New FitBox
-  = form_for(FitBox.new) do |f|
-    .br
-      = f.label :name
-    .br
-      = f.text_field :name
-      = f.hidden_field :manager_id, value: "#{current_user.id}"
-      = f.hidden_field :client_id, value: "#{@user.id}"
-    .br
-      = f.label :description
-    .br
-      = f.text_area :description
-    .br
-      = f.submit
-  .br
-  %h3 Items
-  - @items.group_by(&:kind).each do |kind, items|
-    %h3= kind
-    %table
-      %thead
-        %th img
-        %th Name
-        %th Desciption
-        %th UPC
-        %th Color
-        %th Size 
-      %tbody
-        - items.each_with_index do |i, index|
-          %tr
-            %td= image_tag(i.picture_url) if i.picture?
-            %td= i.name        if i.name
-            %td= i.description if i.description
-            %td= i.upc         if i.upc
-            %td= i.color       if i.color
-            %td= i.size        if i.size
+%h3 Create fitbox
+.panel
+  - if current_user != @user
+    .panel-heading
+      %h6.panel-title Items
+      .heading-elements
+        %a.btn.btn-success{:id => 'sendToFitbox',:href => "#", 'data-client-id' => @user.id, 'data-manager-id' => current_user.id } Send
+    .panel-body
+      .tabbable
+        %ul.nav.nav-tabs.nav-tabs-bottom
+          - @items.group_by(&:kind).each do |kind, items|
+            %li
+              %a{"data-toggle" => "tab", :href => "#tab#{kind}"}= kind
+        .tab-content
+          - @items.group_by(&:kind).each do |kind, items|
+            %div{'id'=>"tab#{kind}", 'class' => 'tab-pane' }
+              .container-fluid
+                .row
+                  - items.each_with_index do |i, index|
+                    .col-lg-3.col-md-3
+                      %a{:href=>"#", 'data-cat-name' => "#tab#{kind}", :class => 'product-item', :id => i.id }
+                        .panel.text-center
+                          .panel-heading
+                            %h5.panel-title= i.name if i.name
+                            .eading-elements
+                              %span.label.label-success.label-lg
+                                =i.size        if i.size
+                          .panel-body
+                            = image_tag(i.picture_url, height: '200') if i.picture?
+                          .panel-footer
+                            %span.text-left
+                              = i.description if i.description
+
+
+      -# %table
+      -#   %thead
+      -#     %th img
+      -#     %th Name
+      -#     %th Desciption
+      -#     %th UPC
+      -#     %th Color
+      -#     %th Size 
+      -#   %tbody
+      -#     - items.each_with_index do |i, index|
+      -#       %tr
+      -#         %td= image_tag(i.picture_url) if i.picture?
+      -#         %td= i.name        if i.name
+      -#         %td= i.description if i.description
+      -#         %td= i.upc         if i.upc
+      -#         %td= i.color       if i.color
+      -#         %td= i.size        if i.size

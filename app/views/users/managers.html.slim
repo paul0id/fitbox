@@ -1,0 +1,19 @@
+.row
+  .col-md-12
+    .panel.panel-white
+      .panel-heading
+        h2.panel-title
+          | Clients
+      table.table
+        - User.where(type: 'Manager').each do |manager|
+          tr
+            td
+              h4
+                = manager.first_name
+                | &nbsp;
+                = manager.last_name
+            td
+              = link_to 'Show', my_user_path(manager)
+            - if current_user.type == 'Admin'
+              td
+                = link_to 'Destroy', my_user_path(manager), method: :delete

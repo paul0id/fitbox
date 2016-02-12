@@ -1,0 +1,32 @@
+.row
+  .col-md-12
+    .panel.panel-white
+      .panel-heading
+        = link_to 'Create new', new_item_path, class: "btn btn-primary pull-right", style: 'z-index:2'
+        h2.panel-title
+          | Items
+      table.table
+        thead
+          th Name
+          th Desciption
+          th UPC
+          th Kind
+          th Color
+          th Size
+          th
+          th
+          th
+        tbody
+          - @items.each do |i|
+            tr
+              td= i.name        if i.name
+              td= i.description if i.description
+              td= i.upc         if i.upc
+              td= i.kind        if i.kind
+              td= i.color       if i.color
+              td= i.size        if i.size
+              td= link_to 'show', item_path(i)
+              td= link_to 'edit', edit_item_path(i)
+              td= link_to 'destroy', item_path(i), method: :delete
+
+

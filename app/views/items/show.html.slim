@@ -1,0 +1,26 @@
+.row
+  .col-md-12
+    .panel.panel-white
+      .panel-heading
+        h2.panel-title
+          = @item.name        if @item.name
+      = link_to 'All items', items_path, class: "btn btn-primary pull-right", style: 'z-index:2'
+      table.table
+        thead
+          tr
+            th Name
+            th Desciption
+            th UPC
+            th Kind
+            th Color
+            th Size
+            th
+        tbody
+          tr
+            td= @item.name        if @item.name
+            td= @item.description if @item.description
+            td= @item.upc         if @item.upc
+            td= @item.kind        if @item.kind
+            td= @item.color       if @item.color
+            td= @item.size        if @item.size
+            td= link_to 'Edit', edit_item_path(@item)

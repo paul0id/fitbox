@@ -1,0 +1,66 @@
+.panel.panel-white
+  .panel-heading
+    h2.panel-title
+      = @user.first_name
+      | &nbsp;profile page
+  .panel-body
+    .row
+      .col-md-3
+        = image_tag @user.avatar_url if @user.avatar?
+      .col-md-9
+        h2
+          = @user.first_name
+          | &nbsp;
+          = @user.last_name
+        .row
+          .col-md-6
+            p
+              | Email:  
+              = @user.email
+            p
+              | How get fit: 
+              = @user.sport
+            p
+              | Where get fit: 
+              = @user.where
+            p
+              | Body type: 
+              = @user.body
+            p
+              | Address: 
+              = @user.address
+            p
+              | Phone:  
+              = @user.phone
+          .col-md-6
+            p
+              | City: 
+              = @user.city
+            p
+              | Country: 
+              = @user.country
+            p
+              | Zip: 
+              = @user.zip
+            p
+              | Foot size: 
+              = @user.foot_size
+            p
+              | T-short size: 
+              = @user.up_size
+            p
+              | Pants size: 
+              = @user.down_size
+
+        - if @user == current_user
+            = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
+
+        hr
+        - if current_user.type == 'Admin'
+          = render 'admin_show'
+          
+        - if current_user.type == 'Manager'
+          = render 'manager_show'
+
+        - if current_user.type == 'Client'
+          = render 'client_show'

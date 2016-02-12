@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   end
   resources :fit_boxes
   resources :items
+
+  post '/fit_boxes/new_box' => 'items#items_to_box', as: :create_fit_box
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
