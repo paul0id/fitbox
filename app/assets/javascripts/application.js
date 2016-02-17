@@ -38,6 +38,7 @@
 // = require ./plugins/ui/drilldown.js
 // = require ./plugins/ui/nicescroll.min.js
 // = require ./plugins/ui/prism.min.js
+// = require ./plugins/sliders/slider_pips.min
 
 /* pickers */
 // = require ./plugins/pickers/pickadate/picker.js
@@ -53,6 +54,7 @@
 
 /* fomrs */
 // = require_tree ./plugins/forms/
+// = require_tree ./plugins/forms/wizards/
 
 /* tables */
 
@@ -68,5 +70,8 @@
 // = require ./core/app.js
 /* custom */
 // = require ./custom.js
+
+
+
 
 
