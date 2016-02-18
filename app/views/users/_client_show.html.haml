@@ -1,42 +1,22 @@
-- if @user.fit_boxes.count > 0
-  %h3 Fit Boxes
-  %table
-    %thead
-      %th num
-      %th Name
-      %th Description
-      %th
-      %th
-      %th
-    %tbody
-      - @user.fit_boxes.each_with_index do |box, i|
-        %tr
-          %td= i+1
-          %td= box.name
-          %td= box.description
-          - if @user == current_user
-            %td= link_to 'Show', box
-            %td= link_to 'Edit', edit_fit_box_path(box)
-            %td= link_to 'Destroy', fit_box_path(box), method: :delete
-- else
-  No FitBoxes
-%h3 Items
-- @items.group_by(&:kind).each do |kind, items|
-  %h3= kind
-  %table
-    %thead
-      %th img
-      %th Name
-      %th Desciption
-      %th UPC
-      %th Color
-      %th Size 
-    %tbody
-      - items.each_with_index do |i, index|
-        %tr
-          %td= image_tag(i.picture_url) if i.picture?
-          %td= i.name        if i.name
-          %td= i.description if i.description
-          %td= i.upc         if i.upc
-          %td= i.color       if i.color
-          %td= i.size        if i.size
+.panel.panel-white
+  .panel-heading
+    %h2.panel-title Fitboxes
+  - if @user.fit_boxes.count > 0
+    %table.table
+      %thead
+        %th Name
+        %th Description
+        %th
+      %tbody
+        - @user.fit_boxes.each_with_index do |box, i|
+          %tr
+            %td
+              = link_to box do
+                Fitbox # 
+                = i+1
+            %td= box.description
+            - if @user == current_user
+              %td.text-right= link_to 'Destroy', fit_box_path(box), method: :delete, class: 'btn btn-danger'
+  - else
+    .panel-body
+      %h4.text-center No FitBoxes
