@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     // Basic wizard setup
-    window.signUpForm = $(".steps-basic").steps({
+    var signUpForm = $(".steps-basic").steps({
+
         headerTag: "h6",
         bodyTag: "fieldset",
         transitionEffect: "fade",
@@ -22,7 +23,7 @@ $(document).ready(function(){
                 });
 
             self
-                .on('click.go2next', 'button',  
+                .on('click.go2next', 'button',
                     function(){ 
                         var $hidden = 
                         $(this)
