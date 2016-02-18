@@ -12,26 +12,26 @@ $(document).ready(function(){
             finish: 'Submit'
         },
         onInit: function(){
+            var self = $(this);
 
-            $(this).on('click.go2next', 'button', function(){
-                signUpForm.steps('next');
-            });
-            // .on('click.async-send', 'button#createAccount', function( event ){
-            //     console.log( signUpForm )
-            //      signUpForm.submit() 
-            // });
+            self
+                .find('fieldset')
+                .each(function(idx, _fieldset){
+                    $(_fieldset)
+                        .prepend( $('<input type="hidden" value="" name="" class="fieldset-data" />') );
+                });
 
-            // $(this)
-            //     .find('button')
-            //     .on('click.go2next', function() { (signUpForm.steps('next')) });
-            // $(this)
-            //     .find('#createAccount')
-            //     .on('click.async-submit', function(){
-            //         // console.log('serialize')
-            //         // console.log($(signUpForm))
-            //         var data = $(signUpForm).serialize();
-            //         console.log( data )
-            //     })
+            self
+                .on('click.go2next', 'button',  
+                    function(){ 
+                        var $hidden = 
+                        $(this)
+                            .parents('fieldset')
+                            .find( '[type="hidden"]' )
+                            .attr('name', $(this).attr('name') )
+                            .attr('value', $(this).attr('value') );
+                        signUpForm.steps('next');
+                    });
         },
 
     });
