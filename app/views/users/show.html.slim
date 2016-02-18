@@ -51,16 +51,14 @@
             p
               | Pants size: 
               = @user.down_size
-
         - if @user == current_user
             = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
 
-        hr
-        - if current_user.type == 'Admin'
-          = render 'admin_show'
-          
-        - if current_user.type == 'Manager'
-          = render 'manager_show'
+- if current_user.type == 'Admin'
+  = render 'admin_show'
+  
+- if current_user.type == 'Manager'
+  = render 'manager_show'
 
-        - if current_user.type == 'Client'
-          = render 'client_show'
+- if current_user.type == 'Client'
+  = render 'client_show'

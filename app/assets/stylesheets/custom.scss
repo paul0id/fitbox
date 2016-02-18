@@ -161,10 +161,7 @@ body {
 }
 
 .footer-section {
-  border-bottom: 2px solid #f0f0f0;
-  padding-bottom: 60px;
   margin-top: 40px;
-  margin-bottom: 10px;
 }
 
 .nav.nav-socials li {
@@ -183,6 +180,17 @@ body {
 
 .nav.nav-socials li > a:hover{
   background-color: #d6d6d6;
+}
+
+#big-slider {
+  margin-bottom: 35px;
+}
+.slick-dots li button {
+  width: 10px !important;
+  height: 10px !important;
+  border: 2px solid #aaa !important;
+  border-radius: 50%;
+  text-indent: -9999px;
 }
 
 .slick-next,
@@ -251,3 +259,5 @@ img {max-width:100%;}
 }
 
 .wizard fieldset {font-size: 0;margin:40px 0 20px;}
+
+body {height: auto !important;}

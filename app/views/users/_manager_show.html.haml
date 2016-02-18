@@ -1,44 +1,53 @@
--# - if current_user != @user
--#   = link_to 'New FitBox', new_fit_box_path
-- if @user.fit_boxes.count > 0
-  %h3 Fit Boxes
-  %table.table
-    %thead
-      %th Id
-      %th USer
-      %th
-      %th
-      %th
-    %tbody
-      - @user.fit_boxes.each_with_index do |box, i|
-        %tr
-          %td= box.id
-          %td
-            = box.client.first_name
-            &nbsp;
-            = box.client.last_name
-          - if @user == current_user
-            %td= link_to 'Show', box
-            %td= link_to 'Edit', edit_fit_box_path(box)
-            %td= link_to 'Destroy', fit_box_path(box), method: :delete
-- else
-  No FitBoxes
-%h3 Create fitbox
-.panel
-  - if current_user != @user
+.panel.panel-white
+  .panel-heading
+    %h2.panel-title Fitboxes
+
+  -# - if current_user != @user
+  -#   = link_to 'New FitBox', new_fit_box_path
+  - if @user.fit_boxes.count > 0
+    %table.table
+      %thead
+        %th ID
+        %th User
+        %th
+        %th
+      %tbody
+        - @user.fit_boxes.each_with_index do |box, i|
+          %tr
+            %td
+              = link_to box do
+                Fitbox # 
+                = box.id
+            %td
+              = box.client.first_name
+              &nbsp;
+              = box.client.last_name
+            - if @user == current_user
+              %td= link_to 'Edit', edit_fit_box_path(box)
+              %td= link_to 'Destroy', fit_box_path(box), method: :delete
+  - else
+    No FitBoxes
+
+
+- if current_user != @user
+  .panel.panel-white
     .panel-heading
-      %h6.panel-title Items
+      %h2.panel-title Create fitbox
       .heading-elements
         %a.btn.btn-success{:id => 'sendToFitbox',:href => "#", 'data-client-id' => @user.id, 'data-manager-id' => current_user.id } Send
     .panel-body
       .tabbable
         %ul.nav.nav-tabs.nav-tabs-bottom
-          - @items.group_by(&:kind).each do |kind, items|
-            %li
-              %a{"data-toggle" => "tab", :href => "#tab#{kind}"}= kind
+          - @items.group_by(&:kind).each_with_index do |(kind, items), index|
+            - if index == 0
+              %li.active
+                %a{"data-toggle" => "tab", :href => "#tab#{kind}"}= kind
+            - else                
+              %li
+                %a{"data-toggle" => "tab", :href => "#tab#{kind}"}= kind
         .tab-content
-          - @items.group_by(&:kind).each do |kind, items|
-            %div{'id'=>"tab#{kind}", 'class' => 'tab-pane' }
+          - @items.group_by(&:kind).each_with_index do |(kind, items), index|            
+            %div{:class => "tab-pane #{'active' if index == 0 }", 'id'=>"tab#{kind}"}
               .container-fluid
                 .row
                   - items.each_with_index do |i, index|
@@ -55,22 +64,3 @@
                           .panel-footer
                             %span.text-left
                               = i.description if i.description
-
-
-      -# %table
-      -#   %thead
-      -#     %th img
-      -#     %th Name
-      -#     %th Desciption
-      -#     %th UPC
-      -#     %th Color
-      -#     %th Size 
-      -#   %tbody
-      -#     - items.each_with_index do |i, index|
-      -#       %tr
-      -#         %td= image_tag(i.picture_url) if i.picture?
-      -#         %td= i.name        if i.name
-      -#         %td= i.description if i.description
-      -#         %td= i.upc         if i.upc
-      -#         %td= i.color       if i.color
-      -#         %td= i.size        if i.size
