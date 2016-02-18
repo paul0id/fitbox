@@ -51,7 +51,10 @@
             p
               | Pants size: 
               = @user.down_size
-
+.panel.panel-white
+  .panel-heading
+    h2.panel-title Fitboxes
+  .panel-body
         - if @user == current_user
             = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
 
