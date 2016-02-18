@@ -11,22 +11,11 @@ $(document).ready(function(){
         labels: {
             finish: 'Submit'
         },
-
-        onFinished: function (event, currentIndex) {
-            alert("Form subimtted.");
-        },
-
-        onFinishing: function (event, currentIndex) {
-            alert("Form subimtted.");
-        },
-
         onInit: function(){
 
             $(this).on('click.go2next', 'button', function(){
-                console.log(   $(this).attr('name'),"=",$(this).attr('value'))
                 signUpForm.steps('next');
-
-            })
+            });
             // .on('click.async-send', 'button#createAccount', function( event ){
             //     console.log( signUpForm )
             //      signUpForm.submit() 
