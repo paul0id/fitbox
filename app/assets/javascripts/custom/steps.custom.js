@@ -42,7 +42,8 @@ $(document).ready(function(){
                 required: true
             },
             'user[password]': {
-                required: true
+                required: true,
+                minlength: 8
             }
         }
     })
