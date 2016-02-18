@@ -1,5 +1,4 @@
-class Item < ActiveRecord::Base      "Down" => 2,
-      "Footwear" => 3
+class Item < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   has_and_belongs_to_many :fit_boxes
 
