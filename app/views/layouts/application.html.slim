@@ -10,18 +10,18 @@ html lang='en'
     .navbar.navbar-inverse
       .navbar-header
         a.navbar-brand href="/" 
-          img alt="" src=image_path("logo.png") /
-
-      ul.nav.navbar-nav
-        li
-          = link_to clients_path do
-            i.fa.fa-users 
-            | &nbsp; Clients
-        li
-          = link_to items_path do 
-            span.badge.bg-teal-400
-            i.glyphicon.glyphicon-th 
-            | &nbsp; Items
+          img alt="" src=image_path('logo.png') /
+      - if current_user && current_user.type == 'Admin'
+        ul.nav.navbar-nav
+          li
+            = link_to clients_path do
+              i.fa.fa-users
+              | &nbsp; Clients
+          li
+            = link_to items_path do
+              span.badge.bg-teal-400
+              i.glyphicon.glyphicon-th
+              | &nbsp; Items
       ul.nav.navbar-nav.navbar-right
         - unless current_user
           li
@@ -51,5 +51,5 @@ html lang='en'
       /! Page content
       .page-content
         .content-wrapper
-          .content
+          .container
             == yield
