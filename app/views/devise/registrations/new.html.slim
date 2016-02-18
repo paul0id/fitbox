@@ -5,7 +5,8 @@
         h2.panel-title
           | Sign up
 
-      form.steps-basic action="#" 
+      / form.steps-basic method="post" action="/admin/users" 
+      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'steps-basic'}) do
         h6 What clothing would you like?
         fieldset
           .row
@@ -482,6 +483,13 @@
                 .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
                   button.Options-button.js-optionBtn.js-hoverBtn name="weight_in_pounds" type="button" value="295" 
                     | 295
+              / .u-marginCenter.u-maxWidth--micro.u-textCenter
+              /   button.Button.u-sizeFull.u-textCenter.u-marginTm.js-hoverBtn.js-submitFormBtn name="submit" type="submit"  Create Your Account
+              /   p.terms.u-marginTm
+              /     | By clicking Create Your Account, you agree to our
+              /     a href="//www.trunkclub.com/terms-of-service" target="_blank"  terms
+              /     | and
+              /     a href="//www.trunkclub.com/privacy" target="_blank"  privacy policy
 
         h6 You’re Almost Done
         fieldset
@@ -506,7 +514,7 @@
                   | Did you mean
               .u-marginBm
                 label.u-hiddenVisually for="password"  Password
-                input#password.Options-input.js-passwordInput minlength="6" name="new_password" placeholder="Password" required="" type="password" /
+                input#password.Options-input.js-passwordInput minlength="6" name="password" placeholder="Password" required="" type="password" /
 
               .u-marginBm
                 label.u-hiddenVisually for="rawReferralDetail"  What Is Their Name?

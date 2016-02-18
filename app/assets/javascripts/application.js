@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree ./core/libraries/jquery_ui/
 //= require core/libraries/bootstrap.min.js
 //= require core/libraries/jasny_bootstrap.min.js
@@ -61,7 +60,7 @@
 // = require_tree ./plugins/tables/
 
 /* pages */
-// = require_tree ./pages
+
 
 /* slick */
 //= require plugins/slick/slick.min.js
@@ -69,6 +68,8 @@
 /* app */
 // = require ./core/app.js
 /* custom */
+
+// = require ./custom/steps.custom  
 // = require ./custom.js
 
 
