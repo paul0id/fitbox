@@ -483,13 +483,7 @@
                 .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
                   button.Options-button.js-optionBtn.js-hoverBtn name="user[weight_in_pounds]" type="button" value="295" 
                     | 295
-              / .u-marginCenter.u-maxWidth--micro.u-textCenter
-              /   button.Button.u-sizeFull.u-textCenter.u-marginTm.js-hoverBtn.js-submitFormBtn name="user[submit]" type="submit"  Create Your Account
-              /   p.terms.u-marginTm
-              /     | By clicking Create Your Account, you agree to our
-              /     a href="//www.trunkclub.com/terms-of-service" target="_blank"  terms
-              /     | and
-              /     a href="//www.trunkclub.com/privacy" target="_blank"  privacy policy
+
 
         h6 You’re Almost Done
         fieldset
@@ -497,28 +491,29 @@
             .col-md-6.col-md-offset-3
               .u-marginBm
                 label.u-hiddenVisually for="firstName"  First Name
-                input#firstName.Options-input name="user[first_name]" placeholder=("First Name") required="" type="text" /
+                input#firstName.Options-input name="user[first_name]" placeholder=("First Name")  type="text" /
               .u-marginBm
                 label.u-hiddenVisually for="lastName"  Last Name
-                input#lastName.Options-input name="user[last_name]" placeholder=("Last Name") required="" type="text" /
+                input#lastName.Options-input name="user[last_name]" placeholder=("Last Name")  type="text" /
               .u-marginBm
                 label.u-hiddenVisually for="phone"  Phone Number
-                input#phone.Options-input minlength="10" name="user[phone]" placeholder="Phone" required="" type="tel" /
+                input#phone.Options-input minlength="10" name="user[phone]" placeholder="Phone" type="tel" /
               .u-marginBm
                 label.u-hiddenVisually for="zipcode"  Zip Code
-                input#zipcode.Options-input name="user[zipcode]" pattern="[0-9]{5}" placeholder=("Zip Code") required="" type="text" /
+                input#zipcode.Options-input name="user[zipcode]" pattern="[0-9]{5}" placeholder=("Zip Code") type="text" /
               .u-marginBm
                 label.u-hiddenVisually for="email"  Email Address
-                input#email.Options-input.js-inputEmail name="user[email]" placeholder=("Email Address") required="" size="50" type="email" /
+                input#email.Options-input.js-inputEmail name="user[email]" placeholder=("Email Address") size="50" type="email" /
                 label.js-emailSuggestion.hidden
                   | Did you mean
               .u-marginBm
                 label.u-hiddenVisually for="password"  Password
-                input#password.Options-input.js-passwordInput minlength="6" name="user[password]" placeholder="Password" required="" type="password" /
+                input#password.Options-input.js-passwordInput minlength="6" name="user[password]" placeholder="Password" type="password" /
 
               .u-marginBm
                 label.u-hiddenVisually for="rawReferralDetail"  What Is Their Name?
                 input#rawReferralDetail.hidden.Options-input.js-inputRefName name="user[raw_referral_detail]" placeholder=("What Is Their Name?") type="text" /
+
               .u-marginCenter.u-maxWidth--micro.u-textCenter
                 button.Button.u-sizeFull.u-textCenter.u-marginTm.js-hoverBtn.js-submitFormBtn name="user[submit]" type="submit"  Create Your Account
                 p.terms.u-marginTm
