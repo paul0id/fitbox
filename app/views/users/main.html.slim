@@ -28,7 +28,7 @@ section#howItWorks
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi quae aspernatur nisi, voluptatem iusto eaque architecto explicabo rerum voluptas maiores incidunt ipsa earum? Aliquam dolores cupiditate tenetur neque quasi sequi.
       .clearfix
       .col-lg-12.col-md-12.text-center
-        button.btn.btn-default.btn-main get started
+        = link_to 'Get started', new_user_registration_path, class: 'btn btn-success btn-lg'
 
 section
   .container.section-container
@@ -81,7 +81,7 @@ section#call-to-action
           p
             | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quaerat <br>tempora quibusdam, rem non repellendus obcaecati laudantium eum,<br>
       .col-lg-12.col-md-12.text-center
-        button.btn.btn-default.btn-main get started
+        = link_to 'Get started', new_user_registration_path, class: 'btn btn-success btn-lg'
 
 
 footer.footer-section

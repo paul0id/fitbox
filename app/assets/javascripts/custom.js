@@ -40,6 +40,9 @@ $(document).on('ready', function(){
             console.log(err)
           }
       });
+      setTimeout(function(){
+        window.location.reload();
+      }, 500);
 
   });
 
