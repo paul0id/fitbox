@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     // Basic wizard setup
-    var signUpForm = $(".steps-basic").steps({
+    var $signUpForm = $(".steps-basic").steps({
 
         headerTag: "h6",
         bodyTag: "fieldset",
@@ -31,10 +31,20 @@ $(document).ready(function(){
                             .find( '[type="hidden"]' )
                             .attr('name', $(this).attr('name') )
                             .attr('value', $(this).attr('value') );
-                        signUpForm.steps('next');
+                        $signUpForm.steps('next');
                     });
-        },
-
+        }
     });
+    
+    $signUpForm.validate({
+        rules: {
+            'user[email]': {
+                required: true
+            },
+            'user[password]': {
+                required: true
+            }
+        }
+    })
 
 });

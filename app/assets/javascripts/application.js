@@ -53,7 +53,6 @@
 
 /* fomrs */
 // = require_tree ./plugins/forms/
-// = require_tree ./plugins/forms/wizards/
 
 /* tables */
 
