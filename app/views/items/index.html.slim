@@ -2,11 +2,12 @@
   .col-md-12
     .panel.panel-white
       .panel-heading
-        = link_to 'Create new', new_item_path, class: "btn btn-primary pull-right", style: 'z-index:2'
+        = link_to 'Create new', new_item_path, class: "btn btn-default pull-right", style: 'z-index:2'
         h2.panel-title
           | Items
       table.table
         thead
+          th
           th Name
           th Desciption
           th UPC
@@ -15,18 +16,18 @@
           th Size
           th
           th
-          th
         tbody
           - @items.each do |i|
             tr
-              td= i.name        if i.name
+              td= image_tag i.picture, style: 'width: 200px' if i.picture?
+              td= link_to item_path(i) do
+                = i.name        if i.name
               td= i.description if i.description
               td= i.upc         if i.upc
               td= i.kind        if i.kind
               td= i.color       if i.color
               td= i.size        if i.size
-              td= link_to 'show', item_path(i)
-              td= link_to 'edit', edit_item_path(i)
-              td= link_to 'destroy', item_path(i), method: :delete
+              td= link_to 'edit', edit_item_path(i), class: 'btn btn-default'
+              td= link_to 'destroy', item_path(i), method: :delete, class: 'btn btn-danger'
 
 

@@ -9,6 +9,7 @@
       %thead
         %th ID
         %th User
+        %th Status
         %th
         %th
       %tbody
@@ -22,11 +23,13 @@
               = box.client.first_name
               &nbsp;
               = box.client.last_name
-            - if @user == current_user
-              %td= link_to 'Edit', edit_fit_box_path(box)
-              %td= link_to 'Destroy', fit_box_path(box), method: :delete
+            %td
+              ???
+            %td= link_to 'Edit', edit_fit_box_path(box), class: 'btn btn-default'
+            %td= link_to 'Destroy', fit_box_path(box), method: :delete, class: 'btn btn-danger'
   - else
-    No FitBoxes
+    .panel-body
+      %h4.text-center No FitBoxes
 
 
 - if current_user != @user

@@ -3,15 +3,79 @@
     .panel.panel-white
       .panel-heading
         h2.panel-title
-          | Fitbox #
+          | Fitbox # 
           = @fit_box.id
-          | for  
-          = @fit_box.client.first_name
-          | &nbsp;
-          = @fit_box.client.last_name
+        .heading-elements
+          .form-group
+            select.form-control.pull-right
+              option not viewed
+              option viewed
+              option accepted
+              option rejected
+
+      .panel-body
+        .row
+          .col-md-12
+            h3 User info (Status: ???)
+
+          .col-md-3
+            p
+              strong Last name: 
+              = link_to my_user_path(@fit_box.client) do 
+                = @fit_box.client.last_name
+            p
+              strong First name: 
+              = link_to my_user_path(@fit_box.client) do 
+                = @fit_box.client.first_name
+            p
+              strong Email:  
+              = link_to my_user_path(@fit_box.client) do 
+                = @fit_box.client.email
+            p
+              strong Address: 
+              = @fit_box.client.address
+          .col-md-3
+            p
+              strong Phone:  
+              = @fit_box.client.phone
+            p
+              strong City: 
+              = @fit_box.client.city
+            p
+              strong Country: 
+              = @fit_box.client.country
+            p
+              strong Zip: 
+              = @fit_box.client.zip
+          .col-md-3
+            p
+              strong How get fit: 
+              = @fit_box.client.sport
+            p
+              strong Where get fit: 
+              = @fit_box.client.where
+            p
+              strong Body type: 
+              = @fit_box.client.body
+            p
+              strong Foot size: 
+              = @fit_box.client.foot_size
+          .col-md-3
+            p
+              strong T-short size: 
+              = @fit_box.client.up_size
+            p
+              strong Pants size: 
+              = @fit_box.client.down_size
+            p
+              strong Height: 
+              = @fit_box.client.height
+            p
+              strong Weight: 
+              = @fit_box.client.weight
       table.table
         tr
-          th
+          th Items
           th Name
           th Description
           th Category
