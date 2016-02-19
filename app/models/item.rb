@@ -3,10 +3,10 @@ class Item < ActiveRecord::Base
   has_and_belongs_to_many :fit_boxes
 
   enum kind: {
-    "Accessoir" => 0,
-    "Up" => 1,
-    "Down" => 2,
-    "Footwear" => 3
+    accessoire: 0,
+    up: 1,
+    down: 2,
+    footwear: 3
     }
 
 end
