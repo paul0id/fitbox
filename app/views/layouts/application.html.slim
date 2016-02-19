@@ -11,7 +11,7 @@ html lang='en'
       .navbar-header
         a.navbar-brand href="/" 
           img alt="" src=image_path('logo.png') /
-      - if current_user && current_user.type == 'Admin'
+      - if current_user && current_user.type == 'Manager'
         ul.nav.navbar-nav
           li
             = link_to clients_path do
@@ -29,10 +29,14 @@ html lang='en'
           li
             = link_to 'Sign Up', new_user_registration_path
         - else
+          li.mutted
+            div style='padding-top: 6px; padding-bottom: 6px; opacity: 0.5'
+            | You logged as: 
+            = current_user.type
           li.dropdown.dropdown-user
             a.dropdown-toggle data-toggle="dropdown" 
               i.fa.fa-user
-              span= current_user.email if current_user
+              span= current_user.first_name if current_user
               i.caret
             ul.dropdown-menu.dropdown-menu-right
               li
