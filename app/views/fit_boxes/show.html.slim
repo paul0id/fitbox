@@ -3,85 +3,79 @@
     .panel.panel-white
       .panel-heading
         h2.panel-title
-          | Fitbox #
+          | Fitbox # 
           = @fit_box.id
-        - if current_user && current_user.type == 'Manager'
-          h2.panel-title
-            = @fit_box.status
-        / .heading-elements
-        /   .form-group
-        /     select.form-control.pull-right
-        /       option not viewed
-        /       option viewed
-        /       option accepted
-        /       option rejected
-              / = select_tag :status, options_for_select(FitBox.statuses, @fit_box.status)
-        - if current_user && current_user.type == 'Client' && ["viewed", "not_viewed"].include?(@fit_box.status)
-          = link_to 'Return', fit_box_return_path(@fit_box)
-          = link_to 'Accept', fit_box_accept_path(@fit_box)
-          = link_to 'Reject', fit_box_reject_path(@fit_box)
-        - elsif current_user && current_user.type == 'Manager' && @fit_box.status == "returned"
-          = link_to 'Send', fit_box_return_back_path(@fit_box)
+        .heading-elements
+          .btn-group
+            - if current_user.type == 'Client' && ["viewed", "not_viewed"].include?(@fit_box.status)
+              = link_to 'Return', fit_box_return_path(@fit_box), class: 'btn btn-warning'
+              = link_to 'Accept', fit_box_accept_path(@fit_box), class: 'btn btn-success'
+              = link_to 'Reject', fit_box_reject_path(@fit_box), class: 'btn btn-danger'
+            - elsif current_user.type == 'Manager' && @fit_box.status == "returned"
+              = link_to 'Send', fit_box_return_back_path(@fit_box), class: 'btn btn-primary'
+          - if current_user.type == 'Manager'
+            div.label.bg-blue= @fit_box.status
+
 
       .panel-body
         .row
           .col-md-12
-            h3 User info (Status: ???)
+            h3 User info
 
           .col-md-3
             p
-              strong Last name:
-              = link_to my_user_path(@fit_box.client) do
+              strong Last name: 
+              = link_to my_user_path(@fit_box.client) do 
                 = @fit_box.client.last_name
             p
-              strong First name:
-              = link_to my_user_path(@fit_box.client) do
+              strong First name: 
+              = link_to my_user_path(@fit_box.client) do 
                 = @fit_box.client.first_name
             p
-              strong Email:
-              = link_to my_user_path(@fit_box.client) do
+              strong Email: 
+              = link_to my_user_path(@fit_box.client) do 
                 = @fit_box.client.email
             p
-              strong Address:
+              strong Address: 
               = @fit_box.client.address
           .col-md-3
             p
-              strong Phone:
+              strong Phone:  
               = @fit_box.client.phone
             p
-              strong City:
+              strong City: 
               = @fit_box.client.city
             p
-              strong Country:
+              strong Country: 
               = @fit_box.client.country
             p
-              strong Zip:
+              strong Zip: 
               = @fit_box.client.zip
           .col-md-3
             p
-              strong How get fit:
+              strong How get fit: 
               = @fit_box.client.sport
             p
-              strong Where get fit:
+              strong Where get fit: 
               = @fit_box.client.where
             p
-              strong Body type:
+              strong Body type: 
               = @fit_box.client.body
             p
-              strong Foot size:
+              strong Foot size: 
               = @fit_box.client.foot_size
           .col-md-3
             p
-              strong T-short size:
+              strong T-short size: 
               = @fit_box.client.up_size
             p
-              strong Pants size:
+              strong Pants size: 
               = @fit_box.client.down_size
             p
-              strong Height:
+              strong Height: 
               = @fit_box.client.height
             p
-              strong Weight:
+              strong Weight: 
               = @fit_box.client.weight
       table.table
         tr
