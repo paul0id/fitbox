@@ -48,6 +48,7 @@ class ItemsController < ApplicationController
     if params
       box = FitBox.create(client_id: params[:client_id], manager_id: params[:manager_id], status: 0)
       box.items = Item.where(id: params[:arr])
+      FitBoxMailer.new_fit_box(box.client,box).deliver_now
       head :ok
     end
   end
