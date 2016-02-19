@@ -102,7 +102,7 @@
                 a.btn.btn-danger.btn-remove id=i.id href="/fit_boxes/#{@fit_box.id}/remove_item_from_box?item_id=#{i.id }"
                   i.icon.delete
                   | remove
-- if current_user && current_user.type == "Manager" && @fit_box.items.count == 4 && @fit_box.status == 'returned'
+- if current_user && current_user.type == 'Manager' && @fit_box.items.count != 4 && @fit_box.status == 'returned'
   .panel.panel-white
     .panel-heading
       h2.panel-title Adding items to fitbox
