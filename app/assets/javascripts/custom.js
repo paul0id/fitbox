@@ -23,7 +23,7 @@ $(document).on('ready', function(){
       });
       // console.info( $(this).data('url') + '?items=' + JSON.stringify(items))
       
-      var xhrChetky = $.get( $(this).data('url') + '?items=' + JSON.stringify(items));
+      var xhrChetky = $.get( $(this).data('url') + '?items=' + items);
         xhrChetky.done(function(res){
           console.dir(res);
 

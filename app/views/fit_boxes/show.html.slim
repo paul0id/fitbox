@@ -86,7 +86,7 @@
           th Upc
           th Color
           th Size
-          - if current_user.type == 'Client'
+          - if current_user && current_user.type == 'Client'
             th x
         - @fit_box.items.each do |i|
           tr
@@ -97,18 +97,18 @@
             td =i.upc
             td =i.color
             td =i.size
-            - if current_user.type == 'Client'
+            - if current_user && current_user.type == 'Client'
               td
                 a.btn.btn-danger.btn-remove id=i.id href="/fit_boxes/#{@fit_box.id}/remove_item_from_box?item_id=#{i.id }"
                   i.icon.delete
                   | remove
-- if current_user.type == "Manager" && @fit_box.status == 'returned'
+- if current_user && current_user.type == "Manager" && @fit_box.items.count == 4 && @fit_box.status == 'returned'
   .panel.panel-white
     .panel-heading
-      h2.panel-title Create fitbox
+      h2.panel-title Adding items to fitbox
       .heading-elements
         / a.btn.btn-success#updateFitbox data-url="/fit_boxes/#{@fit_box.id}/add_item_to_box" href="#" Update
-        a.btn.btn-success#updateFitbox data-url="/fit_boxes/#{@fit_box.id}/add_item_to_box" href="#" Update
+        a.btn.btn-success#updateFitbox data-url="/fit_boxes/#{@fit_box.id}/add_item_to_box" href="#" Add
     .panel-body
       .tabbable
         ul.nav.nav-tabs.nav-tabs-bottom
