@@ -11,6 +11,29 @@ $(document).on('ready', function(){
   });
 
 
+  $('#updateFitbox').on('click', function(e){
+    // e.preventDefault();
+    // console.dir(e)
+    var items = new Array();
+    if ($('.product-item.select').size()) {
+
+      $('.product-item.select')
+        .each(function( _idx, _item ){
+          items.push( $(_item).attr('id')  );
+      });
+      // console.info( $(this).data('url') + '?items=' + JSON.stringify(items))
+      
+      var xhrChetky = $.get( $(this).data('url') + '?items=' + items);
+        xhrChetky.done(function(res){
+          console.dir(res);
+
+        });
+    }
+      setTimeout(function(){
+        window.location.reload();
+      }, 500)
+  });
+
   $('#sendToFitbox').on('click', function(){
 
     var 
