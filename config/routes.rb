@@ -12,6 +12,8 @@ Rails.application.routes.draw do
     get 'reject'      => 'fit_boxes#reject'
     get 'return'      => 'fit_boxes#return'
     get 'return_back' => 'fit_boxes#return_back'
+    get 'remove_item_from_box' => 'fit_boxes#remove_item_from_box'
+
   end
 
   resources :items

@@ -86,6 +86,8 @@
           th Upc
           th Color
           th Size
+          - if current_user.type == 'Client'
+            th x
         - @fit_box.items.each do |i|
           tr
             td = image_tag i.picture_url, style: 'width: 200px' if i.picture
@@ -95,5 +97,10 @@
             td =i.upc
             td =i.color
             td =i.size
-
+            - if current_user.type == 'Client'
+              td
+                a.btn.btn-danger.btn-remove id=i.id href="/fit_boxes/#{@fit_box.id}/remove_item_from_box?item_id=#{i.id }"
+                  i.icon.delete
+                  | remove
+              / кнопка на экшн ремув айтем фром бокс фтибокс_контроллер
 
