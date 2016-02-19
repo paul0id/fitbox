@@ -1,13 +1,16 @@
 class FitBoxesController < ApplicationController
 
-  load_and_authorize_resource
-  before_action :set_fit_box, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource except: [:show]
+  # skip_authorize_resource :only => [:show]
+  before_action :set_fit_box, only: [:edit, :update, :destroy]
 
   # def index
   #   @fit_boxes = FitBox.all
   # end
 
   def show
+    @fit_box = FitBox.friendly.find(params[:id])
+    authorize! :show, FitBox unless @fit_box.slug == params[:id]
   end
 
   def new
@@ -87,7 +90,7 @@ class FitBoxesController < ApplicationController
 
   private
     def set_fit_box
-      @fit_box = FitBox.find(params[:id])
+      @fit_box = FitBox.friendly.find(params[:id])
     end
 
     def fit_box_params
