@@ -102,5 +102,44 @@
                 a.btn.btn-danger.btn-remove id=i.id href="/fit_boxes/#{@fit_box.id}/remove_item_from_box?item_id=#{i.id }"
                   i.icon.delete
                   | remove
-              / кнопка на экшн ремув айтем фром бокс фтибокс_контроллер
+- if current_user.type == "Manager" && @fit_box.status == 'returned'
+  .panel.panel-white
+    .panel-heading
+      h2.panel-title Create fitbox
+      .heading-elements
+        / a.btn.btn-success#updateFitbox data-url="/fit_boxes/#{@fit_box.id}/add_item_to_box" href="#" Update
+        a.btn.btn-success#updateFitbox data-url="/fit_boxes/#{@fit_box.id}/add_item_to_box" href="#" Update
+    .panel-body
+      .tabbable
+        ul.nav.nav-tabs.nav-tabs-bottom
+          - Item.all.group_by(&:kind).each_with_index do |(kind, items), index|
+            - unless @fit_box.items.group_by(&:kind).include?(kind)
+              - if index == 0
+                li.active
+                  a data-toggle="tab" href="#tab#{kind}"
+                    =kind
+              - else                
+                li
+                  a data-toggle="tab" href= "#tab#{kind}"
+                    = kind
+        .tab-content
+          - Item.all.group_by(&:kind).each_with_index do |(kind, items), index|
+            - unless @fit_box.items.group_by(&:kind).include?(kind)
+              div class="tab-pane #{'active' if index == 0 }" id="tab#{kind}"
+                .container-fluid
+                  .row
+                    - items.each_with_index do |i, index|
+                      .col-lg-3.col-md-3
+                        a.product-item href="#" data-cat-name = "#tab#{kind}" id= i.id
+                          .panel.text-center
+                            .panel-heading
+                              h5.panel-title= i.name if i.name
+                              .eading-elements
+                                span.label.label-success.label-lg
+                                  =i.size        if i.size
+                            .panel-body
+                              = image_tag(i.picture_url, height: '200') if i.picture?
+                            .panel-footer
+                              span.text-left
+                                = i.description if i.description
 

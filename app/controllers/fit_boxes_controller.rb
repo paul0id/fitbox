@@ -21,37 +21,46 @@ class FitBoxesController < ApplicationController
   end
 
   def accept
-    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box = FitBox.friendly.find(params[:fit_box_id])
     fit_box.status = 3
     fit_box.save
     redirect_to :back
   end
 
   def reject
-    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box = FitBox.friendly.find(params[:fit_box_id])
     fit_box.status = 4
     fit_box.save
     redirect_to :back
   end
 
   def return
-    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box = FitBox.friendly.find(params[:fit_box_id])
     fit_box.status = 2
     fit_box.save
     redirect_to :back
   end
 
   def return_back
-    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box = FitBox.friendly.find(params[:fit_box_id])
     fit_box.status = 0
     fit_box.save
     redirect_to :back
   end
   
   def remove_item_from_box
-    box = FitBox.find(params[:fit_box_id])
+    box = FitBox.friendly.find(params[:fit_box_id])
     box.items.delete( Item.find(params[:item_id]) )
     redirect_to :back
+  end
+  
+  def add_item_to_box
+    if params
+      box = FitBox.friendly.find(params[:fit_box_id])
+      puts params[:items]
+      box.items << Item.where(id: params[:items])
+      redirect_to :back
+    end
   end
 
   def create

@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20160219121503) do
     t.integer  "client_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "slug"
     t.integer  "status"
+    t.string   "slug"
   end
 
   add_index "fit_boxes", ["slug"], name: "index_fit_boxes_on_slug", using: :btree
