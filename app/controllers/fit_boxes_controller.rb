@@ -17,6 +17,34 @@ class FitBoxesController < ApplicationController
   def edit
   end
 
+  def accept
+    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box.status = 3
+    fit_box.save
+    redirect_to :back
+  end
+
+  def reject
+    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box.status = 4
+    fit_box.save
+    redirect_to :back
+  end
+
+  def return
+    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box.status = 2
+    fit_box.save
+    redirect_to :back
+  end
+
+  def return_back
+    fit_box = FitBox.find(params[:fit_box_id])
+    fit_box.status = 0
+    fit_box.save
+    redirect_to :back
+  end
+
   def create
     @fit_box = FitBox.new(fit_box_params)
 

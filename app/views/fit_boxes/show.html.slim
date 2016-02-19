@@ -5,13 +5,23 @@
         h2.panel-title
           | Fitbox # 
           = @fit_box.id
-        .heading-elements
-          .form-group
-            select.form-control.pull-right
-              option not viewed
-              option viewed
-              option accepted
-              option rejected
+        - if current_user.type == 'Manager'
+          h2.panel-title
+            = @fit_box.status
+        / .heading-elements
+        /   .form-group
+        /     select.form-control.pull-right
+        /       option not viewed
+        /       option viewed
+        /       option accepted
+        /       option rejected
+              / = select_tag :status, options_for_select(FitBox.statuses, @fit_box.status)
+        - if current_user.type == 'Client' && ["viewed", "not_viewed"].include?(@fit_box.status)
+          = link_to 'Return', fit_box_return_path(@fit_box)
+          = link_to 'Accept', fit_box_accept_path(@fit_box)
+          = link_to 'Reject', fit_box_reject_path(@fit_box)
+        - elsif current_user.type == 'Manager' && @fit_box.status == "returned"
+          = link_to 'Send', fit_box_return_back_path(@fit_box)
 
       .panel-body
         .row

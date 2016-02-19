@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   scope "/admin" do
     resources :users, only: :create, as: :create_user
   end
-  resources :fit_boxes
+  resources :fit_boxes do
+    get 'accept'      => 'fit_boxes#accept'
+    get 'reject'      => 'fit_boxes#reject'
+    get 'return'      => 'fit_boxes#return'
+    get 'return_back' => 'fit_boxes#return_back'
+  end
+
   resources :items
 
   post '/fit_boxes/new_box' => 'items#items_to_box', as: :create_fit_box

@@ -24,7 +24,7 @@
               &nbsp;
               = box.client.last_name
             %td
-              ???
+              = box.status
             %td= link_to 'Edit', edit_fit_box_path(box), class: 'btn btn-default'
             %td= link_to 'Destroy', fit_box_path(box), method: :delete, class: 'btn btn-danger'
   - else
