@@ -2,16 +2,6 @@
   .panel-heading
     h2.panel-title
       | User info
-    - if @user.type == 'Client'
-      .heading-elements
-        .form-group
-          select.form-control.pull-right
-            option new
-            option in progress
-            option sended
-            option accepted
-            option rejected
-            option completed
   .panel-body
     .row
       .col-md-3
