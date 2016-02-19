@@ -7,13 +7,13 @@
           = @fit_box.id
         .heading-elements
           .btn-group
-            - if current_user.type == 'Client' && ["viewed", "not_viewed"].include?(@fit_box.status)
+            - if current_user && current_user.type == 'Client' && ["viewed", "not_viewed"].include?(@fit_box.status)
               = link_to 'Return', fit_box_return_path(@fit_box), class: 'btn btn-warning'
               = link_to 'Accept', fit_box_accept_path(@fit_box), class: 'btn btn-success'
               = link_to 'Reject', fit_box_reject_path(@fit_box), class: 'btn btn-danger'
-            - elsif current_user.type == 'Manager' && @fit_box.status == "returned"
+            - elsif current_user && current_user.type == 'Manager' && @fit_box.status == "returned"
               = link_to 'Send', fit_box_return_back_path(@fit_box), class: 'btn btn-primary'
-          - if current_user.type == 'Manager'
+          - if current_user && current_user.type == 'Manager'
             div.label.bg-blue= @fit_box.status
 
 
