@@ -5,15 +5,23 @@
         h2.panel-title
           | Clients
       table.table
+        tr
+          th
+          th Name
+          th Status
+          th
         - User.where(type: 'Client').each do |client|
           tr
+            td= image_tag client.avatar_url, style: 'width: 200px' if client.avatar?
             td
               h4
-                = client.first_name
-                | &nbsp;
-                = client.last_name
+                = link_to my_user_path(client) do 
+                  = client.first_name
+                  | &nbsp;
+                  = client.last_name
+            td Status
             td
-              = link_to 'Show', my_user_path(client)
-            - if current_user.type == 'Admin'
+              
+            - if current_user.type == 'Admin' || 'Manager'
               td
-                =link_to 'Destroy', my_user_path(client), method: :delete
+                =link_to 'Destroy', my_user_path(client), method: :delete, class: 'btn btn-danger'

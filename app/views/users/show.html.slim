@@ -1,58 +1,90 @@
 .panel.panel-white
   .panel-heading
     h2.panel-title
-      = @user.first_name
-      | &nbsp;profile page
+      | User info
+    - if @user.type == 'Client'
+      .heading-elements
+        .form-group
+          select.form-control.pull-right
+            option new
+            option in progress
+            option sended
+            option accepted
+            option rejected
+            option completed
   .panel-body
     .row
       .col-md-3
         = image_tag @user.avatar_url if @user.avatar?
       .col-md-9
-        h2
-          = @user.first_name
-          | &nbsp;
-          = @user.last_name
         .row
-          .col-md-6
-            p
-              | Email:  
-              = @user.email
-            p
-              | How get fit: 
-              = @user.sport
-            p
-              | Where get fit: 
-              = @user.where
-            p
-              | Body type: 
-              = @user.body
-            p
-              | Address: 
-              = @user.address
-            p
-              | Phone:  
-              = @user.phone
-          .col-md-6
-            p
-              | City: 
-              = @user.city
-            p
-              | Country: 
-              = @user.country
-            p
-              | Zip: 
-              = @user.zip
-            p
-              | Foot size: 
-              = @user.foot_size
-            p
-              | T-short size: 
-              = @user.up_size
-            p
-              | Pants size: 
-              = @user.down_size
-        - if @user == current_user
-            = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
+          - if @user.type == 'Client'
+            .col-md-3
+              p
+                strong Last name: 
+                = @user.last_name
+              p
+                strong First name: 
+                = @user.first_name
+              p
+                strong Email:  
+                = @user.email
+              p
+                strong Address: 
+                = @user.address
+            .col-md-3
+              p
+                strong Phone:  
+                = @user.phone
+              p
+                strong City: 
+                = @user.city
+              p
+                strong Country: 
+                = @user.country
+              p
+                strong Zip: 
+                = @user.zip
+            .col-md-3
+              p
+                strong How get fit: 
+                = @user.sport
+              p
+                strong Where get fit: 
+                = @user.where
+              p
+                strong Body type: 
+                = @user.body
+              p
+                strong Foot size: 
+                = @user.foot_size
+            .col-md-3
+              p
+                strong T-short size: 
+                = @user.up_size
+              p
+                strong Pants size: 
+                = @user.down_size
+              p
+                strong Height: 
+                = @user.height
+              p
+                strong Weight: 
+                = @user.weight
+          - else
+            .col-md-6
+              p
+                | Last name: 
+                = @user.last_name
+              p
+                | First name: 
+                = @user.first_name
+              p
+                | Email:  
+                = @user.email
+              p
+          - if @user == current_user
+              = link_to 'Edit Profile', edit_registration_path(current_user), class: 'btn btn-primary'
 
 - if current_user.type == 'Admin'
   = render 'admin_show'
