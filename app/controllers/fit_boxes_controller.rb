@@ -47,6 +47,12 @@ class FitBoxesController < ApplicationController
     fit_box.save
     redirect_to :back
   end
+  
+  def remove_item_from_box
+    box = FitBox.find(params[:fit_box_id])
+    box.items.delete( Item.find(params[:item_id]) )
+    redirect_to :back
+  end
 
   def create
     @fit_box = FitBox.new(fit_box_params)
