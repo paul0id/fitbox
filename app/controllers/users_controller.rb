@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @items = Item.all
   end
 
-  def main ;     end
+  def main
+    render layout: 'main_page'
+  end
   def clients ;  end
   def managers ; end
 
