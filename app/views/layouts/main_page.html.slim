@@ -16,200 +16,136 @@ html lang="en"
           });
       })
   body
-    div
-      .navbar.navbar-inverse.navbar-static-top role="navigation" 
-        .row
-          .col-xs-3.col-md-3.logo_block
-            a href="/" 
-              img src=image_path('logo.png') /
-          .col-md-9
-            .navbar-header
-              button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
-                span.sr-only Toggle navigation
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-          .col-md-9
-            .navbar-collapse.collapse
-              ul.nav.navbar-nav
-                li.active
-                  a.intLink href="#top_banner_link"  Home
-                li
-                  a.intLink href="#howworks_link"  how it works
-                li
-                  a.intLink href="#get_started_link"  get started
-                li
-                  a href="#"  F.A.Q
-                li
-                  a.intLink href="#about_link"  about
-                - unless current_user
-                  li
-                    = link_to 'Sign Up', new_user_registration_path, class: 'sign_in'
-                -else
-                  li
-                    a href="/users/#{current_user.id}"
-                      | Profile
-            /! /.navbar-collapse
-      /! Main jumbotron for a primary marketing message or call to action
-      #top_banner.top_banner_link
-        img src=image_path('1headerimage.png') /
-        .centered_block
-          = link_to 'get started', new_user_session_path, class: 'get_started'
-      #howworks.howworks_link
-        .howworks_line
-          .row.center-row
-            .col-xs-6.col-md-6.center
-              img.img-responsive.pull-right src=image_path('2-1.png') /
-            .col-xs-6.col-md-6.center.text_block
-              h1 tell us about you
-              p.text_block_desc Tell us your size and style preference, and make requests for your regularly scheduled shipments.
-        .howworks_line
-          .row.center-row
-            .col-xs-6.col-md-6.center.text_block
-              h1 receive your items
-              p.text_block_desc After choosing to accept or decline your items, you will receive up to 5 personally picked items according to the choices you made during profile creation.
-            .col-xs-6.col-md-6.center
-              img.img-responsive.pull-right src=image_path('2-2.png') /
-        .howworks_line
-          .row.center-row
-            .col-xs-6.col-md-6.center
-              img.img-responsive.pull-right src=image_path('2-3.png') /
-            .col-xs-6.col-md-6.center.text_block
-              h1 do you like it?
-              p.text_block_desc You have 5days to try everything on. Only pay for what you keep, and return the rest.
-      #likeit.likeit
-        .row.center-row.container
-          .col-xs-9.col-md-7.center
-            h1
-              | are you a member of one
-              br/
-              | of our selected gyms?
-            p.desc Enter you membership code to get discounts and latest news
-            .row.center-row.container
-              .col-xs-12.col-md-12.center
-                .input-group
-                  input.form-control.input-lg placeholder=("enter your membership code") type="text" /
-                  span.input-group-btn
-                    button.btn.btn-default.btn-lg type="button"  Submit
-                /! /input-group
-              /! /.col-lg-6
-            /! /.row
-      #get_started.get_started_link
-        img src=image_path('4getstarted.png') /
-        .row
-          .col-xs-8.ol-md-8
-            h1 get started
-            p.desc
-              | Just click below and answer a few questions, 
-              br
-              | and we'll match you with your very own personal stylist.
-            = link_to 'get started', new_user_session_path, class: 'get_started', style: 'display: inline-block;'
-        div
-      #about.about_link
-        .row.center-row
-          .col-xs-6.col-md-6.center
-            img.img-responsive.pull-right src=image_path('about.png') /
-          .col-xs-6.col-md-6.center.text_block
-            h1.about_title.underline_title About
-            p FITBOX is the simplest way to get men's clothing that looks great on you. Join now to get clothes picked for you by a stylist, so you can spend your time doing awesome stuff.
-            a.read_btn href="#" style=("    display: inline-block;")  read more
-      #value
-        h1.underline_title VALUE
-        .row
-          .col-xs-6.col-md-4
-            img src=image_path('f.png') /
-            h3 PREVIEW YOUR SHIPMENT
-            p
-              | Get a glimpse of what you’ll be getting
-              br/
-              | before it ships.
-          .col-xs-6.col-md-4
-            img src=image_path('i.png') /
-            h3 TRY IT ON AT HOME
-            p
-              | Where you can mix and match with
-              br/
-              | your existing collections.
-          .col-xs-6.col-md-4
-            img src=image_path('t.png') /
-            h3 EASY & FREE RETURNS
-            p
-              | Drop your returns at any USPS Mailbox in 
-                br/
-              | your prepaid envelope.
-          .col-xs-6.col-md-4
-            img src=image_path('b.png') /
-            h3 YOUR OWN PERSONAL SHOPPER
-            p
-              | Your stylist will handpick clothing for you and is
-              br/
-              | here if you need honest advice.
-          .col-xs-6.col-md-4
-            img src=image_path('o.png') /
-            h3 THE BEST BRANDS
-            p
-              | Fitbox offers over 400 recognized
-                br/
-              | brands worldwide.
-          .col-xs-6.col-md-4
-            img src=image_path('x.png') /
-            h3 BUDGETS AND SCHEDULE
-            p
-              | Set budgets for your stylist to work with.
-                br/
-              | Schedule your next shipment whenever you want it.
-      footer
-        .row
-          .col-xs-12.col-md-3.col-md-offset-1 style=("    margin-bottom: 32px;") 
-            img.logo src=image_path('logo.png') /
-          .col-xs-12.col-md-7.col-md-offset-1
-            .row
-              .col-xs-4.col-md-4
-                ul
-                  li
-                    a href="#"  About
-                  li
-                    a href="#"  FAQ
-                  li
-                    a href="#"  Style Tips
-                  li
-                    a href="#"  Gift Cards
-                  li
-                    a href="#"  Reviews
-                  li
-                    a href="#"  iPhone App
-              .col-xs-4.col-md-4
-                ul
-                  li
-                    a href="#"  Help & Contact
-                  li
-                    a href="#"  Shipping & Returns
-                  li
-                    a href="#"  Refer a Friend
-                  li
-                    a href="#"  My Account
-                  li
-                    a href="#"  Locations
-                  li
-                    a href="#"  Privacy
-              .col-xs-4.col-md-4
-                ul
-                  li
-                    a href="#"  Press
-                  li
-                    a href="#"  Affiliate Program
-                  li
-                    a href="#"  Careers
-                  li
-                    a href="#"  Tech Blog
-                  li
-                    a href="#"  Terms of Use
-                  li
-                    a href="#"  Privacy Policy
-        .socials.row
-          a href="#" 
-            image src=image_path('fb.png') style=("width: 36px") /
-          a href="#" 
-            image src=image_path('inst.png') style=("margin: 0px 2%;") /
-          a href="#" 
-            image src=image_path('tw.png') style=("width: 39px;") /
+.navbar.navbar-inverse.navbar-static-top role="navigation" 
+  .row
+    .col-xs-2.col-md-2.logo_block
+      a href="#" 
+        img src=image_path('logo_main.png') /
+    .col-md-9
+      .navbar-header
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+    .col-md-9.col-md-offset-1
+      .navbar-collapse.collapse
+        ul.nav.navbar-nav
+          li.active
+            a.intLink href="#top_banner_link"  Home
+          li
+            a.intLink href="#howworks_link"  how it works
+          li
+            a.intLink href="#membership_link"  membership
+          li
+            a href="#featured_link"  3Xf
+          li
+            a.intLink href="#about_link"  about
+          li
+            a.intLink href="#get_started_link"  get started
+          li style=("   margin-right:0!important; float: right;") 
+            a.sign_in href="#contact"  Sign in
+#top_banner.top_banner_link
+  .banner_slides
+    .top_banner_slide.active
+      img src=image_path('1headerimage.png') /
+      .centered_block
+        a.get_started href="#" 
+          | get started
+    .top_banner_slide
+      img src=image_path('slide2.png') /
+      .centered_block
+        a.get_started href="#" 
+          | get started
+    .top_banner_slide
+      img src=image_path('slide3.png') /
+      .centered_block
+        a.get_started href="#" 
+          | get started
+  .banner_nav
+    span.nav_circle.active
+    span.nav_circle
+    span.nav_circle
+#howworks.howworks_link
+  h1 how it works
+  .row
+    .col-xs-12.col-md-4
+      h2 tell us about you
+      p.text_block_desc
+        | Tell us your size and style preference, and
+          br/
+        | requests for your regularly scheduled shipments.
+    .col-xs-12.col-md-4
+      h2 receive your items
+      p.text_block_desc After choosing to accept or decline your items, you will receive up to 5 personally picked items according to the choices you made during profile creation.
+    .col-xs-12.col-md-4
+      h2 do you like it?
+      p.text_block_desc
+        | You have 5days to try everything on.
+        br>/
+        | Only pay for what you keep, and
+        br/
+        | return the rest.
+#likeit.membership_link
+  .row.center-row.container
+    .col-md-10.col-lg-7.center
+      h1
+        | are you a member of one
+        br/
+        | of our selected gyms?
+      p.desc Enter you membership code to get discounts and latest news
+      .row.center-row.container
+        .col-md-12.col-lg-7.center
+          .input-group
+            input.form-control.input-lg placeholder=("enter your membership code") type="text" /
+            span.input-group-btn
+              button.btn.btn-default.btn-lg type="button"  Submit
+          /! /input-group
+        /! /.col-lg-6
+      /! /.row
+#featured.featured_link
+  img src=image_path('featured.png') /
+#about.about_link
+  .row.center-row
+    .col-sm-12.col-md-6.center.text_block
+      h1.about_title.underline_title who we are
+      p FITBOX is the simplest way to get men's clothing that looks great on you. Join now to get clothes picked for you by a stylist, so you can spend your time doing awesome stuff.
+      a.read_btn href="#" style=("    display: inline-block;")  more
+#get_started.get_started_link
+  .row.center-row
+    .col-sm-12.col-md-4.center
+      h1 get started
+      p.desc Just click below and answer a few questions, and we'll match you with your very own personal stylist.
+      a.read_btn href="#" style=("    display: inline-block;") 
+        | get started
+footer
+  .row
+    .col-sm-12.col-md-10.col-md-offset-1
+      a href="#"  About
+      a href="#"  FAQ
+      a href="#"  Style
+      a href="#"  Gift Cards
+      a href="#"  Reviews
+      a href="#"  iPhone App
+      a href="#"  Press
+      a href="#"  Careers
+      a href="#"  Terms of Use
+  .row
+    .col-sm-12.col-md-10.col-md-offset-1
+      a href="#"  Privacy
+      a href="#"  Policy
+      a href="#"  Help & Contact
+      a href="#"  Shipping & Returns
+      a href="#"  My Account
+      a href="#"  Locations
+      a href="#"  Privacy
+javascript:
+   $(".nav_circle").click(function(){
+   var sl_num=$(this).index();
+  
+   $(".nav_circle").removeClass("active");
+   $(".top_banner_slide").removeClass("active");
+  
+   $(this).addClass("active");
+   $($(".top_banner_slide")[sl_num]).addClass("active");
+   });

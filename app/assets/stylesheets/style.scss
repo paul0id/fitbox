@@ -1,120 +1,97 @@
 @font-face {
-    font-family: 'RobotoBlack';
-    src: asset-url('Roboto-Black.ttf');
+    font-family: 'GillSans';
+    src: url('GillSans.ttc');
     font-style: normal;
     font-weight:normal;
 }
 
 @font-face {
-    font-family: 'RobotoBlack';
-    src: asset-url('Roboto-BlackItalic.ttf');
+    font-family: 'Didot';
+    src: url('Didot.ttc');
     font-style: italic;
     font-weight:normal;
 }
-
-@font-face {
-    font-family: 'RobotoBold';
-    src: asset-url('Roboto-Bold.ttf');
-    font-style: normal;
-    font-weight:normal;
-}
-
-@font-face {
-    font-family: 'RobotoBold';
-    src: asset-url('Roboto-BoldItalic.ttf');
-    font-style: italic;
-    font-weight:normal;
-}
-
 @font-face {
     font-family: 'RobotoMedium';
-    src: asset-url('Roboto-MediumItalic.ttf');
-    font-style: normal;
-    font-weight:normal;
-}
-
-@font-face {
-    font-family: 'RobotoMedium';
-    src: asset-url('Roboto-Medium.ttf');
-    font-style: normal;
-    font-weight:normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: asset-url('Roboto-ThinItalic.ttf');
-    font-style: italic;
-    font-weight:lighter;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: asset-url('Roboto-Thin.ttf');
-    font-style: normal;
-    font-weight:lighter;
-}
-
-@font-face {
-    font-family: 'RobotoLight';
-    src: asset-url('Roboto-Light.ttf');
+    src: url('Roboto-Medium.ttf');
     font-style: normal;
     font-weight:normal;
 }
 @font-face {
     font-family: 'RobotoLight';
-    src: asset-url('Roboto-LightItalic.ttf');
-    font-style: italic;
-    font-weight:normal;
-}
-@font-face {
-    font-family: 'RobotoRegular';
-    src: asset-url('Roboto-Regular.ttf');
-    font-style: italic;
+    src: url('Roboto-Light.ttf');
+    font-style: normal;
     font-weight:normal;
 }
 
-@font-face {
-    font-family: 'Aldinn';
-    src: asset-url('AldinBTRomA');
+.nav_circle.active{background:#f4f7fa;}
+
+.top_banner_slide.active {
+    display:  block!important;
+    opacity:1!important;
+        position: relative!important;
+        
 }
- /*@font-face {
-    font-family: 'Aldin';
-    src: asset-url('AldinBTBolA');
-    font-style: normal;
-    font-weight:bold;
-}
-@font-face {
-    font-family: 'Aldin';
-    src: asset-url('AldinBTBolItaA');
-    font-style: italic;
-    font-weight:bold;
-}*/
-@font-face {
-    font-family: 'AldinItalic';
-    src: asset-url('AldinBTItaA');
+.get_started:hover{color:#fff!important;}
+.banner_nav{    position: absolute;
+    display: run-in;
+    width: 100%;
+    height: 15px;
+    bottom: 19px;
+    text-align: center;}
+.nav_circle{    
+cursor: pointer;
+    width: 10px;
+    height: 10px;
+    background: rgba(244, 247, 250, 0.56);
+    border-radius: 23px;
+    margin-right: 3px;
+    display: inline-block;
+    }
+.top_banner_slide {
+    position: absolute;
+    top: 0;
     
+    opacity:0;
+    -webkit-transition: all 500ms ease;
+-moz-transition: all 500ms ease;
+-ms-transition: all 500ms ease;
+-o-transition: all 500ms ease;
+transition: all 500ms ease;
 }
-
-
-
 
 a{
     text-decoration:none;
 }
-a:hover{text-decoration:none;}
-h1{    text-transform: uppercase;
-    font-size: 2.6em;
-    font-family: 'Aldin';
-    font-style: italic;    margin-top: 0;}
-h3{font-size: 1.3em; font-family: 'Aldin';} 
+a:hover{text-decoration:none!important;color:#000!important;}
+h1{       text-transform: uppercase;
+    font-size: 2.9em;
+    font-family: ''GillSans'';
+    text-align: center;
+    margin-top: 0;
+    letter-spacing: 0.7vw;}
+h2 {
+    font-size: 30px;
+    font-family: 'RobotoLight';
+    letter-spacing: 0.13vw;
+}   
+h3{font-size: 1.3em; font-family: 'GillSans';}  
 .navbar-static-top{
     border:0px!important;
     margin:0px!important;
-    position: absolute;
+    background-color: #000;    padding: 0 8px;
     top: 0;
     right: 0;
-    left: 0;    padding: 4% 6%;}
-    
+    left: 0;    padding: 0 10px;}
+
+.navbar-nav {
+    float: none!important;    padding: 0vw 6vw 0 3vw;
+}   
+.nav>li {
+    position: relative;
+    display: block;
+    margin-right: 2.8%;
+}
 #top_banner{
     padding-top:0!important;
     padding-bottom: 0!important;
@@ -135,26 +112,27 @@ h3{font-size: 1.3em; font-family: 'Aldin';}
     top: 0;
     bottom: 0;
     margin: auto;
-    height: 4%;
+    height: 11%;
     text-align:center;
     width:100%;
     }
 ul.nav.navbar-nav a {
-          font-size: 1.3em;
-    margin-top: 0.7em;
-    font-family: 'RobotoLight';
-       padding: 0.2em 0.8em;
-    letter-spacing: 1px;
+          font-size: 1.1em;
+    margin: 0.7em 0;
+       font-family: 'RobotoLight';
+    letter-spacing: 1.1px;
 }   
 .sign_in{          padding-left: 4.9em!important;
     padding-right: 0.4em!important;}
     .get_started{
-    color: #fff;
-    padding: 0.9em 2.4em;
-    background-color: #f03131;
+    
+         color: #fff;
+    padding: 1.1em 2.4em;
+    border: 2px solid #fff;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 1.9em;
     font-family: 'RobotoMedium';
+    letter-spacing: 0.02em;
     }
     
     .center-row {
@@ -168,106 +146,119 @@ ul.nav.navbar-nav a {
 
 
 #likeit {
-    background-color:#a44949;
+    background-color:#000;
         color: #fff;}
 
 #likeit>div{
-        width: 100%;    padding: 13% 0 9.5%;
+        width: 100%;    padding: 15.3% 0 6%;
 }
 
-#likeit h1{    font-style: italic;
-    line-height: 1.4em;
-    letter-spacing: 0.15em;
+#likeit h1{   
+          line-height: 1.5em;
+    letter-spacing: 0.2em;
+    font-size: 3.4em;
+    margin-bottom: 2%;
     }   
     
-#likeit .input-group    {       padding:6% 5%;}
+#likeit .input-group    {    width: 100%;   padding:0% 1%;}
 #likeit .input-group input{
-            text-transform: uppercase;
-    border-right: 0px;
-    font-family: 'RobotoMedium';
-    font-size: 1.4em!important;
-    padding: 0.7em 1.1em!important;
-    height: 100%!important;
-      }
-
-#likeit button{    
-        background-color: #000;
+              text-transform: uppercase;
+    font-family: 'GillSans';
+    font-size: 1.7em!important;
+    padding: 0.7em 1.4em!important;
+    background-color: transparent!important;
     color: #fff;
+    border-color: #fff;
+    box-shadow: none!important;
+       letter-spacing: 0.08em;
+   
+      }
+     
+#likeit span{   width:50%;}
+#likeit .input-group input::-webkit-input-placeholder{ color: #fff;}
+#likeit button{    
+    background-color: #fff;
+    color: #000;
     text-transform: uppercase;
-    font-family: 'RobotoBlack';
-    padding: 0.94em 4.1em;
-    font-size: 1em;
-    letter-spacing: 0.13em;}
+    font-family: 'GillSans';
+    font-size: 1.5em;
+    letter-spacing: 0.06em;
+    width: 100%;
+    line-height: 35px;}
     .input-group-btn {    font-size: 1.2em!important;}
 #get_started{position: relative;}
 #get_started img{    max-width: 100%;}  
-#howworks h1{       margin-bottom: 6%;
+#howworks {text-align:center;    padding: 7.6vw 0 9vw;}
+#howworks h1{       margin-bottom: 8.2%;
     margin-top: 0}
+    #howworks h2{ text-transform:uppercase;    margin-bottom: 9%;}
+#howworks   .row{    padding: 0 4vw;}
+#howworks   .row > div{   padding: 0px 4%;} 
+    
 .text_block{        padding: 0px 4.3%;}
 .text_block_desc{
-    font-family: 'Aldin';
+     font-family: 'Didot';
     font-size: 1.3em;
     letter-spacing: 1px;
+    line-height: 1.8em;
 }
 #footer{background-color:#121750;}  
-#get_started .row   {    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 7% 6%;    line-height: 3.4em;
-}
+
 #get_started h1{    
         font-size: 3.4em;
     letter-spacing: 0.2em;
-    margin-bottom: 4%;}
+    margin-bottom: 8%;}
     
 #get_started .desc {
-       font-family: 'Aldin';
+       font-family: 'Didot';
     font-size: 2.1em;
-    margin-bottom: 10%;
-    line-height: 1.1em;
+    margin-bottom: 40%;
+    line-height: 1.6em;
     letter-spacing: 0.01em;
 }
+
+.navbar a:hover{
+    color:#fff!important;
+} 
 #get_started .get_started {
  
     padding: 0.2em 2.4em;}
-#about .read_btn {
-        font-family: 'RobotoBold';
+.read_btn {
+          font-family: 'GillSans';
     color: #000;
     text-transform: uppercase;
     border: 3px solid #000;
-    font-size: 1em;
-    padding: 0.4em 2.9em;
-    letter-spacing: 0.15em;
+    font-size: 1.8em;
+    padding: 1.3em 5.8em;
+    letter-spacing: 0.1em;
 }
 #about img{max-width: 79%;
     margin: 5% 11%;}
-#about p{           font-family: 'Aldin';
+#about p{          font-family: 'Didot';
     font-size: 1.4em;
     letter-spacing: 2px;
-    margin: 4em 0 4em;
-    line-height: 1.7em;}
+    margin: 4.2vw 0 10.2vw;
+    line-height: 1.9em;
+    text-align: center;}
 #about .about_title{   
         margin-top: 0;
     position: relative;
     font-size: 2.9em;
-    letter-spacing: 0.15em;}
+    letter-spacing: 0.15em;    color: #000;}
 
 #value{background:asset-url('6Value.png');}
-
-.underline_title {    display: initial;position: relative;}
-.underline_title:after {
-       content: "";
-    border-bottom: 2px solid #000;
-    width: 83%;
-    height: 6px;
-    position: absolute;
-    bottom: -47%;
-    left: 0;
-    text-align: center;
-    right: 0;
-    margin: auto;
+#featured img {
+    max-width: 100%;
 }
-
+.underline_title {    display: initial;position: relative;}
+#about {
+    background:asset-url('about.png') no-repeat center;
+        background-size: cover;    padding:13.8% 0 11%;
+}
+#get_started {
+    background:asset-url('4getstarted.png') no-repeat center;
+        background-size: cover;       padding: 11.3% 0 10.5%;
+}
 
 #value{text-align:center;        padding: 5% 5% 2%;}
 #value h1{    color: #fff;
@@ -289,34 +280,54 @@ border-bottom: 2px solid #fff!important;}
 #value p{     font-size: 1.2em;
     line-height: 2em;}
     
-footer {background-color:#121750;    padding: 3.5% 0 1%;}   
-footer ul a{font-family: 'RobotoRegular';
-    font-size: 1.4em;}
-footer ul{    list-style: none;
-    line-height: 2.6em;
-    margin-top: 3%;}
-footer .logo {       max-width: 77%;
-    margin-top: 11%;}
-    .socials{    text-align: right;
-        margin: 4% 5% 2%;}
+    
+footer  a{        text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 0 0.8em 0 1.3em;}
+footer {background-color:#000;       padding: 3.7% 0 4%;}   
+
+footer .row{      text-align: center;
+    margin-bottom: 2em;
+    line-height: 2.6em;}
+
 .navbar-inverse .navbar-collapse {position:relative!important;}
 .container{position: relative;}
 
 .container .jumbotron {padding:0!important}
    
 #likeit .desc {
-        font-size:1.7em;
-    letter-spacing: 0.07em;
+          font-size: 2.4em;
+    letter-spacing: 0.05em;
     line-height: 2.5em;
+    font-family: 'Didot';    margin-bottom: 9%;
 }
 
-.socials.row img:nth-child(1) {
-    width: 28px!important;
+@media (max-width:750px) {
+    #likeit h1,#get_started h1,#about .about_title  {
+    font-size: 2.4em!important;}
+#likeit .desc {
+font-size: 1.4em!important;}
+#get_started .desc {
+font-size: 1.7em!important;    margin-bottom: 12%!important;    }
+footer  a {
+font-size: 0.8em!important;}
 }
 
 
+@media (max-width:990px) {.read_btn{    font-size: 1em!important;
+    padding: 0.5em 3em!important;}
+    
+    #likeit button {    line-height: 12px!important;
+    padding: 20px 22%!important;    font-size: 1em!important;}
+    #likeit .input-group input  {    height: 60px!important;    font-size: 1em!important;}
+    #likeit span {
+    width: 36%;
+}
 
-
+.get_started{font-size: 1em!important;}
+}
+    
+    
 element.style {
     width: 49%;
 }
@@ -328,4 +339,5 @@ element.style {
     line-height: 2.5em;
     /* width: 100%; */
 }
-@media (min-width: 1720px){  #likeit .col-md-12{  width: 50%!important;} }
+
+@media (min-width: 992px)and (max-width: 1720px){  #likeit .col-md-12{  width: 100%;} }
