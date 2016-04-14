@@ -68,9 +68,9 @@
 // = require ./core/app.js
 /* custom */
 
-// = require ./custom/steps.custom  
-// = require ./custom.js
-
+ 
+// = require custom.js
+// = require jquery.steps.min.js
 
 
 

@@ -1,59 +1,68 @@
-doctype html 
-html lang='en'
+doctype html
+html lang="en" 
   head
     title Fitbox
+    = stylesheet_link_tag 'bootstrap.min', :media => 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'application', :media => 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+    = javascript_include_tag 'bootstrap.min', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    /! Main navbar
-    .navbar.navbar-inverse
+.navbar.navbar-inverse.navbar-static-top role="navigation" 
+  .row
+    .col-xs-2.col-md-2.logo_block
+      a href="#" 
+        img src=image_path('logo_main.png') /
+    .col-md-9
       .navbar-header
-        a.navbar-brand href="/" 
-          img alt="" src=image_path('logo.png') /
-      - if current_user && current_user.type == 'Manager'
+        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+    .col-md-9.col-md-offset-1
+      .navbar-collapse.collapse
         ul.nav.navbar-nav
+          li.active
+            a.intLink href="#top_banner_link"  Home
           li
-            = link_to clients_path do
-              i.fa.fa-users
-              | &nbsp; Clients
+            a.intLink href="#howworks_link"  how it works
           li
-            = link_to items_path do
-              span.badge.bg-teal-400
-              i.glyphicon.glyphicon-th
-              | &nbsp; Items
-      ul.nav.navbar-nav.navbar-right
-        - unless current_user
+            a.intLink href="#membership_link"  membership
           li
-            = link_to 'Log In', new_user_session_path
+            a href="#featured_link"  3Xf
           li
-            = link_to 'Sign Up', new_user_registration_path
-        - else
-          li.mutted
-            div style='padding-top: 6px; padding-bottom: 6px; opacity: 0.5'
-            | You logged as: 
-            = current_user.type
-          li.dropdown.dropdown-user
-            a.dropdown-toggle data-toggle="dropdown" 
-              i.fa.fa-user
-              span= current_user.first_name if current_user
-              i.caret
-            ul.dropdown-menu.dropdown-menu-right
-              li
-                a href="/users/#{current_user.id}"
-                  i.icon-user-plus
-                  | My profile
-              li
-                a data-method="delete" href="/users/sign_out" rel="nofollow"
-                  i.icon-switch2
-                  | Logout
-    /! /main navbar
-
-
+            a.intLink href="#about_link"  about
+          li
+            a.intLink href="#get_started_link"  get started
+          - unless current_user
+                  li.sign_in
+                    = link_to 'Sign Up', new_user_registration_path
+          -else
+                  li.sign_in
+                    a href="/users/#{current_user.id}"
+                      | Profile  
     /! Page container
-    .page-container
-      /! Page content
-      .page-content
-        .content-wrapper
-          .container
+div
             == yield
+footer
+  .row
+    .col-sm-12.col-md-10.col-md-offset-1
+      a href="#"  About
+      a href="#"  FAQ
+      a href="#"  Style
+      a href="#"  Gift Cards
+      a href="#"  Reviews
+      a href="#"  iPhone App
+      a href="#"  Press
+      a href="#"  Careers
+      a href="#"  Terms of Use
+  .row
+    .col-sm-12.col-md-10.col-md-offset-1
+      a href="#"  Privacy
+      a href="#"  Policy
+      a href="#"  Help & Contact
+      a href="#"  Shipping & Returns
+      a href="#"  My Account
+      a href="#"  Locations
+      a href="#"  Privacy            

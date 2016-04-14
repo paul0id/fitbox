@@ -1,617 +1,502 @@
-.row
-  .col-md-12
-    .panel.panel-white
-      .panel-heading
-        h2.panel-title
-          | Sign up
-
-      / form.steps-basic method="post" action="/admin/users" 
-      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'steps-basic'}) do
-        h6 What clothing would you like?
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                  button.Options-button.js-optionBtn.js-hoverBtn.Options-button--big name="user[gender]" type="button" value='male'
-                    | Men’s
-                .Grid-cell.u-marginBm.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                  button.Options-button.js-optionBtn.js-hoverBtn.Options-button--big name="user[gender]" type="button" value='female'
-                    | Women’s
-
-        h6 How do you get fit?
-        fieldset
-
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Yoga"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Casual How do you dress for work?') src=asset_path('yoga.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Yoga
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Running"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Business How do you dress for work?') src=asset_path('running.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Running
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Gym"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Formal How do you dress for work?') src=asset_path('gym.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Gym
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Extreme sports"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Casual How do you dress for work?') src=asset_path('extreme.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Extreme sports
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Cycle"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Business How do you dress for work?') src=asset_path('cycle.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Cycle
-          .Grid-cell.v1-u-sizeFull.v3-u-size1of3.tc-u-mobileMaxWidthMarginAuto
-            button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[sport]" type="button" value="Surfing"
-              .js-flexEmbedRatio.FlexEmbed-ratio
-              .js-flexEmbedContent.FlexEmbed-content
-                picture
-                  img alt=('Formal How do you dress for work?') src=asset_path('surfing.jpg') /
-                .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                  .u-sizeFillAlt.u-alignMiddle
-                    h2.Button-title Surfing
-
-        h6 Where do you get fit?
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[where]" type="button" value="Yoga studio"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Casual How do you dress for work?') src=asset_path('yogastudio.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Yoga studio
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[where]" type="button" value="Outdoors"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Business How do you dress for work?') src=asset_path('outdoors.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Outdoors
-
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[where]" type="button" value="Home"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Casual How do you dress for work?') src=asset_path('home.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Home
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[where]" type="button" value="Gym"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Business How do you dress for work?') src=asset_path('gymstudio.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Gym
-
-        h6 Body type
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[body]" type="button" value="Petite"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Casual How do you dress for work?') src=asset_path('petite.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Petite
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[body]" type="button" value="Lean"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Business How do you dress for work?') src=asset_path('lean.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Lean
-
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[body]" type="button" value="Curvy"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Casual How do you dress for work?') src=asset_path('curvy.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Curvy
-              .Grid-cell.v1-sizeFull.v2-u-size1of2.v3-u-size1of2
-                button.FlexEmbed.Button--imageChild.u-posRelative.u-sizeFull.js-imageBtn name="user[body]" type="button" value="Athletic"
-                  .js-flexEmbedRatio.FlexEmbed-ratio
-                  .js-flexEmbedContent.FlexEmbed-content
-                    picture
-                      img alt=('Business How do you dress for work?') src=asset_path('athletic.jpg') /
-                    .u-posAbsoluteCenter.u-table.tc-u-zindex-collectionTitle.u-spaceFill
-                      .u-sizeFillAlt.u-alignMiddle
-                        h2.Button-title Athletic
-
-
-        h6 Shirt size
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="XS"
-                    | X-SMALL
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="S"
-                    | SMALL
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="M"
-                    | MEDIUM
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="L"
-                    | LARGE
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="XL"
-                    | X-LARGE
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="XXL"
-                    | XX-LARGE
-                .Grid-cell.u-marginBm.v1-u-sizeFull.v2-u-size1of3.v3-u-size1of3
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[up_size]" type="button" value="XXXL"
-                    | XXX-LARGE
-        h6 Waist Size
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="28"
-                    | 28
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="29"
-                    | 29
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="30"
-                    | 30
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="31"
-                    | 31
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="32"
-                    | 32
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="33"
-                    | 33
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="34"
-                    | 34
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="35"
-                    | 35
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="36"
-                    | 36
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="37"
-                    | 37
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="38"
-                    | 38
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="39"
-                    | 39
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[down_size]" type="button" value="40"
-                    | 40
-
-
-
-        h6 Shoe Size
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="6"
-                    | 6
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="6.5"
-                    | 6.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="7"
-                    | 7
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="7.5"
-                    | 7.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="8"
-                    | 8
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="8.5"
-                    | 8.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="9"
-                    | 9
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="9.5"
-                    | 9.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="10"
-                    | 10
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="10.5"
-                    | 10.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="11"
-                    | 11
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="11.5"
-                    | 11.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="12"
-                    | 12
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="12.5"
-                    | 12.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="13"
-                    | 13
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="13.5"
-                    | 13.5
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[foot_size]" type="button" value="14"
-                    | 14
-
-        h6 Height
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="60" 
-                    | 5'0"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="61" 
-                    | 5'1"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="62" 
-                    | 5'2"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="63" 
-                    | 5'3"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="64" 
-                    | 5'4"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="65" 
-                    | 5'5"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="66" 
-                    | 5'6"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="67" 
-                    | 5'7"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="68" 
-                    | 5'8"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="69" 
-                    | 5'9"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="70" 
-                    | 5'10"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="71" 
-                    | 5'11"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="72" 
-                    | 6'0"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="73" 
-                    | 6'1"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="74" 
-                    | 6'2"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="75" 
-                    | 6'3"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="76" 
-                    | 6'4"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="77" 
-                    | 6'5"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="78" 
-                    | 6'6"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="79" 
-                    | 6'7"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="80" 
-                    | 6'8"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="81" 
-                    | 6'9"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="82" 
-                    | 6'10"
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[height]" type="button" value="83" 
-                    | 6'11"
-
-        h6 Weight
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .Grid.Grid--withGutter.js-Grid--withGutter.u-marginBm
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="120"
-                    | 120
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="125"
-                    | 125
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="130"
-                    | 130
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="135"
-                    | 135
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="140"
-                    | 140
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="145"
-                    | 145
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="150"
-                    | 150
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="155"
-                    | 155
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="160"
-                    | 160
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="165"
-                    | 165
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="170"
-                    | 170
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="175"
-                    | 175
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="180"
-                    | 180
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="185"
-                    | 185
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="190"
-                    | 190
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="195"
-                    | 195
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="200"
-                    | 200
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="205"
-                    | 205
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="210"
-                    | 210
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="215"
-                    | 215
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="220"
-                    | 220
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="225"
-                    | 225
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="230"
-                    | 230
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="235"
-                    | 235
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="240"
-                    | 240
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="245"
-                    | 245
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="250"
-                    | 250
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="255"
-                    | 255
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="260"
-                    | 260
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="265"
-                    | 265
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="270"
-                    | 270
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="275"
-                    | 275
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="280"
-                    | 280
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="285"
-                    | 285
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="290"
-                    | 290
-                .Grid-cell.u-marginBm.v1-u-size1of2.v2-u-size1of6.v3-u-size1of6
-                  button.Options-button.js-optionBtn.js-hoverBtn name="user[weight]" type="button" value="295"
-                    | 295
-              / .u-marginCenter.u-maxWidth--micro.u-textCenter
-              /   button.Button.u-sizeFull.u-textCenter.u-marginTm.js-hoverBtn.js-submitFormBtn name="user[submit]" type="submit"  Create Your Account
-              /   p.terms.u-marginTm
-              /     | By clicking Create Your Account, you agree to our
-              /     a href="//www.trunkclub.com/terms-of-service" target="_blank"  terms
-              /     | and
-              /     a href="//www.trunkclub.com/privacy" target="_blank"  privacy policy
-
-        h6 You’re Almost Done
-        fieldset
-          .row
-            .col-md-6.col-md-offset-3
-              .u-marginBm
-                label.u-hiddenVisually for="firstName"  First Name
-                input#firstName.Options-input name="user[first_name]" placeholder=('First Name') required="" type="text" /
-              .u-marginBm
-                label.u-hiddenVisually for="lastName"  Last Name
-                input#lastName.Options-input name="user[last_name]" placeholder=('Last Name') required="" type="text" /
-              .u-marginBm
-                label.u-hiddenVisually for="phone"  Phone Number
-                input#phone.Options-input minlength="10" name="user[phone]" placeholder="Phone" required="" type="tel" /
-              .u-marginBm
-                label.u-hiddenVisually for="zipcode"  Zip Code
-                input#zipcode.Options-input name="user[zip]" pattern="[0-9]{5}" placeholder=('Zip Code') required="" type="text" /
-              .u-marginBm
-                label.u-hiddenVisually for="email"  Email Address
-                input#email.Options-input.js-inputEmail name="user[email]" placeholder=('Email Address') required="" size="50" type="email" /
-                label.js-emailSuggestion.hidden
-                  | Did you mean
-              .u-marginBm
-                label.u-hiddenVisually for="password"  Password
-                input#password.Options-input.js-passwordInput minlength="6" name="user[password]" placeholder="Password" required="" type="password" /
-
-              /.u-marginBm
-                label.u-hiddenVisually for="rawReferralDetail"  What Is Their Name?
-                input#rawReferralDetail.hidden.Options-input.js-inputRefName name="user[raw_referral_detail]" placeholder=('What Is Their Name?') type="text" /
-              .u-marginCenter.u-maxWidth--micro.u-textCenter
-                button.Button.u-sizeFull.u-textCenter.u-marginTm.js-hoverBtn.js-submitFormBtn name="user[submit]" type="submit"  Create Your Account
-                p.terms.u-marginTm
-                  | By clicking Create Your Account, you agree to our
-                  a href="//www.trunkclub.com/terms-of-service" target="_blank"  terms
-                  | and
-                  a href="//www.trunkclub.com/privacy" target="_blank"  privacy policy
-
-
-
-      / .panel-body
-        / = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        /   = devise_error_messages!
-        /   .row
-        /     .col-md-6
-        /       .form-group
-        /         = f.label :first_name, class: 'control-label'
-        /         br
-        /         = f.text_field :first_name, class: 'form-control'
-        /       .form-group
-        /         = f.label :last_name, class: 'control-label'
-        /         br
-        /         = f.text_field :last_name, class: 'form-control'
-        /       .form-group
-        /         = f.label :avatar, class: 'control-label'
-        /         br
-        /         = f.file_field :avatar, class: 'form-control'
-        /       .form-group
-        /         = f.label :sport, class: 'control-label'
-        /         br
-        /         = f.text_field :sport, class: 'form-control'
-        /       .form-group
-        /         = f.label :where, class: 'control-label'
-        /         br
-        /         = f.text_field :where, class: 'form-control'
-        /       .form-group
-        /         = f.label :body, class: 'control-label'
-        /         br
-        /         = f.text_field :body, class: 'form-control'
-        /       .form-group
-        /         = f.label :up_size, class: 'control-label'
-        /         br
-        /         = f.text_field :up_size, class: 'form-control'
-        /       .form-group
-        /         = f.label :down_size, class: 'control-label'
-        /         br
-        /         = f.text_field :down_size, class: 'form-control'
-        /     .col-md-6
-        /       .form-group
-        /         = f.label :foot_size, class: 'control-label'
-        /         br
-        /         = f.text_field :foot_size, class: 'form-control'
-        /       .form-group
-        /         = f.label :phone, class: 'control-label'
-        /         br
-        /         = f.text_field :phone, class: 'form-control'
-        /       .form-group
-        /         = f.label :city, class: 'control-label'
-        /         br
-        /         = f.text_field :city, class: 'form-control'
-        /       .form-group
-        /         = f.label :country, class: 'control-label'
-        /         br
-        /         = f.text_field :country, class: 'form-control'
-        /       .form-group
-        /         = f.label :zip, class: 'control-label'
-        /         br
-        /         = f.text_field :zip, class: 'form-control'
-        /       .form-group
-        /         = f.label :email, class: 'control-label'
-        /         br
-        /         = f.email_field :email, autofocus: true, class: 'form-control'
-        /         = f.hidden_field :type, value: 'Client'
-        /       .form-group
-        /         = f.label :password, class: 'control-label'
-        /         - if @minimum_password_length
-        /           em
-        /             | (
-        /             = @minimum_password_length
-        /             |  characters minimum)
-        /         br
-        /         = f.password_field :password, autocomplete: "off", class: 'form-control'
-        /       .form-group
-        /         = f.label :password_confirmation, class: 'control-label'
-        /         br
-        /         = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
-        /     .col-md-12
-        /       .form-group
-        /         = f.label :address, class: 'control-label'
-        /         br
-        /         = f.text_area :address, class: 'form-control'
-        /     .col-md-12
-        /       .actions
-        /         = f.submit "Sign up", class: 'btn btn-success'
-        /         | &nbsp; or
-        /         = render "devise/shared/links"
+#wizard
+  h1 I am a
+  section.textsection.iam
+    input.fieldset-data name="user[gender]" type="hidden" value="" /
+    h4.step_title I am a
+    .row
+      .col-xs-12.col-md-6.select_item.woman_select name="user[gender]" value="female" 
+        .img_title woman
+        img src=asset_path('q_woman.png') /
+        .hover_effect
+      .col-xs-12.col-md-6.select_item.man_select name="user[gender]" value="male" 
+        .img_title man
+        img src=asset_path('q_man.png') /
+        .hover_effect
+  h1 Where do you work out?
+  section.textsection.sport
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title Where do you work out?
+    .row
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="yoga_studio" 
+        .img_title yoga studio
+        img src=asset_path('q_yoga.png') /
+        .hover_effect
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="urban_area" 
+        .img_title urban area
+        img src=asset_path('q_urban.png') /
+        .hover_effect
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="gym" 
+        .img_title gym
+        img src=asset_path('q_gym.png') /
+        .hover_effect
+    .row
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="outdoor" 
+        .img_title outdoor
+        img src=asset_path('q_outdoor.png') /
+        .hover_effect
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="aquatic_area" 
+        .img_title aquatic area
+        img src=asset_path('q_aquatic.png') /
+        .hover_effect
+      .col-xs-12.col-md-4.select_item name="user[sport]" value="home" 
+        .img_title home
+        img src=asset_path('q_home.png') /
+        .hover_effect
+  h1 Skin tone
+  section.textsection.skintone
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title skin tone
+    .row
+      .col-xs-12.col-md-6.select_item name="user[skin_tone]" style="background-color:#000;" value="cool" 
+        .img_title cool
+      .col-xs-12.col-md-6.select_item name="user[skin_tone]" value="warm" 
+        .img_title style="color:#000;"  warm
+  h1 Body type
+  section.bodytype
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title What is your body type?
+    .row.woman_block
+      .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
+        div fit
+        img src=asset_path('q_fit.png') /
+      .col-xs-12.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
+        div toned
+        img src=asset_path('q_toned.png') /
+      .col-xs-12.col-md-4.select_item name="user[body_type]" value="regular" 
+        div regular
+        img src=asset_path('q_regular.png') /
+    .row.man_block
+      .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
+        div fit
+        img src=asset_path('q_fitman.png') /
+      .col-xs-12.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
+        div toned
+        img src=asset_path('q_tonedman.png') /
+      .col-xs-12.col-md-4.select_item name="user[body_type]" value="regular" 
+        div regular
+        img src=asset_path('q_regularman.png') /
+  h1
+    | shirt size
+    br/
+    | waist size
+    br/
+    | shoe size
+  section.shirt
+    input.fieldset-data name="user[top_size]" type="hidden" value="" /
+    input.fieldset-data name="user[waist_size]" type="hidden" value="" /
+    input.fieldset-data name="user[shoe_size]" type="hidden" value="" /
+    .row.woman_block
+      .col-xs-12.col-md-4
+        h4.step_title top size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#00_top_size.select_items name="user[top_size]" type="radio" value="00" /
+          label for="00_top_size"  00
+          input#0_top_size.select_items name="user[top_size]" type="radio" value="0" /
+          label for="0_top_size"  0
+          input#2_top_size.select_items name="user[top_size]" type="radio" value="2" /
+          label for="2_top_size"  2
+          input#4_top_size.select_items name="user[top_size]" type="radio" value="4" /
+          label for="4_top_size"  4
+          input#6_top_size.select_items name="user[top_size]" type="radio" value="6" /
+          label for="6_top_size"  6
+          input#8_top_size.select_items name="user[top_size]" type="radio" value="8" /
+          label for="8_top_size"  8
+          input#10_top_size.select_items name="user[top_size]" type="radio" value="10" /
+          label for="10_top_size"  10
+          input#12_top_size.select_items name="user[top_size]" type="radio" value="12" /
+          label for="12_top_size"  12
+          input#14_top_size.select_items name="user[top_size]" type="radio" value="14" /
+          label for="14_top_size"  14
+          input#16_top_size.select_items name="user[top_size]" type="radio" value="16" /
+          label for="16_top_size"  16
+          input#18_top_size.select_items name="user[top_size]" type="radio" value="18" /
+          label for="18_top_size"  18
+          br/
+          .dknow_btn
+            input#dont_know_top_size.select_items name="user[top_size]" type="radio" value="dont_know" /
+            label for="dont_know_top_size"  I don't know
+      .col-xs-12.col-md-4
+        h4.step_title waist size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#23_waist_size.select_items name="user[waist_size]" type="radio" value="23" /
+          label for="23_waist_size"  23
+          input#24_waist_size.select_items name="user[waist_size]" type="radio" value="24" /
+          label for="24_waist_size"  24
+          input#25_waist_size.select_items name="user[waist_size]" type="radio" value="25" /
+          label for="25_waist_size"  25
+          input#4_waist_size.select_items name="user[waist_size]" type="radio" value="4" /
+          label for="4_waist_size"  4
+          input#6_waist_size.select_items name="user[waist_size]" type="radio" value="6" /
+          label for="6_waist_size"  6
+          input#8_waist_size.select_items name="user[waist_size]" type="radio" value="8" /
+          label for="8_waist_size"  8
+          input#10_waist_size.select_items name="user[waist_size]" type="radio" value="10" /
+          label for="10_waist_size"  10
+          input#12_waist_size.select_items name="user[waist_size]" type="radio" value="12" /
+          label for="12_waist_size"  12
+          input#14_waist_size.select_items name="user[waist_size]" type="radio" value="14" /
+          label for="14_waist_size"  14
+          input#16_waist_size.select_items name="user[waist_size]" type="radio" value="16" /
+          label for="16_waist_size"  16
+          input#18_waist_size.select_items name="user[waist_size]" type="radio" value="18" /
+          label for="18_waist_size"  18
+          br/
+          .dknow_btn
+            input#dont_know_waist_size.select_items name="user[waist_size]" type="radio" value="dont_know" /
+            label for="dont_know_waist_size"  I don't know
+      .col-xs-12.col-md-4
+        h4.step_title shoe size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#3_shoe_size.select_items name="user[shoe_size]" type="radio" value="3" /
+          label for="3_shoe_size"  3
+          input.select_items id="3.5_shoe_size" name="user[shoe_size]" type="radio" value="3.5" /
+          label for="3.5_shoe_size"  3.5
+          input#4_shoe_size.select_items name="user[shoe_size]" type="radio" value="4" /
+          label for="4_shoe_size"  4
+          input.select_items id="4.5_shoe_size" name="user[shoe_size]" type="radio" value="4.5" /
+          label for="4.5_shoe_size"  4.5
+          input.select_items id="4.5_shoe_size" name="user[shoe_size]" type="radio" value="4.5" /
+          label for="4.5_shoe_size"  4.5
+          input#5_shoe_size.select_items name="user[shoe_size]" type="radio" value="5" /
+          label for="5_shoe_size"  5
+          input.select_items id="5.5_shoe_size" name="user[shoe_size]" type="radio" value="5.5" /
+          label for="5.5_shoe_size"  5.5
+          input#6_shoe_size.select_items name="user[shoe_size]" type="radio" value="6" /
+          label for="6_shoe_size"  6
+          input.select_items id="6.5_shoe_size" name="user[shoe_size]" type="radio" value="6.5" /
+          label for="6.5_shoe_size"  6.5
+          input#7_shoe_size.select_items name="user[shoe_size]" type="radio" value="7" /
+          label for="7_shoe_size"  7
+          input.select_items id="7.5_shoe_size" name="user[shoe_size]" type="radio" value="7.5" /
+          label for="7.5_shoe_size"  7.5
+          input#8_shoe_size.select_items name="user[shoe_size]" type="radio" value="8" /
+          label for="8_shoe_size"  8
+          input.select_items id="8.5_shoe_size" name="user[shoe_size]" type="radio" value="8.5" /
+          label for="8.5_shoe_size"  8.5
+          input#9_shoe_size.select_items name="user[shoe_size]" type="radio" value="9" /
+          label for="9_shoe_size"  9
+          input.select_items id="9.5_shoe_size" name="user[shoe_size]" type="radio" value="9.5" /
+          label for="9.5_shoe_size"  9.5
+          input#10_shoe_size.select_items name="user[shoe_size]" type="radio" value="10" /
+          label for="10_shoe_size"  10
+          input.select_items id="10.5_shoe_size" name="user[shoe_size]" type="radio" value="10.5" /
+          label for="10.5_shoe_size"  10.5
+          input#11_shoe_size.select_items name="user[shoe_size]" type="radio" value="11" /
+          label for="11_shoe_size"  11
+          input.select_items id="11.5_shoe_size" name="user[shoe_size]" type="radio" value="11.5" /
+          label for="11.5_shoe_size"  11.5
+          input#12_shoe_size.select_items name="user[shoe_size]" type="radio" value="12" /
+          label for="12_shoe_size"  12
+          input.select_items id="12.5_shoe_size" name="user[shoe_size]" type="radio" value="12.5" /
+          label for="12.5_shoe_size"  12.5
+          br/
+          .dknow_btn
+            input#dont_know_shoe_size.select_items name="user[shoe_size]" type="radio" value="dont_know" /
+            label for="dont_know_shoe_size"  I don't know
+    .row.man_block
+      .col-xs-12.col-md-4
+        h4.step_title top size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#34_top_size.select_items name="user[top_size]" type="radio" value="34" /
+          label for="34_top_size"  34
+          input#36_top_size.select_items name="user[top_size]" type="radio" value="36" /
+          label for="36_top_size"  36
+          input#38_top_size.select_items name="user[top_size]" type="radio" value="38" /
+          label for="38_top_size"  38
+          input#40_top_size.select_items name="user[top_size]" type="radio" value="40" /
+          label for="40_top_size"  40
+          input#42_top_size.select_items name="user[top_size]" type="radio" value="42" /
+          label for="42_top_size"  42
+          input#44_top_size.select_items name="user[top_size]" type="radio" value="44" /
+          label for="44_top_size"  44
+          input#46_top_size.select_items name="user[top_size]" type="radio" value="46" /
+          label for="46_top_size"  46
+          br/
+          .dknow_btn
+            input#dont_know_top_size.select_items name="user[top_size]" type="radio" value="dont_know" /
+            label for="dont_know_top_size"  I don't know
+      .col-xs-12.col-md-4
+        h4.step_title waist size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#28_waist_size.select_items name="user[waist_size]" type="radio" value="28" /
+          label for="28_waist_size"  28
+          input#29_waist_size.select_items name="user[waist_size]" type="radio" value="29" /
+          label for="29_waist_size"  29
+          input#30_waist_size.select_items name="user[waist_size]" type="radio" value="30" /
+          label for="30_waist_size"  30
+          input#31_waist_size.select_items name="user[waist_size]" type="radio" value="31" /
+          label for="31_waist_size"  31
+          input#32_waist_size.select_items name="user[waist_size]" type="radio" value="32" /
+          label for="32_waist_size"  32
+          input#33_waist_size.select_items name="user[waist_size]" type="radio" value="33" /
+          label for="33_waist_size"  33
+          input#34_waist_size.select_items name="user[waist_size]" type="radio" value="34" /
+          label for="34_waist_size"  34
+          input#35_waist_size.select_items name="user[waist_size]" type="radio" value="35" /
+          label for="12_waist_size"  35
+          input#36_waist_size.select_items name="user[waist_size]" type="radio" value="36" /
+          label for="36_waist_size"  36
+          input#37_waist_size.select_items name="user[waist_size]" type="radio" value="37" /
+          label for="37_waist_size"  37
+          input#38_waist_size.select_items name="user[waist_size]" type="radio" value="38" /
+          label for="38_waist_size"  38
+          br/
+          .dknow_btn
+            input#dont_know_waist_size.select_items name="user[waist_size]" type="radio" value="dont_know" /
+            label for="dont_know_waist_size"  I dont know
+      .col-xs-12.col-md-4
+        h4.step_title shoe size
+        .col-xs-12.col-md-6.col-md-offset-3
+          input#6_shoe_size.select_items name="user[shoe_size]" type="radio" value="6" /
+          label for="6_shoe_size"  6
+          input.select_items id="6.5_shoe_size" name="user[shoe_size]" type="radio" value="6.5" /
+          label for="6.5_shoe_size"  6.5
+          input#7_shoe_size.select_items name="user[shoe_size]" type="radio" value="7" /
+          label for="7_shoe_size"  7
+          input.select_items id="7.5_shoe_size" name="user[shoe_size]" type="radio" value="7.5" /
+          label for="7.5_shoe_size"  7.5
+          input#8_shoe_size.select_items name="user[shoe_size]" type="radio" value="8" /
+          label for="8_shoe_size"  8
+          input.select_items id="8.5_shoe_size" name="user[shoe_size]" type="radio" value="8.5" /
+          label for="8.5_shoe_size"  8.5
+          input#9_shoe_size.select_items name="user[shoe_size]" type="radio" value="9" /
+          label for="9_shoe_size"  9
+          input.select_items id="9.5_shoe_size" name="user[shoe_size]" type="radio" value="9.5" /
+          label for="9.5_shoe_size"  9.5
+          input#10_shoe_size.select_items name="user[shoe_size]" type="radio" value="10" /
+          label for="10_shoe_size"  10
+          input.select_items id="10.5_shoe_size" name="user[shoe_size]" type="radio" value="10.5" /
+          label for="10.5_shoe_size"  10.5
+          input#11_shoe_size.select_items name="user[shoe_size]" type="radio" value="11" /
+          label for="11_shoe_size"  11
+          input.select_items id="11.5_shoe_size" name="user[shoe_size]" type="radio" value="11.5" /
+          label for="11.5_shoe_size"  11.5
+          input#12_shoe_size.select_items name="user[shoe_size]" type="radio" value="12" /
+          label for="12_shoe_size"  12
+          input.select_items id="12.5_shoe_size" name="user[shoe_size]" type="radio" value="12.5" /
+          label for="12.5_shoe_size"  12.5
+          input#13_shoe_size.select_items name="user[shoe_size]" type="radio" value="13" /
+          label for="13_shoe_size"  13
+          input.select_items id="13.5_shoe_size" name="user[shoe_size]" type="radio" value="13.5" /
+          label for="13.5_shoe_size"  13.5
+          input#14_shoe_size.select_items name="user[shoe_size]" type="radio" value="14" /
+          label for="14_shoe_size"  14
+          input.select_items id="14.5_shoe_size" name="user[shoe_size]" type="radio" value="14.5" /
+          label for="14.5_shoe_size"  14.5
+          input#15_shoe_size.select_items name="user[shoe_size]" type="radio" value="15" /
+          label for="15_shoe_size"  15
+          br/
+          .dknow_btn
+            input#dont_know_shoe_size.select_items name="user[shoe_size]" type="radio" value="dont_know" /
+            label for="dont_know_shoe_size"  I dont know
+  h1 height/weight
+  section.height
+    input.fieldset-data name="user[height]" type="hidden" value="" /
+    input.fieldset-data name="user[weight]" type="hidden" value="" /
+    .row
+      .col-xs-12.col-md-3.col-md-offset-2
+        h4.step_title height
+        .col-xs-12.col-md-4.col-md-offset-1.firstcol
+          h4.step_title '
+        .col-xs-12.col-md-6.col-md-offset-1.secondcol
+          h4.step_title ''
+      .col-xs-12.col-md-5.col-md-offset-1
+        h4.step_title weight
+    .row
+      .col-xs-12.col-md-3.col-md-offset-2
+        .col-xs-12.col-md-4.col-md-offset-1.firstcol
+          input.select_items id="5'_height" name="user[height]" type="radio" value="5'" /
+          label for="5'_height"  5
+          br/
+          input.select_items id="6'_height" name="user[height]" type="radio" value="6'" /
+          label for="6'_height"  6
+        .col-xs-12.col-md-6.col-md-offset-1.secondcol
+          input#0_height.select_items name="user[height]" type="radio" value="0" /
+          label for="0_height"  0
+          input#1_height.select_items name="user[height]" type="radio" value="1" /
+          label for="1_height"  1
+          input#2_height.select_items name="user[height]" type="radio" value="2" /
+          label for="2_height"  2
+          input#3_height.select_items name="user[height]" type="radio" value="3" /
+          label for="3_height"  3
+          input#4_height.select_items name="user[height]" type="radio" value="4" /
+          label for="4_height"  4
+          input#5_height.select_items name="user[height]" type="radio" value="5" /
+          label for="5_height"  5
+          input#6_height.select_items name="user[height]" type="radio" value="6" /
+          label for="6_height"  6
+          input#7_height.select_items name="user[height]" type="radio" value="7" /
+          label for="7_height"  7
+          input#8_height.select_items name="user[height]" type="radio" value="8" /
+          label for="8_height"  8
+          input#9_height.select_items name="user[height]" type="radio" value="9" /
+          label for="9_height"  9
+          input#10_height.select_items name="user[height]" type="radio" value="10" /
+          label for="10_height"  10
+          input#11_height.select_items name="user[height]" type="radio" value="11" /
+          label for="11_height"  11
+        br/
+        .dknow_btn.col-md-offset-1
+          input#dont_know_height.select_items name="user[height]" type="radio" value="dont_know" /
+          label for="dont_know_height"  I don't know
+      .col-xs-12.col-md-5.col-md-offset-1
+        .col-xs-12.col-md-8.col-md-offset-2.thirdcol
+          input#120_weight.select_items name="user[weight]" type="radio" value="120" /
+          label for="120_weight"  120
+          input#125_weight.select_items name="user[weight]" type="radio" value="125" /
+          label for="125_weight"  125
+          input#130_weight.select_items name="user[weight]" type="radio" value="130" /
+          label for="130_weight"  130
+          input#135_weight.select_items name="user[weight]" type="radio" value="135" /
+          label for="135_weight"  135
+          input#140_weight.select_items name="user[weight]" type="radio" value="140" /
+          label for="140_weight"  140
+          input#145_weight.select_items name="user[weight]" type="radio" value="145" /
+          label for="145_weight"  145
+          input#150_weight.select_items name="user[weight]" type="radio" value="150" /
+          label for="150_weight"  150
+          input#155_weight.select_items name="user[weight]" type="radio" value="155" /
+          label for="155_weight"  155
+          input#160_weight.select_items name="user[weight]" type="radio" value="160" /
+          label for="160_weight"  160
+          input#165_weight.select_items name="user[weight]" type="radio" value="165" /
+          label for="165_weight"  165
+          input#170_weight.select_items name="user[weight]" type="radio" value="170" /
+          label for="170_weight"  170
+          input#175_weight.select_items name="user[weight]" type="radio" value="175" /
+          label for="175_weight"  175
+          input#180_weight.select_items name="user[weight]" type="radio" value="180" /
+          label for="180_weight"  180
+          input#185_weight.select_items name="user[weight]" type="radio" value="185" /
+          label for="185_weight"  185
+          input#190_weight.select_items name="user[weight]" type="radio" value="190" /
+          label for="190_weight"  190
+          input#195_weight.select_items name="user[weight]" type="radio" value="195" /
+          label for="195_weight"  195
+          input#200_weight.select_items name="user[weight]" type="radio" value="200" /
+          label for="200_weight"  200
+          input#205_weight.select_items name="user[weight]" type="radio" value="205" /
+          label for="205_weight"  205
+          input#210_weight.select_items name="user[weight]" type="radio" value="210" /
+          label for="210_weight"  210
+          input#215_weight.select_items name="user[weight]" type="radio" value="215" /
+          label for="215_weight"  215
+          input#220_weight.select_items name="user[weight]" type="radio" value="220" /
+          label for="220_weight"  220
+          input#225_weight.select_items name="user[weight]" type="radio" value="225" /
+          label for="225_weight"  225
+          input#230_weight.select_items name="user[weight]" type="radio" value="230" /
+          label for="230_weight"  230
+          input#235_weight.select_items name="user[weight]" type="radio" value="235" /
+          label for="235_weight"  235
+          input#240_weight.select_items name="user[weight]" type="radio" value="240" /
+          label for="240_weight"  240
+          input#245_weight.select_items name="user[weight]" type="radio" value="245" /
+          label for="245_weight"  245
+          input#250_weight.select_items name="user[weight]" type="radio" value="250" /
+          label for="250_weight"  250
+          input#255_weight.select_items name="user[weight]" type="radio" value="255" /
+          label for="255_weight"  255
+          input#260_weight.select_items name="user[weight]" type="radio" value="260" /
+          label for="260_weight"  260
+          input#265_weight.select_items name="user[weight]" type="radio" value="265" /
+          label for="265_weight"  265
+          input#270_weight.select_items name="user[weight]" type="radio" value="270" /
+          label for="270_weight"  270
+          input#275_weight.select_items name="user[weight]" type="radio" value="275" /
+          label for="275_weight"  275
+          input#280_weight.select_items name="user[weight]" type="radio" value="280" /
+          label for="280_weight"  280
+          input#285_weight.select_items name="user[weight]" type="radio" value="285" /
+          label for="285_weight"  285
+          input#290_weight.select_items name="user[weight]" type="radio" value="290" /
+          label for="290_weight"  290
+          br/
+          .dknow_btn
+            input#dont_know_weight.select_items name="user[weight]" type="radio" value="dont_know" /
+            label for="dont_know_weight"  I don't know
+  h1 Preferred ambiance
+  section.preferred_ambiance
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title What is your body type?
+    .row.woman_block
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
+        div tight
+        img src=asset_path('q_tight_w.png') /
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
+        div regular
+        img src=asset_path('q_regular_w.png') /
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
+        div relaxed
+        img src=asset_path('q_relaxed_w.png') /
+    .row.man_block
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
+        div tight
+        img src=asset_path('q_tight_m.png') /
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
+        div regular
+        img src=asset_path('q_regular_m.png') /
+      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
+        div relaxed
+        img src=asset_path('q_relaxed_m.png') /
+  h1 Favourite brands
+  section.brands
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title Favourite brands
+    .row
+      .multiselect_item name="user[brand]" value="puma" 
+        img src=asset_path('q_puma.png') /
+      .multiselect_item name="user[brand]" value="nike" 
+        img src=asset_path('q_nike.png') /
+      .multiselect_item name="user[brand]" value="new_balance" 
+        img src=asset_path('q_balance.png') /
+      .multiselect_item name="user[brand]" value="adidas" 
+        img src=asset_path('q_adidas.png') /
+      .multiselect_item name="user[brand]" value="dasics" 
+        img src=asset_path('q_dasics.png') /
+      .multiselect_item name="user[brand]" value="converse" 
+        img src=asset_path('q_converse.png') /
+      .multiselect_item name="user[brand]" value="reebok" 
+        img src=asset_path('q_reebok.png') /
+      .multiselect_item name="user[brand]" value="under_armqur" 
+        img src=asset_path('q_armqur.png') /
+      .multiselect_item name="user[brand]" value="vans" 
+        img src=asset_path('q_vans.png') /
+      .multiselect_item name="user[brand]" value="mizuno" 
+        img src=asset_path('q_mizuno.png') /
+    br/
+    .dknow_btn
+      input#dont_know_brand.select_items name="user[brand]" type="radio" value="dont_know" /
+      label for="dont_know_brand"  I don't shop at any of these brands.
+  h1 Personal info
+  section.personal_info
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title Personal info
+    .row.col-xs-12.col-md-4.col-md-offset-4
+      form data-toggle="validator" role="form" 
+        .form-group
+          label.sr-only for="firstname"  First name
+          input#firstname.form-control placeholder=("First name") type="text" /
+        .form-group
+          label.sr-only for="lastname"  Last name
+          input#lastname.form-control placeholder=("Last name") type="text" /
+        .form-group
+          label.sr-only for="email"  Email
+          input#email.form-control placeholder="email" type="email" /
+        .form-group
+          label.sr-only for="password"  Пароль
+          input#password.form-control placeholder="Password" type="password" /
+        .form-group
+          label.sr-only for="confirmpassword"  Пароль
+          input#confirmpassword.form-control placeholder=("confirm Password") type="password" /
+        .form-group
+          label.sr-only for="Zipcode"  Zipcode
+          input#Zipcode.form-control placeholder="Zipcoded" type="number" /
+        button.btn.btn-default type="submit"  Submit
+  h1 Thank you!
+  section.thankyou
+    input.fieldset-data name="" type="hidden" value="" /
+    h4.step_title Thank you!
+    .row
+      p style="text-transform:initial" 
+        | You will receive confirmation email shortly.

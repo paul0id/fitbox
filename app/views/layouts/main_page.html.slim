@@ -43,8 +43,13 @@ html lang="en"
             a.intLink href="#about_link"  about
           li
             a.intLink href="#get_started_link"  get started
-          li style=("   margin-right:0!important; float: right;") 
-            a.sign_in href="#contact"  Sign in
+          - unless current_user
+                  li.sign_in
+                    = link_to 'Sign Up', new_user_registration_path
+          -else
+                  li.sign_in
+                    a href="/users/#{current_user.id}"
+                      | Profile  
 #top_banner.top_banner_link
   .banner_slides
     .top_banner_slide.active
