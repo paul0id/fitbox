@@ -16,40 +16,33 @@ html lang="en"
           });
       })
   body
-.navbar.navbar-inverse.navbar-static-top role="navigation" 
+.navbar.navbar-inverse.navbar-static-top role="navigation"
   .row
-    .col-xs-2.col-md-2.logo_block
+    .navbar-header.logo_block
       a href="#" 
         img src=image_path('logo_main.png') /
-    .col-md-9
-      .navbar-header
-        button.navbar-toggle data-target=".navbar-collapse" data-toggle="collapse" type="button" 
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-    .col-md-9.col-md-offset-1
-      .navbar-collapse.collapse
-        ul.nav.navbar-nav
-          li.active
-            a.intLink href="#top_banner_link"  Home
-          li
-            a.intLink href="#howworks_link"  how it works
-          li
-            a.intLink href="#membership_link"  membership
-          li
-            a href="#featured_link"  3Xf
-          li
-            a.intLink href="#about_link"  about
-          li
-            a.intLink href="#get_started_link"  get started
-          - unless current_user
-                  li.sign_in
-                    = link_to 'Sign Up', new_user_registration_path
-          -else
-                  li.sign_in
-                    a href="/users/#{current_user.id}"
-                      | Profile  
+
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav.pull-right
+        li.active
+          a.intLink href="#top_banner_link"  Home
+        li
+          a.intLink href="#howworks_link"  how it works
+        li
+          a.intLink href="#membership_link"  membership
+        li
+          a href="#featured_link"  3Xf
+        li
+          a.intLink href="#about_link"  about
+        li
+          a.intLink href="#get_started_link"  get started
+        - unless current_user
+                li.sign_in
+                  = link_to 'Sign Up', new_user_registration_path
+        -else
+                li.sign_in
+                  a href="/users/#{current_user.id}"
+                    | Profile   
 #top_banner.top_banner_link
   .banner_slides
     .top_banner_slide.active
@@ -74,23 +67,21 @@ html lang="en"
 #howworks.howworks_link
   h1 how it works
   .row
-    .col-xs-12.col-md-4
+    .col-xs-12.col-md-4.left_block
       h2 tell us about you
       p.text_block_desc
         | Tell us your size and style preference, and
-          br/
+        br/
         | requests for your regularly scheduled shipments.
     .col-xs-12.col-md-4
       h2 receive your items
       p.text_block_desc After choosing to accept or decline your items, you will receive up to 5 personally picked items according to the choices you made during profile creation.
-    .col-xs-12.col-md-4
+    .col-xs-12.col-md-4.right_block
       h2 do you like it?
       p.text_block_desc
         | You have 5days to try everything on.
-        br>/
-        | Only pay for what you keep, and
         br/
-        | return the rest.
+        | Only pay for what you keep, and return the rest.
 #likeit.membership_link
   .row.center-row.container
     .col-md-10.col-lg-7.center
@@ -100,7 +91,7 @@ html lang="en"
         | of our selected gyms?
       p.desc Enter you membership code to get discounts and latest news
       .row.center-row.container
-        .col-md-12.col-lg-7.center
+        .col-md-12.col-lg-10.center
           .input-group
             input.form-control.input-lg placeholder=("enter your membership code") type="text" /
             span.input-group-btn
@@ -108,11 +99,20 @@ html lang="en"
           /! /input-group
         /! /.col-lg-6
       /! /.row
-#featured.featured_link
-  img src=image_path('featured.png') /
+#featured.featured_link.row
+  .featured_link_block.col-md-4.col-md-offset-5.col-xs-4.col-xs-offset-5
+    a.read_btn.col-md-7.col-md-offset-3.col-xs-8.col-xs-offset-2 href="#" style=("    display: inline-block;") 
+      div.first_line
+        | 3XF 
+      span
+        | FEATURED
+        br/
+        | FITNESS 
+        br/
+        | FASION
 #about.about_link
   .row.center-row
-    .col-sm-12.col-md-6.center.text_block
+    .col-sm-12.col-md-5.center.text_block
       h1.about_title.underline_title who we are
       p FITBOX is the simplest way to get men's clothing that looks great on you. Join now to get clothes picked for you by a stylist, so you can spend your time doing awesome stuff.
       a.read_btn href="#" style=("    display: inline-block;")  more
@@ -120,12 +120,15 @@ html lang="en"
   .row.center-row
     .col-sm-12.col-md-4.center
       h1 get started
-      p.desc Just click below and answer a few questions, and we'll match you with your very own personal stylist.
+      p.desc 
+        | Just click below and answer a few questions, and 
+        br/
+        | we'll match you with your very own personal stylist.
       a.read_btn href="#" style=("    display: inline-block;") 
         | get started
 footer
   .row
-    .col-sm-12.col-md-10.col-md-offset-1
+    .col-sm-12.col-md-6.col-md-offset-3.col-lg-10.col-lg-offset-1
       a href="#"  About
       a href="#"  FAQ
       a href="#"  Style
@@ -136,7 +139,7 @@ footer
       a href="#"  Careers
       a href="#"  Terms of Use
   .row
-    .col-sm-12.col-md-10.col-md-offset-1
+    .col-sm-12.col-md-6.col-md-offset-3.col-lg-10.col-lg-offset-1
       a href="#"  Privacy
       a href="#"  Policy
       a href="#"  Help & Contact
@@ -145,12 +148,30 @@ footer
       a href="#"  Locations
       a href="#"  Privacy
 javascript:
-   $(".nav_circle").click(function(){
-   var sl_num=$(this).index();
+  $(".nav_circle").click(function(){
+  var sl_num=$(this).index();
   
-   $(".nav_circle").removeClass("active");
-   $(".top_banner_slide").removeClass("active");
+  $(".nav_circle").removeClass("active");
+  $(".top_banner_slide").removeClass("active");
   
-   $(this).addClass("active");
-   $($(".top_banner_slide")[sl_num]).addClass("active");
+  $(this).addClass("active");
+  $($(".top_banner_slide")[sl_num]).addClass("active");
    });
+
+
+
+  var timerId = setInterval(function() {
+  var ind=$(".banner_nav span.active").index()+1;
+  if(ind>= $(".banner_nav span").length) ind=0;
+    $(".banner_nav span").get(ind).click();
+  }, 400000);
+
+
+  $("#likeit .input-group input").on('blur', function () {
+    if ($(this).val()) {
+        $(this).css("background-color","rgb(226, 226, 226)");
+    }
+    else {
+        $(this).css("background-color","#000");
+    }
+  });
