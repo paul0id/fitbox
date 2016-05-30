@@ -107,7 +107,9 @@ h3{font-size: 1.3em; font-family: 'GillSans';}
 }
 .navbar .container{    margin-top: 58px;}
 .navbar-nav li a{    text-transform: uppercase;}
-.logo_block img{width:68%;    max-width: 308px;}
+.logo_block img{width:68%;    max-width: 308px;
+margin: 0.7em 0;
+}
 .logo_block a   {    width: 100%;
     display: block;}
     .centered_block { position: absolute;
@@ -433,6 +435,10 @@ footer a:hover {
 
  /********----------****/
  @media(max-width:1660px){
+
+ .logo_block img{
+ margin:0px!important;
+ }
 .navbar-nav {
     padding: 0vw 4vw 0 3vw;
 }   
