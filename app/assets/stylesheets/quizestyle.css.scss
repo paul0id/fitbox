@@ -1,25 +1,25 @@
 @font-face {
     font-family: 'GillSans';
-    src: url('GillSans.ttc');
+    src:  asset-url('GillSans.ttc');
     font-style: normal;
     font-weight:normal;
 }
 
 @font-face {
     font-family: 'Didot';
-    src: url('Didot.ttc');
+    src:  asset-url('Didot.ttc');
     font-style: italic;
     font-weight:normal;
 }
 @font-face {
     font-family: 'RobotoMedium';
-    src: url('Roboto-Medium.ttf');
+    src:  asset-url('Roboto-Medium.ttf');
     font-style: normal;
     font-weight:normal;
 }
 @font-face {
     font-family: 'RobotoLight';
-    src: url('Roboto-Light.ttf');
+    src:  asset-url('Roboto-Light.ttf');
     font-style: normal;
     font-weight:normal;
 }
