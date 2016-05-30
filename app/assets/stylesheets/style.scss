@@ -32,6 +32,11 @@
         position: relative!important;
         
 }
+
+.banner_slides{
+        height: 51vw;
+    position: relative;
+}
 .get_started:hover{
         color: #000 !important;
     background-color:rgba(255,255,255,0.81);
@@ -164,8 +169,11 @@ ul.nav.navbar-nav a {
 
 
     
-#likeit .input-group    {    width: 100%;   padding:0% 1%;}
+#likeit .input-group    {     width:100%;  height: 63px;
+    border: 4px solid #fff;
+    }
 #likeit .input-group input{
+
               text-transform: uppercase;
     font-family: 'GillSans';
     font-size: 1.7em!important;
@@ -175,6 +183,10 @@ ul.nav.navbar-nav a {
     border-color: #fff;
     box-shadow: none!important;
        letter-spacing: 0.08em;
+       height: 100% !important;
+    padding: 0px 1.4em !important;
+    border: none !important;
+        border-right: 4px solid #fff!important;
    
       }
  #likeit .input-group input:hover{
@@ -215,7 +227,8 @@ ul.nav.navbar-nav a {
     font-size: 1.5em;
     letter-spacing: 0.06em;
     width: 100%;
-    line-height: 35px;}
+        line-height: 38px;
+    border:none!important;}
     .input-group-btn {    font-size: 1.2em!important;}
 #get_started{position: relative;}
 #get_started img{    max-width: 100%;}  
@@ -356,15 +369,7 @@ font-size: 0.8em!important;}
     .featured_link .read_btn {
         padding: 2em 1em !important;
     }
-    #likeit button {    
-        line-height: 15px!important;
-        padding: 20px 22%!important;    
-        font-size: 1em!important;
-    }
-    #likeit .input-group input  {    
-        height: 60px!important;    
-        font-size: 1em!important;
-    }
+    
     #likeit span {
         width: 36%;
     }
@@ -425,11 +430,21 @@ footer a:hover {
 
 
 
+@media(min-width:1196px) and (max-width:1377px){
+#likeit button{
+      
+    }
+#likeit span {
+    width: 39%!important;
+}    
+}
 
+ @media(min-width:1660px) and (max-width:2000px){
+#likeit .input-group input {
+    font-size: 1.4em !important;
+    }
 
-
-
-
+}
 
 
 
@@ -504,16 +519,16 @@ h2{
     width: 77%;
 }
 #likeit button{
-    font-size: 0.8em;
-        letter-spacing: 0.06em;
-    width: 100%;
-    line-height: 7px;
+   padding: 13px 2px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
     } 
 
 #likeit .input-group input  {
-      font-size: 1em !important;
-      letter-spacing: 0.06em;
-      height: 61px !important;
+          height: 63px!important;
+    font-size: 14px !important;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 #likeit > div {
     padding: 12.7% 0 12%;
