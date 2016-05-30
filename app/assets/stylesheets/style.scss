@@ -336,11 +336,11 @@ footer .row{      text-align: center;
 
 @media (max-width:750px) {
     #likeit h1,#get_started h1,#about .about_title  {
-    font-size: 2.4em!important;}
+    font-size: 1.4em!important;}
 #likeit .desc {
 font-size: 1.4em!important;}
 #get_started .desc {
-font-size: 1.7em!important;    margin-bottom: 12%!important;    }
+   margin-bottom: 12%!important;    }
 footer  a {
 font-size: 0.8em!important;}
 }
@@ -355,7 +355,7 @@ font-size: 0.8em!important;}
         padding: 2em 1em !important;
     }
     #likeit button {    
-        line-height: 12px!important;
+        line-height: 15px!important;
         padding: 20px 22%!important;    
         font-size: 1em!important;
     }
@@ -406,7 +406,7 @@ footer a:hover {
 .featured_link_block{    padding:13% 0 20% 0;    background-color: #D2D2CD;}    
 
 .featured_link .read_btn {    padding: 2.6em 1.8em!important;
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: 'RobotoLight';
     text-align:center;
         letter-spacing: 0.7vw;
@@ -432,7 +432,7 @@ footer a:hover {
 
 
  /********----------****/
- @media(min-width:1280px) and (max-width:1800px){
+ @media(max-width:1660px){
 .navbar-nav {
     padding: 0vw 4vw 0 3vw;
 }   
