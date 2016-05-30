@@ -42,7 +42,7 @@ html lang="en"
           li
             a.intLink href="#about_link"  about
           li
-            a.intLink href="#get_started_link"  get started
+            a.intLink href="/users/sign_up"  get started
           - unless current_user
                   li.sign_in
                     = link_to 'Sign Up', new_user_registration_path
@@ -55,17 +55,17 @@ html lang="en"
     .top_banner_slide.active
       img src=image_path('1headerimage.png') /
       .centered_block
-        a.get_started href="#" 
+        a.get_started href="/users/sign_up" 
           | get started
     .top_banner_slide
       img src=image_path('slide2.png') /
       .centered_block
-        a.get_started href="#" 
+        a.get_started href="/users/sign_up" 
           | get started
     .top_banner_slide
       img src=image_path('slide3.png') /
       .centered_block
-        a.get_started href="#" 
+        a.get_started href="/users/sign_up" 
           | get started
   .banner_nav
     span.nav_circle.active
@@ -121,7 +121,7 @@ html lang="en"
     .col-sm-12.col-md-4.center
       h1 get started
       p.desc Just click below and answer a few questions, and we'll match you with your very own personal stylist.
-      a.read_btn href="#" style=("    display: inline-block;") 
+      a.read_btn href="/users/sign_up" style=("    display: inline-block;") 
         | get started
 footer
   .row
