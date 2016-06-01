@@ -24,6 +24,23 @@
     font-weight:normal;
 }
 
+.logo_block img{width:68%;    max-width: 308px;
+margin: 0.7em 0;
+}
+.logo_block a   {    width: 100%;
+    display: block;}
+    .centered_block { position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 11%;
+    text-align:center;
+    width:100%;
+    }
+
+body{
+        overflow: hidden;
+}
 .nav_circle.active{background:#f4f7fa;}
 
 
@@ -46,12 +63,10 @@ cursor: pointer;
     left: 0;    padding: 0 10px;}
 
 .navbar-nav {
-    float: none!important;    padding: 0vw 6vw 0 3vw;
-}   
+      padding: 0vw 6vw 0 3vw;
+}  
+
 .nav>li {
-    position: relative;
-    display: block;
-    margin-right: 2.8%;
 }
 
 .navbar .container{    margin-top: 58px;}
@@ -72,6 +87,7 @@ cursor: pointer;
     
  margin-right:0!important; float: right;
     }
+
 ul.nav.navbar-nav a {
           font-size: 1.1em;
     margin: 0.7em 0;
@@ -80,6 +96,21 @@ ul.nav.navbar-nav a {
 }   
 .sign_in{          padding-left: 4.9em!important;
     padding-right: 0.4em!important;}
+
+
+    .get_started{
+    
+         color: #fff;
+    padding: 1.1em 2.4em;
+    border: 3px solid #fff;
+    text-transform: uppercase;
+    font-size: 1.9em;
+    font-family: 'RobotoMedium';
+    letter-spacing: 0.02em;
+    }
+    
+
+
     .get_started{
     
          color: #fff;
@@ -101,7 +132,13 @@ ul.nav.navbar-nav a {
 }
 
 
-#footer{background-color:#121750;}  
+footer{
+position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2.8% 0 3%;
+    }  
 
 
 
@@ -116,13 +153,13 @@ footer  a{        text-transform: uppercase;
     padding: 0 0.8em 0 1.3em;
 	color:#fff;
 	    font-family: 'RobotoLight';}
-footer {background-color:#000;       padding: 3.7% 0 4%;}   
+footer {background-color:#000;      }   
 
 footer .row{      text-align: center;
     margin-bottom: 2em;
     line-height: 2.6em;}
 
-.navbar-inverse .navbar-collapse {position:relative!important;}
+
 .container{position: relative;}
 
 .container .jumbotron {padding:0!important}
@@ -209,20 +246,20 @@ label {
 	cursor:pointer;
 }
 
-.dknow_btn{ text-align:center;    margin-top: 2em;}
+.dknow_btn{ text-align:center;    margin-top: 10px;}
  .dknow_btn label{       width: 74%;
     text-transform: initial;}
 
 h4.step_title {
     font-size: 2.5em;
     font-family: 'GillSans';
-    letter-spacing: 0.16em;    margin-bottom: 3%;
+    letter-spacing: 0.1em;    margin-bottom: 3%;
 }
-.sport .step_title{    margin: 1% 0 0.5%!important;}
+.sport .step_title{ margin:   -0.2% 0 0.1% !important;}
 .iam .step_title{    margin: 3% 0 2.5%!important;}
-.bodytype .step_title {       margin: 3% auto 3%!important;}
+.bodytype .step_title {     margin: 0.5% auto 0.5% !important;}
 .preferred_ambiance .step_title {    margin: 1% auto 2%!important;}
-.shirt .step_title{          margin: 8% auto 9%!important;}
+.shirt .step_title{          margin: 2% auto 7%!important;}
 .brands .step_title{        margin: 2.5% auto 4%!important;}
 
 .brands .dknow_btn label {
@@ -237,11 +274,7 @@ h4.step_title {
 .shirt .row >div>div{ 
     text-align: left!important;}
 .bodytype .row, .preferred_ambiance .row{       border-top: 2px solid #000;}
-.bodytype .select_item div,.preferred_ambiance .select_item div{
-	 font-size: 3.2em;
-    letter-spacing: 0.1em;
-	margin:0.6em auto 1.3em;
-}
+
 
 a{
 	color:#000;
@@ -299,6 +332,7 @@ a{
     height: 100%;
     background: rgba(0, 0, 0, 0.41);
     top: 0;
+    z-index:100000;
 }
 
 
@@ -609,4 +643,108 @@ a{
 .wizard>.actions>ul>li.disabled>a[href="#previous"],.wizard>.actions>ul>li.disabled>a[href="#previous"]:hover,.wizard>.actions>ul>li.disabled>a[href="#previous"]:focus {
     -webkit-box-shadow: none;
     box-shadow: none
+}
+
+
+
+
+
+
+
+#wizard .textsection img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+}
+
+.select_item{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+ .half_height {  height: 50%;}
+
+.bodytype .select_item div,.preferred_ambiance .select_item div{
+        font-size: 1.7em;
+    letter-spacing: 0.1em;
+    height: 24%;
+    padding-top: 6%;
+}
+
+.bodytype img{
+        height: 71%;
+}
+
+
+
+
+
+ /********----------****/
+ @media(max-width:1660px){
+label {
+    padding: 3px 0;
+    font-size: 0.9em;
+    margin: 0 6px 14px;
+    width: 24%;
+}
+
+ .logo_block img{
+ margin:0px!important;
+ }
+.navbar-nav {
+    padding: 0vw 4vw 0 3vw;
+}   
+.sign_in {
+    padding-left: 3.4em !important;
+    padding-right: 1em !important;
+}
+
+ul.nav.navbar-nav a {
+    font-size: 0.8em;
+    margin: 0em 0;
+        padding: 15px 9px !important;
+    }
+footer a {
+    font-size: 0.8em;
+    padding: 0 0.5em 0 0.8em;
+    }  
+footer .row {
+       margin-bottom: 0.5em;
+    line-height: 2.5em;
+    }  
+footer {
+    background-color: #000;
+        
+        margin-top:-1px;
+    } 
+.wizard > .steps > ul > li a {
+    margin-top: 12px;
+    padding-top: 21px;
+    margin-bottom: 19px;
+        font-size: 0.6em;
+    }
+.wizard > .steps .number{
+    width: 15px!important;
+    height: 15px!important;
+    margin-left: -8px!important;
+    }    
+.wizard > .steps > ul > li:before, .wizard > .steps > ul > li:after{
+        top: 20px!important;
+    }
+.wizard > .steps {
+    margin: 1.6% auto 0%!important;
+    }  
+h4.step_title {
+    font-size: 1.7em;
+    }
+.iam .step_title {
+    margin: 0.5% 0 4.2% !important;
+    }      
+.img_title {
+    font-size: 1.7em;
+    }
 }

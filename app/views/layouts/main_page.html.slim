@@ -4,16 +4,28 @@ html lang="en"
     title Fitbox
     = stylesheet_link_tag 'bootstrap.min', :media => 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'style', :media => 'all', 'data-turbolinks-track' => true
-
+    = stylesheet_link_tag 'slick', :media => 'all', 'data-turbolinks-track' => true
+    
     script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" 
     = javascript_include_tag 'bootstrap.min', 'data-turbolinks-track' => true
     = javascript_include_tag 'jquery.smint', 'data-turbolinks-track' => true
+    = javascript_include_tag 'slick', 'data-turbolinks-track' => true
     = csrf_meta_tags
     javascript:
       $(document).ready( function() {
+          $(".banner_slides").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed:2000,
+            autoplay: true,
+            autoplaySpeed: 400000,
+          });   
           $('.navbar-collapse ').smint({
             'scrollSpeed' : 1000
           });
+          
       })
   body
 .navbar.navbar-inverse.navbar-static-top role="navigation"
@@ -29,7 +41,7 @@ html lang="en"
         li
           a.intLink href="#howworks_link"  how it works
         li
-          a.intLink href="#membership_link"  membership
+          a.intLink href="#membership_link"  gym
         li
           a href="#featured_link"  3Xf
         li
@@ -45,8 +57,8 @@ html lang="en"
                     | Profile   
 #top_banner.top_banner_link
   .banner_slides
-    .top_banner_slide.active
-      img src=image_path('1headerimage.png') /
+    .top_banner_slide
+      img src=image_path('slide1.png') /
       .centered_block
         a.get_started href="#" 
           | get started
@@ -59,11 +71,9 @@ html lang="en"
       img src=image_path('slide3.png') /
       .centered_block
         a.get_started href="#" 
-          | get started
-  .banner_nav
-    span.nav_circle.active
-    span.nav_circle
-    span.nav_circle
+          | get started            
+    
+
 #howworks.howworks_link
   h1 how it works
   .row
@@ -72,8 +82,8 @@ html lang="en"
       p.text_block_desc
         | Tell us your size and style preference, and
         br/
-        | requests for your regularly scheduled shipments.
-    .col-xs-12.col-md-4
+        | make requests for your regularly scheduled shipments.
+    .col-xs-12.col-md-4.cent_block
       h2 receive your items
       p.text_block_desc After choosing to accept or decline your items, you will receive up to 5 personally picked items according to the choices you made during profile creation.
     .col-xs-12.col-md-4.right_block
@@ -89,7 +99,7 @@ html lang="en"
         | are you a member of one
         br/
         | of our selected gyms?
-      p.desc Enter you membership code to get discounts and latest news
+      p.desc Enter your membership code to get promo codes and latest news
       .row.center-row.container
         .col-md-12.col-lg-10.center
           .input-group
@@ -101,7 +111,7 @@ html lang="en"
       /! /.row
 #featured.featured_link.row
   .featured_link_block.col-md-4.col-md-offset-5.col-xs-4.col-xs-offset-5
-    a.read_btn.col-md-7.col-md-offset-3.col-xs-8.col-xs-offset-2 href="#" style=("    display: inline-block;") 
+    a.read_btn href="#" style=("    display: inline-block;") 
       div.first_line
         | 3XF 
       span
@@ -114,7 +124,7 @@ html lang="en"
   .row.center-row
     .col-sm-12.col-md-5.center.text_block
       h1.about_title.underline_title who we are
-      p FITBOX is the simplest way to get men's clothing that looks great on you. Join now to get clothes picked for you by a stylist, so you can spend your time doing awesome stuff.
+      p FITBOX is the simplest way to get athleisure clothing that looks great on you. Join now to get clothes picked for you by a stylist, so you can spend your time doing awesome stuff.
       a.read_btn href="#" style=("    display: inline-block;")  more
 #get_started.get_started_link
   .row.center-row
@@ -148,23 +158,6 @@ footer
       a href="#"  Locations
       a href="#"  Privacy
 javascript:
-  $(".nav_circle").click(function(){
-  var sl_num=$(this).index();
-  
-  $(".nav_circle").removeClass("active");
-  $(".top_banner_slide").removeClass("active");
-  
-  $(this).addClass("active");
-  $($(".top_banner_slide")[sl_num]).addClass("active");
-   });
-
-
-
-  var timerId = setInterval(function() {
-  var ind=$(".banner_nav span.active").index()+1;
-  if(ind>= $(".banner_nav span").length) ind=0;
-    $(".banner_nav span").get(ind).click();
-  }, 4000);
 
 
   $("#likeit .input-group input").on('blur', function () {

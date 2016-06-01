@@ -1,5 +1,8 @@
 $(document).on('ready', function(){
-        	 $("#wizard").steps({
+
+
+	
+        	 var wizard = $("#wizard").steps({
 				headerTag: "h1",
 				bodyTag: "section",
 				transitionEffect: "fade",
@@ -8,12 +11,20 @@ $(document).on('ready', function(){
 					if(currentIndex==8 | currentIndex==9){
 						 $("#wizard").addClass("wizard_bg");
 					} else  $("#wizard").removeClass("wizard_bg");
+					resizeSliderContent();
 				}, 
+				// onStepChanged:function (event, currentIndex, priorIndex) { 
+				//     var height= $(".steps").height() + $("footer").height() ;
+				//     $("#wizard .content").height(height);
+				// }
 			});
         
-          
+          if (wizard) {
+          	resizeSliderContent();
+          }
 
-          
+
+    
    
 		
 		$("button[type=submit]").click(function(){
@@ -121,3 +132,17 @@ $(document).on('ready', function(){
 		}
 		
 	});	
+
+
+function resizeSliderContent(){
+	var height= Math.floor(window.innerHeight - $(".steps").outerHeight(true) - $("footer").outerHeight(true) - $(".navbar").outerHeight(true)- $(".current .step_title").outerHeight(true));
+	$("#wizard .content section .slider_content").height(height);
+}
+
+
+
+$( window ).resize(function() {
+   if (wizard) {
+   			resizeSliderContent();
+          }
+});

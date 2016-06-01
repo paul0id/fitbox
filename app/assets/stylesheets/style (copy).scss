@@ -184,7 +184,7 @@ ul.nav.navbar-nav a {
     box-shadow: none!important;
        letter-spacing: 0.08em;
        height: 100% !important;
-    padding: 0px 1.2em !important;
+    padding: 0px 1.4em !important;
     border: none !important;
         border-right: 4px solid #fff!important;
    
@@ -237,7 +237,7 @@ ul.nav.navbar-nav a {
     margin-top: 0}
     #howworks h2{ text-transform:uppercase;    margin-bottom: 9%;}
 #howworks   .row{    padding: 0 4vw;}
-.cent_block{   padding: 0px 4%;} 
+#howworks   .row > div{   padding: 0px 4%;} 
     
 .text_block{        padding: 0px 4.3%;}
 .text_block_desc{
@@ -412,7 +412,7 @@ footer a:hover {
 
 .featured_link_block{    padding:13% 0 20% 0;    background-color: #D2D2CD;}    
 
-.featured_link .read_btn {    padding:2.5em 0em 3.2em!important;
+.featured_link .read_btn {    padding: 2.6em 1.8em!important;
     font-size: 2em;
     font-family: 'RobotoLight';
     text-align:center;
@@ -490,10 +490,6 @@ footer a:hover {
 
 
 @media(min-width: 1200px) and (max-width: 1300px){
-h1{
-    font-size: 1.5em!important;
-    letter-spacing: 0.5vw!important;
-}
 .logo_block img {
     width: 64%!important;
     }
@@ -515,7 +511,7 @@ ul.nav.navbar-nav a {
     }
 
 #likeit > div {
-    padding: 14% 0 11.4% !important;
+    padding: 13.9% 0 11.4% !important;
     }
 #howworks {
     padding: 9.3vw 0 10.4vw!important;
@@ -526,10 +522,9 @@ ul.nav.navbar-nav a {
 #howworks h2 {
     margin-bottom: 32px !important;
     letter-spacing: 0.1vw!important;
-        margin-top: 20px!important;
     }
 .howworks_link .left_block{
-    padding:0px 5.4% 0 0 !important;
+    padding:0px 5.7% 0 0 !important;
     } 
 .howworks_link .right_block{
     padding: 0px 1.9% 0 0% !important;
@@ -541,14 +536,11 @@ ul.nav.navbar-nav a {
         }
 
 #likeit h1 {
-    margin-bottom: 4.4%!important;
-    letter-spacing: 0.45vw !important;
-        line-height: 2.4em!important;
+    margin-bottom: 4.5%!important;
     }  
  #likeit .desc {
     letter-spacing: 0.015em!important;
-    margin-bottom: 12.9% !important;
-        font-size: 1.25em!important;
+    margin-bottom: 12.8% !important;
     }
 .container {
     width: 100%;
@@ -591,12 +583,12 @@ ul.nav.navbar-nav a {
     letter-spacing: 0.17em!important;
     }       
 #about p {
-    letter-spacing: 0.4px!important;
+    letter-spacing: 0.5px!important;
     margin: 4.7vw 0 10.4vw!important;
     line-height: 2em!important;
     }
 .text_block {
-    padding: 0px 9px!important;
+    padding: 0px 15.5px!important;
     }
 .get_started {
     padding: 1.3vw 3.7vw !important;
@@ -610,7 +602,7 @@ ul.nav.navbar-nav a {
     }    
 #get_started h1 {
     letter-spacing: 0.17em !important;
-    margin-bottom: 9.9%!important;
+    margin-bottom: 9.5%!important;
     }  
 #get_started .desc {
     letter-spacing: 0.6px !important;
@@ -632,19 +624,15 @@ footer a {
 }
 
 .howworks_link .left_block{
-    padding:0px 5.4% 0 0 ;
+    padding:0px 6% 0 0 ;
 } 
 .howworks_link .right_block{
-    padding:0px 0.9% 0 3.8%;
+    padding: 0px 1.5% 0 0% ;
 } 
-
-
 
  /********----------****/
  @media(max-width:1660px){
-.container {
-    padding: 0 6%;
-}
+
  .logo_block img{
  margin:0px!important;
  }
@@ -668,22 +656,21 @@ ul.nav.navbar-nav a {
            font-size: 1.4em;
     }
 #howworks {
-    padding:2.2vw 0 9.2vw;
+    padding: 9.5vw 0 10vw;
     }
 h1 {
-        font-size: 1.8em;
-    letter-spacing: 0.37vw;
+    font-size: 1.5em;
+    letter-spacing: 0.5vw;
     }
 #howworks h1 {
     margin-bottom: 9%;
     }
 h2{
-    letter-spacing: 0.14vw;
+    letter-spacing: 0.1vw;
     font-size: 18px;
     }
 #howworks h2 {
     margin-bottom: 35px;
-        margin-top: 18px;
     }
 .text_block_desc {
     font-size: 1em;
@@ -696,26 +683,24 @@ h2{
     line-height: 2.3em;
     letter-spacing: 0.23em;
     font-size: 1.6em;
-    margin-bottom: 4%;
-
+    margin-bottom: 4.2%;
     }
 #likeit .desc {
-    font-size: 1.3em;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
     line-height: 2.5em;
     margin-bottom: 12%;
-    letter-spacing: 0;
+    letter-spacing: 0.06em;
     } 
 #likeit .col-md-12 {
     width: 77%;
 }
 #likeit button{
-   padding: 8px 2px;
+   padding: 13px 2px;
     font-size: 14px;
     letter-spacing: 0.06em;
     } 
-#likeit .input-group {
-    height: 61px;
-    }
+
 #likeit .input-group input  {
          
     font-size: 14px !important;
@@ -723,16 +708,16 @@ h2{
     text-transform: uppercase;
   }
 #likeit > div {
-    padding: 12.4% 0 12.4%;
+    padding: 12.7% 0 12%;
     }
 #likeit span {
-    
+    width: 47%;
     }
 .featured_link_block {
     padding: 13% 0 18% 0;
     } 
 .featured_link .read_btn{
-    margin-top: 62px;
+    margin-top: 64px;
     }    
 .featured_link .read_btn {
     padding: 2.7em 0.4em ;
@@ -740,47 +725,43 @@ h2{
     letter-spacing: 0.4vw!important;
     }  
 div.first_line {
-    margin-bottom: 6%;
-    font-size: 1.7em;
+    margin-bottom: 7%;
+    font-size: 1.5em;
     letter-spacing: 0.1vw;
     }
 #about {
-    padding: 14.3% 0 12.3%;
+    padding: 14.5% 0 12%;
     }  
 #about p {
     font-family: 'Didot';
     font-size: 1em;
-    letter-spacing: .58px;
+    letter-spacing: .8px;
     margin: 4.4vw 0 9.8vw;
     line-height: 2em;
     }     
  #about .about_title{
-    letter-spacing: 0.16em;
+    letter-spacing: 0.15em;
     font-size: 1.5em;
     }  
  .text_block {
-    padding: 0px 2vw;
+    padding: 0px 2%;
     }  
 .read_btn {
     font-size: 1.2em;
     padding: 1em 5.7em;
     }
 #get_started {
-        padding: 13.6% 0 12.8%;
+        padding: 14% 0 13%;
     }    
 #get_started h1 {
     font-size: 1.5em;
     letter-spacing: 0.2em;
     margin-bottom: 10%;
-    }  
-#get_started .read_btn{
-        padding: 1.25vw 7.9vw;
-    }      
+    }    
 #get_started .desc {
     font-size: 1em;
     margin-bottom: 36%;
         line-height: 2.3em;
-        letter-spacing: 0.07em;
     }
 footer a {
     font-size: 0.8em;

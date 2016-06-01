@@ -3,7 +3,7 @@
   section.textsection.iam
     input.fieldset-data name="user[gender]" type="hidden" value="" /
     h4.step_title I am a
-    .row
+    .row.slider_content
       .col-xs-12.col-md-6.select_item.woman_select name="user[gender]" value="female" 
         .img_title woman
         img src=asset_path('q_woman.png') /
@@ -16,37 +16,38 @@
   section.textsection.sport
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title Where do you work out?
-    .row
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="yoga_studio" 
-        .img_title yoga studio
-        img src=asset_path('q_yoga.png') /
-        .hover_effect
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="urban_area" 
-        .img_title urban area
-        img src=asset_path('q_urban.png') /
-        .hover_effect
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="gym" 
-        .img_title gym
-        img src=asset_path('q_gym.png') /
-        .hover_effect
-    .row
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="outdoor" 
-        .img_title outdoor
-        img src=asset_path('q_outdoor.png') /
-        .hover_effect
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="aquatic_area" 
-        .img_title aquatic area
-        img src=asset_path('q_aquatic.png') /
-        .hover_effect
-      .col-xs-12.col-md-4.select_item name="user[sport]" value="home" 
-        .img_title home
-        img src=asset_path('q_home.png') /
-        .hover_effect
+    .slider_content
+      .row.half_height
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="yoga_studio" 
+          .img_title yoga studio
+          img src=asset_path('q_yoga.png') /
+          .hover_effect
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="urban_area" 
+          .img_title urban area
+          img src=asset_path('q_urban.png') /
+          .hover_effect
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="gym" 
+          .img_title gym
+          img src=asset_path('q_gym.png') /
+          .hover_effect
+      .row.half_height
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="outdoor" 
+          .img_title outdoor
+          img src=asset_path('q_outdoor.png') /
+          .hover_effect
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="aquatic_area" 
+          .img_title aquatic area
+          img src=asset_path('q_aquatic.png') /
+          .hover_effect
+        .col-xs-12.col-md-4.select_item name="user[sport]" value="home" 
+          .img_title home
+          img src=asset_path('q_home.png') /
+          .hover_effect
   h1 Skin tone
   section.textsection.skintone
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title skin tone
-    .row
+    .row.slider_content
       .col-xs-12.col-md-6.select_item name="user[skin_tone]" style="background-color:#000;" value="cool" 
         .img_title cool
       .col-xs-12.col-md-6.select_item name="user[skin_tone]" value="warm" 
@@ -55,7 +56,7 @@
   section.bodytype
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title What is your body type?
-    .row.woman_block
+    .row.woman_block.slider_content
       .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
         div fit
         img src=asset_path('q_fit.png') /
@@ -65,7 +66,7 @@
       .col-xs-12.col-md-4.select_item name="user[body_type]" value="regular" 
         div regular
         img src=asset_path('q_regular.png') /
-    .row.man_block
+    .row.man_block.slider_content
       .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
         div fit
         img src=asset_path('q_fitman.png') /
@@ -124,22 +125,24 @@
           label for="24_waist_size"  24
           input#25_waist_size.select_items name="user[waist_size]" type="radio" value="25" /
           label for="25_waist_size"  25
-          input#4_waist_size.select_items name="user[waist_size]" type="radio" value="4" /
-          label for="4_waist_size"  4
-          input#6_waist_size.select_items name="user[waist_size]" type="radio" value="6" /
-          label for="6_waist_size"  6
-          input#8_waist_size.select_items name="user[waist_size]" type="radio" value="8" /
-          label for="8_waist_size"  8
-          input#10_waist_size.select_items name="user[waist_size]" type="radio" value="10" /
-          label for="10_waist_size"  10
-          input#12_waist_size.select_items name="user[waist_size]" type="radio" value="12" /
-          label for="12_waist_size"  12
-          input#14_waist_size.select_items name="user[waist_size]" type="radio" value="14" /
-          label for="14_waist_size"  14
-          input#16_waist_size.select_items name="user[waist_size]" type="radio" value="16" /
-          label for="16_waist_size"  16
-          input#18_waist_size.select_items name="user[waist_size]" type="radio" value="18" /
-          label for="18_waist_size"  18
+          input#26_waist_size.select_items name="user[waist_size]" type="radio" value="26" /
+          label for="26_waist_size"  26
+          input#27_waist_size.select_items name="user[waist_size]" type="radio" value="27" /
+          label for="27_waist_size"  27
+          input#28_waist_size.select_items name="user[waist_size]" type="radio" value="28" /
+          label for="28_waist_size"  28
+          input#29_waist_size.select_items name="user[waist_size]" type="radio" value="29" /
+          label for="29_waist_size"  29
+          input#30_waist_size.select_items name="user[waist_size]" type="radio" value="30" /
+          label for="30_waist_size"  30
+          input#31_waist_size.select_items name="user[waist_size]" type="radio" value="31" /
+          label for="31_waist_size"  31
+          input#32_waist_size.select_items name="user[waist_size]" type="radio" value="32" /
+          label for="32_waist_size"  32
+          input#33_waist_size.select_items name="user[waist_size]" type="radio" value="33" /
+          label for="33_waist_size"  33
+          input#34_waist_size.select_items name="user[waist_size]" type="radio" value="34" /
+          label for="34_waist_size"  34
           br/
           .dknow_btn
             input#dont_know_waist_size.select_items name="user[waist_size]" type="radio" value="dont_know" /
@@ -501,3 +504,7 @@
     .row
       p style="text-transform:initial" 
         | You will receive confirmation email shortly.
+
+
+
+
