@@ -54,25 +54,24 @@ html lang="en"
         -else
                 li.sign_in
                   a href="/users/#{current_user.id}"
-                    | Profile   
+                    | Profile
 #top_banner.top_banner_link
   .banner_slides
     .top_banner_slide
       img src=image_path('slide1.png') /
       .centered_block
-        a.get_started href="#" 
+        a.get_started href="/users/sign_up" 
           | get started
     .top_banner_slide
       img src=image_path('slide2.png') /
       .centered_block
-        a.get_started href="#" 
+        a.get_started href="/users/sign_up" 
           | get started
     .top_banner_slide
       img src=image_path('slide3.png') /
       .centered_block
         a.get_started href="#" 
           | get started            
-    
 
 #howworks.howworks_link
   h1 how it works
