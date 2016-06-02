@@ -4,11 +4,11 @@
     input.fieldset-data name="user[gender]" type="hidden" value="" /
     h4.step_title I am a
     .row.slider_content
-      .col-xs-12.col-md-6.select_item.woman_select name="user[gender]" value="female" 
+      .col-xs-6.col-md-6.select_item.woman_select name="user[gender]" value="female" 
         .img_title woman
         img src=asset_path('q_woman.png') /
         .hover_effect
-      .col-xs-12.col-md-6.select_item.man_select name="user[gender]" value="male" 
+      .col-xs-6.col-md-6.select_item.man_select name="user[gender]" value="male" 
         .img_title man
         img src=asset_path('q_man.png') /
         .hover_effect
@@ -18,64 +18,59 @@
     h4.step_title Where do you work out?
     .slider_content
       .row.half_height
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="yoga_studio" 
+        .img_block.select_item name="user[sport]" value="yoga_studio" style="background:url(#{image_path('q_yoga.png')})"
           .img_title yoga studio
-          img src=asset_path('q_yoga.png') /
           .hover_effect
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="urban_area" 
+        .img_block.select_item name="user[sport]" value="urban_area" style="background:url(#{image_path('q_urban.png')})"
           .img_title urban area
-          img src=asset_path('q_urban.png') /
           .hover_effect
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="gym" 
+        .img_block.select_item name="user[sport]" value="gym" style="background:url(#{image_path('q_gym.png')})"
           .img_title gym
-          img src=asset_path('q_gym.png') /
           .hover_effect
       .row.half_height
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="outdoor" 
+        .img_block.select_item name="user[sport]" value="outdoor"  style="background:url(#{image_path('q_outdoor.png')})"
           .img_title outdoor
           img src=asset_path('q_outdoor.png') /
           .hover_effect
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="aquatic_area" 
+        .img_block.select_item name="user[sport]" value="aquatic_area"  style="background:url(#{image_path('q_aquatic.png')})"
           .img_title aquatic area
-          img src=asset_path('q_aquatic.png') /
           .hover_effect
-        .col-xs-12.col-md-4.select_item name="user[sport]" value="home" 
+        .img_block.select_item name="user[sport]" value="home"  style="background:url(#{image_path('q_home.png')})"
           .img_title home
-          img src=asset_path('q_home.png') /
           .hover_effect
   h1 Skin tone
   section.textsection.skintone
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title skin tone
     .row.slider_content
-      .col-xs-12.col-md-6.select_item name="user[skin_tone]" style="background-color:#000;" value="cool" 
+      .col-xs-6.col-md-6.select_item name="user[skin_tone]" style="background-color:#000;" value="cool" 
         .img_title cool
-      .col-xs-12.col-md-6.select_item name="user[skin_tone]" value="warm" 
+      .col-xs-6.col-md-6.select_item name="user[skin_tone]" value="warm" 
         .img_title style="color:#000;"  warm
   h1 Body type
   section.bodytype
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title What is your body type?
     .row.woman_block.slider_content
-      .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
+      .col-xs-4.col-md-4.select_item name="user[body_type]" value="fit" 
         div fit
         img src=asset_path('q_fit.png') /
-      .col-xs-12.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
+      .col-xs-4.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
         div toned
-        img src=asset_path('q_toned.png') /
-      .col-xs-12.col-md-4.select_item name="user[body_type]" value="regular" 
-        div regular
         img src=asset_path('q_regular.png') /
+      .col-xs-4.col-md-4.select_item name="user[body_type]" value="regular" 
+        div regular
+        img src=asset_path('q_toned.png') /
     .row.man_block.slider_content
-      .col-xs-12.col-md-4.select_item name="user[body_type]" value="fit" 
+      .col-xs-4.col-md-4.select_item name="user[body_type]" value="fit" 
         div fit
         img src=asset_path('q_fitman.png') /
-      .col-xs-12.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
+      .col-xs-4.col-md-4.select_item name="user[body_type]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="toned" 
         div toned
-        img src=asset_path('q_tonedman.png') /
-      .col-xs-12.col-md-4.select_item name="user[body_type]" value="regular" 
-        div regular
         img src=asset_path('q_regularman.png') /
+      .col-xs-4.col-md-4.select_item name="user[body_type]" value="regular" 
+        div regular
+        img src=asset_path('q_tonedman.png') /
   h1
     | shirt size
     br/
@@ -87,119 +82,119 @@
     input.fieldset-data name="user[waist_size]" type="hidden" value="" /
     input.fieldset-data name="user[shoe_size]" type="hidden" value="" /
     .row.woman_block
-      .col-xs-12.col-md-4
+      div.top_size
         h4.step_title top size
-        .col-xs-12.col-md-6.col-md-offset-3
-          input#00_top_size.select_items name="user[top_size]" type="radio" value="00" /
-          label for="00_top_size"  00
-          input#0_top_size.select_items name="user[top_size]" type="radio" value="0" /
-          label for="0_top_size"  0
-          input#2_top_size.select_items name="user[top_size]" type="radio" value="2" /
-          label for="2_top_size"  2
-          input#4_top_size.select_items name="user[top_size]" type="radio" value="4" /
-          label for="4_top_size"  4
-          input#6_top_size.select_items name="user[top_size]" type="radio" value="6" /
-          label for="6_top_size"  6
-          input#8_top_size.select_items name="user[top_size]" type="radio" value="8" /
-          label for="8_top_size"  8
-          input#10_top_size.select_items name="user[top_size]" type="radio" value="10" /
-          label for="10_top_size"  10
-          input#12_top_size.select_items name="user[top_size]" type="radio" value="12" /
-          label for="12_top_size"  12
-          input#14_top_size.select_items name="user[top_size]" type="radio" value="14" /
-          label for="14_top_size"  14
-          input#16_top_size.select_items name="user[top_size]" type="radio" value="16" /
-          label for="16_top_size"  16
-          input#18_top_size.select_items name="user[top_size]" type="radio" value="18" /
-          label for="18_top_size"  18
+        .content
+          input#00_top_size_w.select_items name="user[top_size_w]" type="radio" value="00" /
+          label for="00_top_size_w"  00
+          input#0_top_size_w.select_items name="user[top_size_w]" type="radio" value="0" /
+          label for="0_top_size_w"  0
+          input#2_top_size_w.select_items name="user[top_size_w]" type="radio" value="2" /
+          label for="2_top_size_w"  2
+          input#4_top_size_w.select_items name="user[top_size_w]" type="radio" value="4" /
+          label for="4_top_size_w"  4
+          input#6_top_size_w.select_items name="user[top_size_w]" type="radio" value="6" /
+          label for="6_top_size_w"  6
+          input#8_top_size_w.select_items name="user[top_size_w]" type="radio" value="8" /
+          label for="8_top_size_w"  8
+          input#10_top_size_w.select_items name="user[top_size_w]" type="radio" value="10" /
+          label for="10_top_size_w"  10
+          input#12_top_size_w.select_items name="user[top_size_w]" type="radio" value="12" /
+          label for="12_top_size_w"  12
+          input#14_top_size_w.select_items name="user[top_size_w]" type="radio" value="14" /
+          label for="14_top_size_w"  14
+          input#16_top_size_w.select_items name="user[top_size_w]" type="radio" value="16" /
+          label for="16_top_size_w"  16
+          input#18_top_size_w.select_items name="user[top_size_w]" type="radio" value="18" /
+          label for="18_top_size_w"  18
           br/
           .dknow_btn
-            input#dont_know_top_size.select_items name="user[top_size]" type="radio" value="dont_know" /
-            label for="dont_know_top_size"  I don't know
-      .col-xs-12.col-md-4
+            input#dont_know_top_size_w.select_items name="user[top_size_w]" type="radio" value="dont_know" /
+            label for="dont_know_top_size_w"  I don't know
+      div.waist_size
         h4.step_title waist size
-        .col-xs-12.col-md-6.col-md-offset-3
-          input#23_waist_size.select_items name="user[waist_size]" type="radio" value="23" /
-          label for="23_waist_size"  23
-          input#24_waist_size.select_items name="user[waist_size]" type="radio" value="24" /
-          label for="24_waist_size"  24
-          input#25_waist_size.select_items name="user[waist_size]" type="radio" value="25" /
-          label for="25_waist_size"  25
-          input#26_waist_size.select_items name="user[waist_size]" type="radio" value="26" /
-          label for="26_waist_size"  26
-          input#27_waist_size.select_items name="user[waist_size]" type="radio" value="27" /
-          label for="27_waist_size"  27
-          input#28_waist_size.select_items name="user[waist_size]" type="radio" value="28" /
-          label for="28_waist_size"  28
-          input#29_waist_size.select_items name="user[waist_size]" type="radio" value="29" /
-          label for="29_waist_size"  29
-          input#30_waist_size.select_items name="user[waist_size]" type="radio" value="30" /
-          label for="30_waist_size"  30
-          input#31_waist_size.select_items name="user[waist_size]" type="radio" value="31" /
-          label for="31_waist_size"  31
-          input#32_waist_size.select_items name="user[waist_size]" type="radio" value="32" /
-          label for="32_waist_size"  32
-          input#33_waist_size.select_items name="user[waist_size]" type="radio" value="33" /
-          label for="33_waist_size"  33
-          input#34_waist_size.select_items name="user[waist_size]" type="radio" value="34" /
-          label for="34_waist_size"  34
+        .content
+          input#23_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="23" /
+          label for="23_waist_size_w"  23
+          input#24_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="24" /
+          label for="24_waist_size_w"  24
+          input#25_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="25" /
+          label for="25_waist_size_w"  25
+          input#26_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="26" /
+          label for="26_waist_size_w"  26
+          input#27_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="27" /
+          label for="27_waist_size_w"  27
+          input#28_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="28" /
+          label for="28_waist_size_w"  28
+          input#29_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="29" /
+          label for="29_waist_size_w"  29
+          input#30_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="30" /
+          label for="30_waist_size_w"  30
+          input#31_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="31" /
+          label for="31_waist_size_w"  31
+          input#32_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="32" /
+          label for="32_waist_size_w"  32
+          input#33_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="33" /
+          label for="33_waist_size_w"  33
+          input#34_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="34" /
+          label for="34_waist_size_w"  34
           br/
           .dknow_btn
-            input#dont_know_waist_size.select_items name="user[waist_size]" type="radio" value="dont_know" /
-            label for="dont_know_waist_size"  I don't know
-      .col-xs-12.col-md-4
+            input#dont_know_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="dont_know" /
+            label for="dont_know_waist_size_w"  I don't know
+      div.shoe_size
         h4.step_title shoe size
-        .col-xs-12.col-md-6.col-md-offset-3
-          input#3_shoe_size.select_items name="user[shoe_size]" type="radio" value="3" /
-          label for="3_shoe_size"  3
-          input.select_items id="3.5_shoe_size" name="user[shoe_size]" type="radio" value="3.5" /
-          label for="3.5_shoe_size"  3.5
-          input#4_shoe_size.select_items name="user[shoe_size]" type="radio" value="4" /
-          label for="4_shoe_size"  4
-          input.select_items id="4.5_shoe_size" name="user[shoe_size]" type="radio" value="4.5" /
-          label for="4.5_shoe_size"  4.5
-          input.select_items id="4.5_shoe_size" name="user[shoe_size]" type="radio" value="4.5" /
-          label for="4.5_shoe_size"  4.5
-          input#5_shoe_size.select_items name="user[shoe_size]" type="radio" value="5" /
-          label for="5_shoe_size"  5
-          input.select_items id="5.5_shoe_size" name="user[shoe_size]" type="radio" value="5.5" /
-          label for="5.5_shoe_size"  5.5
-          input#6_shoe_size.select_items name="user[shoe_size]" type="radio" value="6" /
-          label for="6_shoe_size"  6
-          input.select_items id="6.5_shoe_size" name="user[shoe_size]" type="radio" value="6.5" /
-          label for="6.5_shoe_size"  6.5
-          input#7_shoe_size.select_items name="user[shoe_size]" type="radio" value="7" /
-          label for="7_shoe_size"  7
-          input.select_items id="7.5_shoe_size" name="user[shoe_size]" type="radio" value="7.5" /
-          label for="7.5_shoe_size"  7.5
-          input#8_shoe_size.select_items name="user[shoe_size]" type="radio" value="8" /
-          label for="8_shoe_size"  8
-          input.select_items id="8.5_shoe_size" name="user[shoe_size]" type="radio" value="8.5" /
-          label for="8.5_shoe_size"  8.5
-          input#9_shoe_size.select_items name="user[shoe_size]" type="radio" value="9" /
-          label for="9_shoe_size"  9
-          input.select_items id="9.5_shoe_size" name="user[shoe_size]" type="radio" value="9.5" /
-          label for="9.5_shoe_size"  9.5
-          input#10_shoe_size.select_items name="user[shoe_size]" type="radio" value="10" /
-          label for="10_shoe_size"  10
-          input.select_items id="10.5_shoe_size" name="user[shoe_size]" type="radio" value="10.5" /
-          label for="10.5_shoe_size"  10.5
-          input#11_shoe_size.select_items name="user[shoe_size]" type="radio" value="11" /
-          label for="11_shoe_size"  11
-          input.select_items id="11.5_shoe_size" name="user[shoe_size]" type="radio" value="11.5" /
-          label for="11.5_shoe_size"  11.5
-          input#12_shoe_size.select_items name="user[shoe_size]" type="radio" value="12" /
-          label for="12_shoe_size"  12
-          input.select_items id="12.5_shoe_size" name="user[shoe_size]" type="radio" value="12.5" /
-          label for="12.5_shoe_size"  12.5
+        .content
+          input#3_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="3" /
+          label for="3_shoe_size_w"  3
+          input.select_items id="3.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="3.5" /
+          label for="3.5_shoe_size_w"  3.5
+          input#4_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="4" /
+          label for="4_shoe_size_w"  4
+          input.select_items id="4.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="4.5" /
+          label for="4.5_shoe_size_w"  4.5
+          input.select_items id="4.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="4.5" /
+          label for="4.5_shoe_size_w"  4.5
+          input#5_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="5" /
+          label for="5_shoe_size_w"  5
+          input.select_items id="5.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="5.5" /
+          label for="5.5_shoe_size_w"  5.5
+          input#6_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="6" /
+          label for="6_shoe_size_w"  6
+          input.select_items id="6.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="6.5" /
+          label for="6.5_shoe_size_w"  6.5
+          input#7_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="7" /
+          label for="7_shoe_size_w"  7
+          input.select_items id="7.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="7.5" /
+          label for="7.5_shoe_size_w"  7.5
+          input#8_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="8" /
+          label for="8_shoe_size_w"  8
+          input.select_items id="8.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="8.5" /
+          label for="8.5_shoe_size_w"  8.5
+          input#9_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="9" /
+          label for="9_shoe_size_w"  9
+          input.select_items id="9.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="9.5" /
+          label for="9.5_shoe_size_w"  9.5
+          input#10_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="10" /
+          label for="10_shoe_size_w"  10
+          input.select_items id="10.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="10.5" /
+          label for="10.5_shoe_size_w"  10.5
+          input#11_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="11" /
+          label for="11_shoe_size_w"  11
+          input.select_items id="11.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="11.5" /
+          label for="11.5_shoe_size_w"  11.5
+          input#12_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="12" /
+          label for="12_shoe_size_w"  12
+          input.select_items id="12.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="12.5" /
+          label for="12.5_shoe_size_w"  12.5
           br/
           .dknow_btn
-            input#dont_know_shoe_size.select_items name="user[shoe_size]" type="radio" value="dont_know" /
-            label for="dont_know_shoe_size"  I don't know
+            input#dont_know_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="dont_know" /
+            label for="dont_know_shoe_size_w"  I don't know
     .row.man_block
-      .col-xs-12.col-md-4
+      div.top_size
         h4.step_title top size
-        .col-xs-12.col-md-6.col-md-offset-3
+        .content
           input#34_top_size.select_items name="user[top_size]" type="radio" value="34" /
           label for="34_top_size"  34
           input#36_top_size.select_items name="user[top_size]" type="radio" value="36" /
@@ -218,9 +213,9 @@
           .dknow_btn
             input#dont_know_top_size.select_items name="user[top_size]" type="radio" value="dont_know" /
             label for="dont_know_top_size"  I don't know
-      .col-xs-12.col-md-4
+      div.waist_size
         h4.step_title waist size
-        .col-xs-12.col-md-6.col-md-offset-3
+        .content
           input#28_waist_size.select_items name="user[waist_size]" type="radio" value="28" /
           label for="28_waist_size"  28
           input#29_waist_size.select_items name="user[waist_size]" type="radio" value="29" /
@@ -247,9 +242,9 @@
           .dknow_btn
             input#dont_know_waist_size.select_items name="user[waist_size]" type="radio" value="dont_know" /
             label for="dont_know_waist_size"  I dont know
-      .col-xs-12.col-md-4
+      div.shoe_size
         h4.step_title shoe size
-        .col-xs-12.col-md-6.col-md-offset-3
+        .content
           input#6_shoe_size.select_items name="user[shoe_size]" type="radio" value="6" /
           label for="6_shoe_size"  6
           input.select_items id="6.5_shoe_size" name="user[shoe_size]" type="radio" value="6.5" /
@@ -297,157 +292,158 @@
     input.fieldset-data name="user[height]" type="hidden" value="" /
     input.fieldset-data name="user[height2]" type="hidden" value="" /
     input.fieldset-data name="user[weight]" type="hidden" value="" /
-    .row
-      .col-xs-12.col-md-3.col-md-offset-2
-        h4.step_title height
-        .col-xs-12.col-md-4.col-md-offset-1.firstcol
-          h4.step_title '
-        .col-xs-12.col-md-6.col-md-offset-1.secondcol
-          h4.step_title ''
-      .col-xs-12.col-md-5.col-md-offset-1
-        h4.step_title weight
-    .row
-      .col-xs-12.col-md-3.col-md-offset-2
-        .col-xs-12.col-md-4.col-md-offset-1.firstcol
-          input.select_items id="5'_height" name="user[height]" type="radio" value="5'" /
-          label for="5'_height"  5
-          br/
-          input.select_items id="6'_height" name="user[height]" type="radio" value="6'" /
-          label for="6'_height"  6
-        .col-xs-12.col-md-6.col-md-offset-1.secondcol
-          input#0_height.select_items name="user[height2]" type="radio" value="0" /
-          label for="0_height"  0
-          input#1_height.select_items name="user[height2]" type="radio" value="1" /
-          label for="1_height"  1
-          input#2_height.select_items name="user[height2]" type="radio" value="2" /
-          label for="2_height"  2
-          input#3_height.select_items name="user[height2]" type="radio" value="3" /
-          label for="3_height"  3
-          input#4_height.select_items name="user[height2]" type="radio" value="4" /
-          label for="4_height"  4
-          input#5_height.select_items name="user[height2]" type="radio" value="5" /
-          label for="5_height"  5
-          input#6_height.select_items name="user[height2]" type="radio" value="6" /
-          label for="6_height"  6
-          input#7_height.select_items name="user[height2]" type="radio" value="7" /
-          label for="7_height"  7
-          input#8_height.select_items name="user[height2]" type="radio" value="8" /
-          label for="8_height"  8
-          input#9_height.select_items name="user[height2]" type="radio" value="9" /
-          label for="9_height"  9
-          input#10_height.select_items name="user[height2]" type="radio" value="10" /
-          label for="10_height"  10
-          input#11_height.select_items name="user[height2]" type="radio" value="11" /
-          label for="11_height"  11
-        br/
-        .dknow_btn.col-md-offset-1
-          input#dont_know_height.select_items name="user[height]" type="radio" value="dont_know" /
-          label for="dont_know_height"  I don't know
-      .col-xs-12.col-md-5.col-md-offset-1
-        .col-xs-12.col-md-8.col-md-offset-2.thirdcol
-          input#120_weight.select_items name="user[weight]" type="radio" value="120" /
-          label for="120_weight"  120
-          input#125_weight.select_items name="user[weight]" type="radio" value="125" /
-          label for="125_weight"  125
-          input#130_weight.select_items name="user[weight]" type="radio" value="130" /
-          label for="130_weight"  130
-          input#135_weight.select_items name="user[weight]" type="radio" value="135" /
-          label for="135_weight"  135
-          input#140_weight.select_items name="user[weight]" type="radio" value="140" /
-          label for="140_weight"  140
-          input#145_weight.select_items name="user[weight]" type="radio" value="145" /
-          label for="145_weight"  145
-          input#150_weight.select_items name="user[weight]" type="radio" value="150" /
-          label for="150_weight"  150
-          input#155_weight.select_items name="user[weight]" type="radio" value="155" /
-          label for="155_weight"  155
-          input#160_weight.select_items name="user[weight]" type="radio" value="160" /
-          label for="160_weight"  160
-          input#165_weight.select_items name="user[weight]" type="radio" value="165" /
-          label for="165_weight"  165
-          input#170_weight.select_items name="user[weight]" type="radio" value="170" /
-          label for="170_weight"  170
-          input#175_weight.select_items name="user[weight]" type="radio" value="175" /
-          label for="175_weight"  175
-          input#180_weight.select_items name="user[weight]" type="radio" value="180" /
-          label for="180_weight"  180
-          input#185_weight.select_items name="user[weight]" type="radio" value="185" /
-          label for="185_weight"  185
-          input#190_weight.select_items name="user[weight]" type="radio" value="190" /
-          label for="190_weight"  190
-          input#195_weight.select_items name="user[weight]" type="radio" value="195" /
-          label for="195_weight"  195
-          input#200_weight.select_items name="user[weight]" type="radio" value="200" /
-          label for="200_weight"  200
-          input#205_weight.select_items name="user[weight]" type="radio" value="205" /
-          label for="205_weight"  205
-          input#210_weight.select_items name="user[weight]" type="radio" value="210" /
-          label for="210_weight"  210
-          input#215_weight.select_items name="user[weight]" type="radio" value="215" /
-          label for="215_weight"  215
-          input#220_weight.select_items name="user[weight]" type="radio" value="220" /
-          label for="220_weight"  220
-          input#225_weight.select_items name="user[weight]" type="radio" value="225" /
-          label for="225_weight"  225
-          input#230_weight.select_items name="user[weight]" type="radio" value="230" /
-          label for="230_weight"  230
-          input#235_weight.select_items name="user[weight]" type="radio" value="235" /
-          label for="235_weight"  235
-          input#240_weight.select_items name="user[weight]" type="radio" value="240" /
-          label for="240_weight"  240
-          input#245_weight.select_items name="user[weight]" type="radio" value="245" /
-          label for="245_weight"  245
-          input#250_weight.select_items name="user[weight]" type="radio" value="250" /
-          label for="250_weight"  250
-          input#255_weight.select_items name="user[weight]" type="radio" value="255" /
-          label for="255_weight"  255
-          input#260_weight.select_items name="user[weight]" type="radio" value="260" /
-          label for="260_weight"  260
-          input#265_weight.select_items name="user[weight]" type="radio" value="265" /
-          label for="265_weight"  265
-          input#270_weight.select_items name="user[weight]" type="radio" value="270" /
-          label for="270_weight"  270
-          input#275_weight.select_items name="user[weight]" type="radio" value="275" /
-          label for="275_weight"  275
-          input#280_weight.select_items name="user[weight]" type="radio" value="280" /
-          label for="280_weight"  280
-          input#285_weight.select_items name="user[weight]" type="radio" value="285" /
-          label for="285_weight"  285
-          input#290_weight.select_items name="user[weight]" type="radio" value="290" /
-          label for="290_weight"  290
+    .height_w_content
+      .row
+        .col_height
+          h4.step_title height
+          .firstcol
+            h4.step_title '
+          .secondcol
+            h4.step_title ''
+        .col_weight
+          h4.step_title weight
+      .row.slider_content
+        .col_height
+          .firstcol
+            input.select_items id="5'_height" name="user[height]" type="radio" value="5'" /
+            label for="5'_height"  5
+            br/
+            input.select_items id="6'_height" name="user[height]" type="radio" value="6'" /
+            label for="6'_height"  6
+          .secondcol
+            input#0_height.select_items name="user[height2]" type="radio" value="0" /
+            label for="0_height"  0
+            input#1_height.select_items name="user[height2]" type="radio" value="1" /
+            label for="1_height"  1
+            input#2_height.select_items name="user[height2]" type="radio" value="2" /
+            label for="2_height"  2
+            input#3_height.select_items name="user[height2]" type="radio" value="3" /
+            label for="3_height"  3
+            input#4_height.select_items name="user[height2]" type="radio" value="4" /
+            label for="4_height"  4
+            input#5_height.select_items name="user[height2]" type="radio" value="5" /
+            label for="5_height"  5
+            input#6_height.select_items name="user[height2]" type="radio" value="6" /
+            label for="6_height"  6
+            input#7_height.select_items name="user[height2]" type="radio" value="7" /
+            label for="7_height"  7
+            input#8_height.select_items name="user[height2]" type="radio" value="8" /
+            label for="8_height"  8
+            input#9_height.select_items name="user[height2]" type="radio" value="9" /
+            label for="9_height"  9
+            input#10_height.select_items name="user[height2]" type="radio" value="10" /
+            label for="10_height"  10
+            input#11_height.select_items name="user[height2]" type="radio" value="11" /
+            label for="11_height"  11
           br/
           .dknow_btn
-            input#dont_know_weight.select_items name="user[weight]" type="radio" value="dont_know" /
-            label for="dont_know_weight"  I don't know
+            input#dont_know_height.select_items name="user[height]" type="radio" value="dont_know" /
+            label for="dont_know_height"  I don't know
+        .col_weight
+          .thirdcol
+            input#120_weight.select_items name="user[weight]" type="radio" value="120" /
+            label for="120_weight"  120
+            input#125_weight.select_items name="user[weight]" type="radio" value="125" /
+            label for="125_weight"  125
+            input#130_weight.select_items name="user[weight]" type="radio" value="130" /
+            label for="130_weight"  130
+            input#135_weight.select_items name="user[weight]" type="radio" value="135" /
+            label for="135_weight"  135
+            input#140_weight.select_items name="user[weight]" type="radio" value="140" /
+            label for="140_weight"  140
+            input#145_weight.select_items name="user[weight]" type="radio" value="145" /
+            label for="145_weight"  145
+            input#150_weight.select_items name="user[weight]" type="radio" value="150" /
+            label for="150_weight"  150
+            input#155_weight.select_items name="user[weight]" type="radio" value="155" /
+            label for="155_weight"  155
+            input#160_weight.select_items name="user[weight]" type="radio" value="160" /
+            label for="160_weight"  160
+            input#165_weight.select_items name="user[weight]" type="radio" value="165" /
+            label for="165_weight"  165
+            input#170_weight.select_items name="user[weight]" type="radio" value="170" /
+            label for="170_weight"  170
+            input#175_weight.select_items name="user[weight]" type="radio" value="175" /
+            label for="175_weight"  175
+            input#180_weight.select_items name="user[weight]" type="radio" value="180" /
+            label for="180_weight"  180
+            input#185_weight.select_items name="user[weight]" type="radio" value="185" /
+            label for="185_weight"  185
+            input#190_weight.select_items name="user[weight]" type="radio" value="190" /
+            label for="190_weight"  190
+            input#195_weight.select_items name="user[weight]" type="radio" value="195" /
+            label for="195_weight"  195
+            input#200_weight.select_items name="user[weight]" type="radio" value="200" /
+            label for="200_weight"  200
+            input#205_weight.select_items name="user[weight]" type="radio" value="205" /
+            label for="205_weight"  205
+            input#210_weight.select_items name="user[weight]" type="radio" value="210" /
+            label for="210_weight"  210
+            input#215_weight.select_items name="user[weight]" type="radio" value="215" /
+            label for="215_weight"  215
+            input#220_weight.select_items name="user[weight]" type="radio" value="220" /
+            label for="220_weight"  220
+            input#225_weight.select_items name="user[weight]" type="radio" value="225" /
+            label for="225_weight"  225
+            input#230_weight.select_items name="user[weight]" type="radio" value="230" /
+            label for="230_weight"  230
+            input#235_weight.select_items name="user[weight]" type="radio" value="235" /
+            label for="235_weight"  235
+            input#240_weight.select_items name="user[weight]" type="radio" value="240" /
+            label for="240_weight"  240
+            input#245_weight.select_items name="user[weight]" type="radio" value="245" /
+            label for="245_weight"  245
+            input#250_weight.select_items name="user[weight]" type="radio" value="250" /
+            label for="250_weight"  250
+            input#255_weight.select_items name="user[weight]" type="radio" value="255" /
+            label for="255_weight"  255
+            input#260_weight.select_items name="user[weight]" type="radio" value="260" /
+            label for="260_weight"  260
+            input#265_weight.select_items name="user[weight]" type="radio" value="265" /
+            label for="265_weight"  265
+            input#270_weight.select_items name="user[weight]" type="radio" value="270" /
+            label for="270_weight"  270
+            input#275_weight.select_items name="user[weight]" type="radio" value="275" /
+            label for="275_weight"  275
+            input#280_weight.select_items name="user[weight]" type="radio" value="280" /
+            label for="280_weight"  280
+            input#285_weight.select_items name="user[weight]" type="radio" value="285" /
+            label for="285_weight"  285
+            input#290_weight.select_items name="user[weight]" type="radio" value="290" /
+            label for="290_weight"  290
+            br/
+            .dknow_btn
+              input#dont_know_weight.select_items name="user[weight]" type="radio" value="dont_know" /
+              label for="dont_know_weight"  I don't know
   h1 Preferred ambiance
   section.preferred_ambiance
     input.fieldset-data name="" type="hidden" value="" /
-    h4.step_title What is your body type?
-    .row.woman_block
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
+    h4.step_title Preferred fit
+    .row.woman_block.slider_content
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
         div tight
         img src=asset_path('q_tight_w.png') /
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
         div regular
         img src=asset_path('q_regular_w.png') /
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
         div relaxed
         img src=asset_path('q_relaxed_w.png') /
-    .row.man_block
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
+    .row.man_block.slider_content
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" value="tight" 
         div tight
         img src=asset_path('q_tight_m.png') /
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" style=("    border-right: 2px solid #000;    border-left: 2px solid #000;") value="regular" 
         div regular
         img src=asset_path('q_regular_m.png') /
-      .col-xs-12.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
+      .col-xs-4.col-md-4.select_item name="user[preferred_ambiance]" value="relaxed" 
         div relaxed
         img src=asset_path('q_relaxed_m.png') /
   h1 Favourite brands
   section.brands
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title Favourite brands
-    .row
+    .row.slider_content
       .multiselect_item name="user[brand]" value="puma" 
         img src=asset_path('q_puma.png') /
       .multiselect_item name="user[brand]" value="nike" 
@@ -468,15 +464,16 @@
         img src=asset_path('q_vans.png') /
       .multiselect_item name="user[brand]" value="mizuno" 
         img src=asset_path('q_mizuno.png') /
-    br/
-    .dknow_btn
-      input#dont_know_brand.select_items name="user[brand]" type="radio" value="dont_know" /
-      label for="dont_know_brand"  I don't shop at any of these brands.
+      br/
+      .dknow_btn
+        input#dont_know_brand.select_items name="user[brand]" type="radio" value="dont_know" /
+        label for="dont_know_brand"  I don't shop at any of these brands.  
+    
   h1 Personal info
   section.personal_info
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title Personal info
-    .row.col-xs-12.col-md-4.col-md-offset-4
+    .row.slider_content
       form data-toggle="validator" role="form" 
         .form-group
           label.sr-only for="firstname"  First name
@@ -501,7 +498,7 @@
   section.thankyou
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title Thank you!
-    .row
+    .row.slider_content
       p style="text-transform:initial" 
         | You will receive confirmation email shortly.
 

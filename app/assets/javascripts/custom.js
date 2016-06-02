@@ -1,7 +1,6 @@
 $(document).on('ready', function(){
 
 
-	
         	 var wizard = $("#wizard").steps({
 				headerTag: "h1",
 				bodyTag: "section",
@@ -11,21 +10,27 @@ $(document).on('ready', function(){
 					if(currentIndex==8 | currentIndex==9){
 						 $("#wizard").addClass("wizard_bg");
 					} else  $("#wizard").removeClass("wizard_bg");
-					resizeSliderContent();
+					
 				}, 
+				onInit: function () { 
+					
+				}
 				// onStepChanged:function (event, currentIndex, priorIndex) { 
 				//     var height= $(".steps").height() + $("footer").height() ;
 				//     $("#wizard .content").height(height);
 				// }
 			});
         
-          if (wizard) {
-          	resizeSliderContent();
-          }
+ 
 
-
-    
-   
+    	$(".brands .dknow_btn label").on('click', function(){
+    		$(".brands .multiselect_item").removeClass('checked');
+    	})
+   		$(".brands .multiselect_item").on('click', function(){
+   			$(".brands .dknow_btn input").prop('checked',false);
+   			var value=$(".brands input.fieldset-data").attr("value").replace('dont_know,','').replace('dont_know','');
+   			$(".brands input.fieldset-data").attr("value",value);
+   			})
 		
 		$("button[type=submit]").click(function(){
 			var validate=true;
@@ -111,6 +116,7 @@ $(document).on('ready', function(){
 			
 			$(".select_items").click(function(){
 				var name=$(this).attr("name"), value=$(this).attr("value");var next=1;
+				name = name.replace('_w', '');
 				$("section.current input[name='"+name+"'][type='hidden']").attr("value",value);
 				
 				$("section.current input[type='hidden']").each(function( index ) {
@@ -135,14 +141,14 @@ $(document).on('ready', function(){
 
 
 function resizeSliderContent(){
-	var height= Math.floor(window.innerHeight - $(".steps").outerHeight(true) - $("footer").outerHeight(true) - $(".navbar").outerHeight(true)- $(".current .step_title").outerHeight(true));
-	$("#wizard .content section .slider_content").height(height);
+	var win_height = window.innerHeight, steps=$(".steps").outerHeight(true) , footer=$("footer").outerHeight(true), nav=$(".navbar").outerHeight(true);
+	
+	
+	$("#wizard .content section").each(function( index ) {
+		var height= Math.floor(win_height- steps - footer - nav - $(this).find("h4.step_title").outerHeight(true));
+		$(this).find("div.slider_content").height(height);	 
+	});
 }
 
 
 
-$( window ).resize(function() {
-   if (wizard) {
-   			resizeSliderContent();
-          }
-});

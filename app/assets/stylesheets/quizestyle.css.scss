@@ -215,22 +215,30 @@ body{
     background-color: #eeeeee;
 }
 .height .thirdcol .dknow_btn label {
-    width: 55%!important;    margin-top: 0.3em;
+   width: 44% !important;
+    margin-top: 0.8em;
+    padding: 4px 0px;
 }
 .height .thirdcol{    text-align: left;}
 .height .thirdcol label {
     width: 16%!important;
-    margin: 1px 9px 21px;
+       padding: 3px 0px;
+    margin: 0px 5px 12px;
+
 }
 
 .height .secondcol label {
-    width: 36%!important;
+   width: 36% !important;
+    padding: 3px 0px;
+    margin: 0px 5px 12.5px;
 }
 .height .firstcol label {
-    width: 54%;
+   width: 59%;
+    padding: 3px 0px;
+    margin: 0px 5px 12.5px;
 }
 .height .dknow_btn label {
-    width: 55%;    margin-top: 2.4em;
+    width: 55%;    margin-top: 2.1em;
 }
 .height .firstcol h4.step_title, .height .secondcol h4.step_title{    margin: 0.5em 0 0.8em;}
 
@@ -252,28 +260,37 @@ label {
 
 h4.step_title {
     font-size: 2.5em;
-    font-family: 'GillSans';
+    font-family: 'RobotoLight';
     letter-spacing: 0.1em;    margin-bottom: 3%;
 }
 .sport .step_title{ margin:   -0.2% 0 0.1% !important;}
-.iam .step_title{    margin: 3% 0 2.5%!important;}
-.bodytype .step_title {     margin: 0.5% auto 0.5% !important;}
-.preferred_ambiance .step_title {    margin: 1% auto 2%!important;}
-.shirt .step_title{          margin: 2% auto 7%!important;}
-.brands .step_title{        margin: 2.5% auto 4%!important;}
+.iam .step_title, .skintone .step_title{    margin: 3% 0 2.5%!important;}
+.bodytype .step_title {     margin: 0.5% auto 0.5%;}
+.preferred_ambiance .step_title {  
+    margin: 0% auto 0.2% !important;
+    letter-spacing: 0.13vw;
+    }
+.shirt .step_title{  
+    font-size: 1.6em;
+    letter-spacing: 0.1em;
+    margin: 5px auto 34px !important;
+    }
+.brands .step_title{        
+margin: 0.2% auto 1.4% !important;
+    letter-spacing: 0.1em;}
 
-.brands .dknow_btn label {
-    width: 24%;
-    margin-top: 1%;
-    padding: 0.5% 0;
-}
+
 
 .error {
     border-color: #843F3F!important;
 }
 .shirt .row >div>div{ 
     text-align: left!important;}
-.bodytype .row, .preferred_ambiance .row{       border-top: 2px solid #000;}
+.bodytype .row, .preferred_ambiance .row{    
+        border-top: 2px solid #000;
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+    }
 
 
 a{
@@ -347,8 +364,11 @@ a{
 	outline:none!important;
 	background-color:#fff!important;
 }
-.personal_info h4.step_title{    margin-top: 2.5%;}
-.personal_info .row{padding: 0 89px;}
+.personal_info h4.step_title{    
+     letter-spacing: 0.12em;
+    margin: 4px auto 39px !important;
+    }
+.personal_info .row{padding: 0 38%;}
 .form-group {
     margin-bottom: 0!important;
 }
@@ -396,7 +416,7 @@ a{
 .wizard>.steps {
            position: relative;
     display: block;
-    width: 65%;
+    width: 66%;
     left: 0;
     right: 0;
    
@@ -668,52 +688,173 @@ a{
 
  .half_height {  height: 50%;}
 
-.bodytype .select_item div,.preferred_ambiance .select_item div{
+.bodytype .select_item div{
         font-size: 1.7em;
     letter-spacing: 0.1em;
-    height: 24%;
+    height: 23%;
     padding-top: 6%;
 }
 
+.preferred_ambiance .select_item div{
+    font-size: 1.4em;
+    letter-spacing: 0.1em;
+    height: 13%;
+    padding-top: 14px;
+}
+.preferred_ambiance .select_item img {
+    height: 89%;
+}
+
 .bodytype img{
-        height: 71%;
+        height: 69%;
 }
 
 
 
 
 
+
+
+
+.waist_size{
+        width: 59%;
+        float: left;
+    }  
+.waist_size .content{
+        padding: 0 33%;
+    }  
+.top_size{
+     width: 21%;
+     float: left;
+    }    
+.top_size .content{
+    padding: 0 3%;
+    }  
+.shoe_size{
+     width: 20%;
+     float: left;
+    }    
+.shoe_size .content{
+     padding: 0 1%;
+    }
+
+
+
+.sport .img_block:first-child  {
+    width: 37.5%!important;
+}
+.sport .img_block {
+    width: 25%;
+    float: left;
+    height: 100%;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center!important;
+}
+
+
+.sport .img_block:last-child  {
+    width: 37.5%!important;
+}
+.half_column
+{
+    width: 50%;
+    float: left;
+}
+
+.col_height{
+        width: 35%;
+        float: left;
+            margin-right: 22%;
+    }
+.col_weight{
+    width: 43%;
+    float: left;
+    }
+.height_w_content{
+    padding: 0px 21%;
+}
+
+.firstcol{
+        width: 32%;
+    margin-right: 13%;
+    float: left;
+}
+.secondcol{
+    width: 53%;
+    float: left;
+}
+
+.brands .dknow_btn label {
+    width: 27%;
+    margin-top: 1%;
+    padding: 0.7% 0;
+    font-size: 1em;
+    letter-spacing: 0.035vw;
+}
+.brands .dknow_btn {
+    margin-top: 3.2% ;
+}
+
+
+ @media(max-width:992px){
+   body{ overflow: auto;}
+}
+
+ @media(max-width:768px){
+    .logo_block img {
+        width: 28% !important;
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        margin: auto !important;
+    }
+    .logo_block {
+    position: relative;
+}
+}
  /********----------****/
  @media(max-width:1660px){
-label {
-    padding: 3px 0;
+
+.form-control, .form-control:focus {
+    font-size: 1em;
+    letter-spacing: 0.1vw;
+    height: 0;
+    padding: 6.9% 0%;
+}
+.personal_info button, .personal_info button:hover, .personal_info button:focus {
+    margin: 2.8em 0;
+    padding: 1em 5.4em;
     font-size: 0.9em;
-    margin: 0 6px 14px;
-    width: 24%;
 }
 
  .logo_block img{
- margin:0px!important;
+ margin: 1px ;
+    width: 64% ;
  }
+.logo_block {
+    margin-left: 21px !important;
+    }
 .navbar-nav {
-    padding: 0vw 4vw 0 3vw;
+    padding: 0vw 0vw 0 1vw;
 }   
 .sign_in {
-    padding-left: 3.4em !important;
-    padding-right: 1em !important;
+    padding-left: 4.7em !important;
+    padding-right: 1.3em !important;
 }
 
 ul.nav.navbar-nav a {
-    font-size: 0.8em;
-    margin: 0em 0;
-        padding: 15px 9px !important;
+       font-size: 0.7em !important;
+    margin: 0em 0 !important;
+    padding: 17px 10.5px 13px 13.2px !important;
+    letter-spacing: 0.9px !important;
     }
 footer a {
     font-size: 0.8em;
     padding: 0 0.5em 0 0.8em;
     }  
 footer .row {
-       margin-bottom: 0.5em;
+       margin-bottom: 0.6em;
     line-height: 2.5em;
     }  
 footer {
@@ -722,10 +863,11 @@ footer {
         margin-top:-1px;
     } 
 .wizard > .steps > ul > li a {
-    margin-top: 12px;
-    padding-top: 21px;
-    margin-bottom: 19px;
-        font-size: 0.6em;
+       margin-top: 12px;
+    padding-top: 19px;
+    margin-bottom: 22px;
+    font-size: 0.7em;
+    line-height: 12px;
     }
 .wizard > .steps .number{
     width: 15px!important;
@@ -739,12 +881,91 @@ footer {
     margin: 1.6% auto 0%!important;
     }  
 h4.step_title {
-    font-size: 1.7em;
+        font-size: 1.7em;
+    letter-spacing: 0.18em;
+    margin: 8px auto 33px !important;
     }
-.iam .step_title {
+.iam .step_title,  .skintone .step_title {
     margin: 0.5% 0 4.2% !important;
     }      
 .img_title {
     font-size: 1.7em;
     }
+.dknow_btn {
+    margin-top: 17px !important;
+    }
+label {
+    padding: 4px 0px;
+    font-size: 0.9em;
+    margin: 0px 5px 11px;
+    width: 27%;
+    } 
+
+
+section.shirt > div.row {
+     padding: 0 12.7%;
+ }   
+.bodytype .step_title{
+     margin: 0.6% auto 0.3% !important;
+     font-size: 1.6em!important;
+    letter-spacing: 0.15em!important;
 }
+.sport .step_title {
+    letter-spacing: 0.14em!important;
+    }
+
+.height .step_title {
+        font-size: 1.6em;
+    letter-spacing: 0.05em;
+    margin: 6px auto 14px !important;
+}
+  
+  .multiselect_item {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 0.4% 0%;
+    margin: 1.5% 0.85vw;
+    cursor: pointer;
+    width: 17%;
+}
+.brands .slider_content {
+    padding: 0px 6%;
+    } 
+.brands .step_title {
+    margin: 0.2% auto 2% !important;
+    letter-spacing: 0.1em;
+    }    
+}
+
+
+/*----------------------*/
+.iam .slider_content{
+        height: 389px;
+    }
+.sport .slider_content{
+        height: 449px;
+    }
+.skintone .slider_content{
+        height: 388px;
+    }
+.bodytype .slider_content{
+        height: 437px;
+    }
+.shirt .slider_content{
+        height: 473px;
+    }  
+.height .slider_content{
+        height: 384px;
+    }
+.preferred_ambiance .slider_content{
+        height: 445px;
+    }
+.brands .slider_content{
+        height: 418px;
+    }
+.personal_info .slider_content{
+        height: 403px;
+    }                   
+.thankyou .slider_content{
+      height: 405px;
+}    
