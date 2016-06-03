@@ -17,23 +17,23 @@ html lang="en"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a href="#" 
+      a href="/" 
         img src=image_path('logo_main.png') /
 
     .navbar-collapse.collapse
       ul.nav.navbar-nav.pull-right
         li.active
-          a.intLink href="#top_banner_link"  Home
+          a.intLink href="/#top_banner_link"  Home
         li
-          a.intLink href="#howworks_link"  how it works
+          a.intLink href="/#howworks_link"  how it works
         li
-          a.intLink href="#membership_link"  membership
+          a.intLink href="/#membership_link"  membership
         li
-          a href="#featured_link"  3Xf
+          a href="/#featured_link"  3Xf
         li
-          a.intLink href="#about_link"  about
+          a.intLink href="/#about_link"  about
         li
-          a.intLink href="#get_started_link"  get started
+          a.intLink href="#"  get started
         - unless current_user
                 li.sign_in
                   = link_to 'Sign Up', new_user_registration_path

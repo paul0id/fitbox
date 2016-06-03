@@ -21,13 +21,14 @@ html lang="en"
             speed:2000,
             autoplay: true,
             autoplaySpeed: 4000,
-          });   
+          }); 
+
           $('.navbar-collapse ').smint({
             'scrollSpeed' : 1000
           });
           
       })
-  body
+  body onload="scrollPage()"
 .navbar.navbar-inverse.navbar-static-top role="navigation"
   .row
     .navbar-header.logo_block
@@ -37,7 +38,7 @@ html lang="en"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a href="#" 
+      a href="/" 
         img src=image_path('logo_main.png') /
 
     .navbar-collapse.collapse
@@ -53,11 +54,15 @@ html lang="en"
         li
           a.intLink href="#about_link"  about
         li
-          a.intLink href="#get_started_link"  get started
+          = link_to 'get started', root_path, class: 'intLink'
         - unless current_user
+                li
+                  = link_to 'get started', new_user_registration_path, class: ''
                 li.sign_in
                   = link_to 'Sign Up', new_user_registration_path
         -else
+                li
+                  = link_to 'get started', root_path, class: 'intLink'
                 li.sign_in
                   a href="/users/#{current_user.id}"
                     | Profile
@@ -136,7 +141,7 @@ html lang="en"
         | Just click below and answer a few questions, and 
         br/
         | we'll match you with your very own personal stylist.
-      a.read_btn href="#" style=("    display: inline-block;") 
+      a.read_btn href="/users/sign_up"  style=("    display: inline-block;") 
         | get started
 footer
   .row
@@ -160,8 +165,11 @@ footer
       a href="#"  Locations
       a href="#"  Privacy
 javascript:
-
-
+  function scrollPage(){
+          var url= (window.location.href).split('/');
+          var link=url[url.length-1];
+          $(".nav a[href='"+link+"']").click();  
+        }
   $("#likeit .input-group input").on('blur', function () {
     if ($(this).val()) {
         $(this).css("background-color","rgb(226, 226, 226)");
@@ -170,3 +178,5 @@ javascript:
         $(this).css("background-color","#000");
     }
   });
+
+  
