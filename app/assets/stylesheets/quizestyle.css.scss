@@ -813,6 +813,13 @@ a{
     position: relative;
 }
 }
+
+
+@media(min-width:1196px) and (max-width:1377px){
+.navbar {
+    min-height: 49px!important;} 
+}
+
  /********----------****/
  @media(max-width:1660px){
 
@@ -886,7 +893,7 @@ h4.step_title {
     margin: 8px auto 33px !important;
     }
 .iam .step_title,  .skintone .step_title {
-    margin: 0.5% 0 4.2% !important;
+    margin: 0.5% 0 4.1% !important;
     }      
 .img_title {
     font-size: 1.7em;
@@ -906,7 +913,7 @@ section.shirt > div.row {
      padding: 0 12.7%;
  }   
 .bodytype .step_title{
-     margin: 0.6% auto 0.3% !important;
+     margin: 0.6% auto 0.2% !important;
      font-size: 1.6em!important;
     letter-spacing: 0.15em!important;
 }
