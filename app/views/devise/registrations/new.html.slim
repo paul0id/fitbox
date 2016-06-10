@@ -4,13 +4,11 @@
     input.fieldset-data name="user[gender]" type="hidden" value="" /
     h4.step_title I am a
     .row.slider_content
-      .col-xs-6.col-md-6.select_item.woman_select name="user[gender]" value="female" 
+      .col-xs-6.col-md-6.select_item.woman_select name="user[gender]" value="female" style="background:url(#{image_path('q_woman.jpg')})"
         .img_title woman
-        img src=asset_path('q_woman.jpg') /
         .hover_effect
-      .col-xs-6.col-md-6.select_item.man_select name="user[gender]" value="male" 
+      .col-xs-6.col-md-6.select_item.man_select name="user[gender]" value="male"  style="background:url(#{image_path('q_man.jpg')})"
         .img_title man
-        img src=asset_path('q_man.jpg') /
         .hover_effect
   h1 Where do you work out?
   section.textsection.sport
@@ -41,7 +39,7 @@
   h1 Skin tone
   section.textsection.skintone
     input.fieldset-data name="" type="hidden" value="" /
-    h4.step_title skin tone
+    h4.step_title what is your skin tone
     .row.slider_content
       .col-xs-6.col-md-6.select_item name="user[skin_tone]" style="background-color:#000;" value="cool" 
         .img_title cool
@@ -84,7 +82,7 @@
     .row.woman_block
       div.top_size
         h4.step_title top size
-        .content
+        .content.slider_content
           input#00_top_size_w.select_items name="user[top_size_w]" type="radio" value="00" /
           label for="00_top_size_w"  00
           input#0_top_size_w.select_items name="user[top_size_w]" type="radio" value="0" /
@@ -113,7 +111,7 @@
             label for="dont_know_top_size_w"  I don't know
       div.waist_size
         h4.step_title waist size
-        .content
+        .content.slider_content
           input#23_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="23" /
           label for="23_waist_size_w"  23
           input#24_waist_size_w.select_items name="user[waist_size_w]" type="radio" value="24" /
@@ -144,7 +142,7 @@
             label for="dont_know_waist_size_w"  I don't know
       div.shoe_size
         h4.step_title shoe size
-        .content
+        .content.slider_content
           input#3_shoe_size_w.select_items name="user[shoe_size_w]" type="radio" value="3" /
           label for="3_shoe_size_w"  3
           input.select_items id="3.5_shoe_size_w" name="user[shoe_size_w]" type="radio" value="3.5" /
@@ -194,7 +192,7 @@
     .row.man_block
       div.top_size
         h4.step_title top size
-        .content
+        .content.slider_content
           input#34_top_size.select_items name="user[top_size]" type="radio" value="34" /
           label for="34_top_size"  34
           input#36_top_size.select_items name="user[top_size]" type="radio" value="36" /
@@ -215,7 +213,7 @@
             label for="dont_know_top_size"  I don't know
       div.waist_size
         h4.step_title waist size
-        .content
+        .content.slider_content
           input#28_waist_size.select_items name="user[waist_size]" type="radio" value="28" /
           label for="28_waist_size"  28
           input#29_waist_size.select_items name="user[waist_size]" type="radio" value="29" /
@@ -244,7 +242,7 @@
             label for="dont_know_waist_size"  I dont know
       div.shoe_size
         h4.step_title shoe size
-        .content
+        .content.slider_content
           input#6_shoe_size.select_items name="user[shoe_size]" type="radio" value="6" /
           label for="6_shoe_size"  6
           input.select_items id="6.5_shoe_size" name="user[shoe_size]" type="radio" value="6.5" /
@@ -445,31 +443,34 @@
     h4.step_title Favourite brands
     .row.slider_content
       .multiselect_item name="user[brand]" value="puma" 
-        img src=asset_path('q_puma.png') /
+        img src=asset_path('q_puma.jpg') /
       .multiselect_item name="user[brand]" value="nike" 
-        img src=asset_path('q_nike.png') /
+        img src=asset_path('q_nike.jpg') /
       .multiselect_item name="user[brand]" value="new_balance" 
-        img src=asset_path('q_balance.png') /
+        img src=asset_path('q_balance.jpg') /
       .multiselect_item name="user[brand]" value="adidas" 
-        img src=asset_path('q_adidas.png') /
+        img src=asset_path('q_adidas.jpg') /
       .multiselect_item name="user[brand]" value="dasics" 
-        img src=asset_path('q_dasics.png') /
+        img src=asset_path('q_asics.jpg') /
       .multiselect_item name="user[brand]" value="converse" 
-        img src=asset_path('q_converse.png') /
+        img src=asset_path('q_convers.jpg') /
       .multiselect_item name="user[brand]" value="reebok" 
-        img src=asset_path('q_reebok.png') /
+        img src=asset_path('q_reebok.jpg') /
       .multiselect_item name="user[brand]" value="under_armqur" 
-        img src=asset_path('q_armqur.png') /
+        img src=asset_path('q_un.jpg') /
       .multiselect_item name="user[brand]" value="vans" 
-        img src=asset_path('q_vans.png') /
+        img src=asset_path('q_vans.jpg') /
       .multiselect_item name="user[brand]" value="mizuno" 
-        img src=asset_path('q_mizuno.png') /
+        img src=asset_path('q_mizuno.jpg') /
       br/
       .dknow_btn
         input#dont_know_brand.select_items name="user[brand]" type="radio" value="dont_know" /
         label for="dont_know_brand"  I don't shop at any of these brands.  
     
-  h1 Personal info
+  h1 
+    | Personal 
+    br/
+    | info
   section.personal_info
     input.fieldset-data name="" type="hidden" value="" /
     h4.step_title Personal info

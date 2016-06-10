@@ -53,8 +53,6 @@ html lang="en"
           a href="#featured_link"  3Xf
         li
           a.intLink href="#about_link"  about
-        li
-          = link_to 'get started', root_path, class: 'intLink'
         - unless current_user
                 li
                   = link_to 'get started', new_user_registration_path, class: ''

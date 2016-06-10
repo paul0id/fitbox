@@ -1,6 +1,18 @@
 @font-face {
+    font-family: 'GillSansLight';
+    src:  asset-url('GillSans-Light.ttf');
+    font-style: normal;
+    font-weight:normal;
+}
+@font-face {
     font-family: 'GillSans';
-    src:  asset-url('GillSans.ttc');
+    src:  asset-url('GillSans.ttf');
+    font-style: normal;
+    font-weight:normal;
+}
+@font-face {
+    font-family: 'GillSansSemiBold';
+    src:  asset-url('GillSans-SemiBold.ttf');
     font-style: normal;
     font-weight:normal;
 }
@@ -69,6 +81,13 @@ cursor: pointer;
 .nav>li {
 }
 
+.iam .select_item{    
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+
+}
+
 .navbar .container{    margin-top: 58px;}
 .navbar-nav li a{    text-transform: uppercase;}
 .logo_block img{width:70%;    max-width: 308px;}
@@ -91,7 +110,7 @@ cursor: pointer;
 ul.nav.navbar-nav a {
           font-size: 1.1em;
     margin: 0.7em 0;
-       font-family: 'RobotoLight';
+       font-family: 'GillSansLight';
     letter-spacing: 1.1px;
 }   
 .sign_in{          padding-left: 4.9em!important;
@@ -138,6 +157,8 @@ footer{
     bottom: 0;
     width: 100%;
     padding: 2.8% 0 3%;
+        position: fixed;
+            z-index: 1000;
     }  
 
 
@@ -152,7 +173,8 @@ footer  a{        text-transform: uppercase;
     font-size: 1.2em;
     padding: 0 0.8em 0 1.3em;
 	color:#fff;
-	    font-family: 'RobotoLight';}
+	  font-family: 'GillSansLight';
+      }
 footer {background-color:#000;      }   
 
 footer .row{      text-align: center;
@@ -194,7 +216,7 @@ color:#fff;
 .multiselect_item {
     display: inline-block;
     border: 2px solid #000;
-    padding: 1.1% 2%;
+    padding: 1% 0%;
     margin: 1.9em 1.3em;
 	cursor:pointer;
 }
@@ -212,25 +234,27 @@ body{
 	 font-family: 'GillSans';
 }
 .wizard>.steps>ul>li.disabled:after, .wizard>.steps>ul>li.disabled:before {
-    background-color: #eeeeee;
+    background-color: rgba(0,0,0,0.5);
 }
 .height .thirdcol .dknow_btn label {
-   width: 44% !important;
+    width: 45% !important;
     margin-top: 0.8em;
-    padding: 4px 0px;
+    padding: 3px 0px;
+    font-size: 0.9em;
+    margin: 10px 0;
 }
 .height .thirdcol{    text-align: left;}
 .height .thirdcol label {
-    width: 16%!important;
-       padding: 3px 0px;
-    margin: 0px 5px 12px;
+   width: 16% !important;
+    padding: 3px 0px;
+    margin: 0px 4px 12px 7.5px;
 
 }
 
 .height .secondcol label {
-   width: 36% !important;
-    padding: 3px 0px;
-    margin: 0px 5px 12.5px;
+width: 36% !important;
+    padding: 2.2% 0px;
+    margin: 0px 5px 13px;
 }
 .height .firstcol label {
    width: 59%;
@@ -238,21 +262,26 @@ body{
     margin: 0px 5px 12.5px;
 }
 .height .dknow_btn label {
-    width: 55%;    margin-top: 2.1em;
+       width: 51%;
+    margin: 27px 0px;
 }
 .height .firstcol h4.step_title, .height .secondcol h4.step_title{    margin: 0.5em 0 0.8em;}
 
-
+.dknow_btn label{
+    font-family: 'GillSans';
+}
 label {
-       border: 2px solid #000;
+       border: 1px solid #000;
     font-weight: normal;
     padding: 5px 0;
-    font-size: 1.6em;
+    font-size: 12px;
     margin: 0 6px 21px;
     width: 27%;
     text-align: center;
 	cursor:pointer;
+      font-family: 'GillSansLight';
 }
+
 
 .dknow_btn{ text-align:center;    margin-top: 10px;}
  .dknow_btn label{       width: 74%;
@@ -260,14 +289,14 @@ label {
 
 h4.step_title {
     font-size: 2.5em;
-    font-family: 'RobotoLight';
+    font-family: 'GillSansLight';
     letter-spacing: 0.1em;    margin-bottom: 3%;
 }
 .sport .step_title{ margin:   -0.2% 0 0.1% !important;}
 .iam .step_title, .skintone .step_title{    margin: 3% 0 2.5%!important;}
 .bodytype .step_title {     margin: 0.5% auto 0.5%;}
 .preferred_ambiance .step_title {  
-    margin: 0% auto 0.2% !important;
+    margin: -0.2% auto 0.2% !important;
     letter-spacing: 0.13vw;
     }
 .shirt .step_title{  
@@ -287,9 +316,9 @@ margin: 0.2% auto 1.4% !important;
 .shirt .row >div>div{ 
     text-align: left!important;}
 .bodytype .row, .preferred_ambiance .row{    
-        border-top: 2px solid #000;
-        border-left: 2px solid #000;
-        border-right: 2px solid #000;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
     }
 
 
@@ -329,11 +358,14 @@ a{
     color: #fff;
     position: absolute;
     font-size: 3.2em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     z-index: 999;    width: 100%;
 	  top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
+        font-family: 'GillSansLight';
+
+    z-index: 10000000;
 }
 
 @media (max-width:1200px){
@@ -360,17 +392,19 @@ a{
     padding: 1.2em 6.3em;
     font-size: 1.2em;
     letter-spacing: 0.2em;
-    border: 2px solid #000;
+    border: 1px solid #000;
 	outline:none!important;
-	background-color:#fff!important;
+	    background-color: transparent!important;
 }
 .personal_info h4.step_title{    
-     letter-spacing: 0.12em;
-    margin: 4px auto 39px !important;
+
+       letter-spacing: 0.13em;
+    margin: 5px auto 39px !important;
     }
 .personal_info .row{padding: 0 38%;}
 .form-group {
     margin-bottom: 0!important;
+  
 }
 
 .form-control,.form-control:focus {
@@ -381,7 +415,8 @@ a{
     font-size: 1.5em;
     letter-spacing: 0.1em;
     height: 3.2em;
-    border: 2px solid #000;
+    border: 1px solid #000;
+        background-color: transparent!important;
 }	
 /*---------*/
 .wizard {
@@ -454,7 +489,7 @@ a{
     display: block;
     position: absolute;
     top: 32px;
-    width: 50%;
+    width: 42%;
     height: 1px;
     background-color: #000;
     z-index: 9;
@@ -473,18 +508,18 @@ a{
 }
 
 .wizard>.steps>ul>li.current:after,.wizard>.steps>ul>li.current ~ li:before,.wizard>.steps>ul>li.current ~ li:after {
-    background-color: #eeeeee
+    background-color:rgba(0,0,0,0.5)
 }
 
 .wizard>.steps>ul>li.current>a {
-    color: #333333;
+    color: #000;
     cursor: default
 }
 
 .wizard>.steps>ul>li.current .number {
     font-size: 0;
     border-color: #000;
-    background-color: #fff;
+
     color: #000
 }
 
@@ -502,17 +537,17 @@ a{
 }
 
 .wizard>.steps>ul>li.disabled a,.wizard>.steps>ul>li.disabled a:hover,.wizard>.steps>ul>li.disabled a:focus {
-    color: #999999;
+    color: rgba(0, 0, 0, 0.5);
     cursor: default
 }
 
 .wizard>.steps>ul>li.done a,.wizard>.steps>ul>li.done a:hover,.wizard>.steps>ul>li.done a:focus {
-    color: #999999
+    color: #000
 }
 
 .wizard>.steps>ul>li.done .number {
     font-size: 0;
-    background-color: #000;
+
     border-color: #000;
     color: #fff
 }
@@ -570,7 +605,7 @@ a{
 }
 
 .wizard>.steps .number {
-      background-color: #fff;
+
     color: #ccc;
     display: inline-block;
     position: absolute;
@@ -579,7 +614,7 @@ a{
     margin-left: -19px;
     width: 22px;
     height: 22px;
-    border: 1.5px solid #eeeeee;
+    border: 1.5px solid rgba(0,0,0,0.5);
     font-size: 14px;
     border-radius: 50%;
     z-index: 10;
@@ -686,13 +721,20 @@ a{
     overflow: hidden;
 }
 
- .half_height {  height: 50%;}
+.half_height {  
+    height: 51%;
+}
+.sport .half_height{    
+    padding: 0 11%;
+    background-color: rgba(0,0,0,0.81);
+}
 
 .bodytype .select_item div{
-        font-size: 1.7em;
+    font-size: 1.7em;
     letter-spacing: 0.1em;
     height: 23%;
-    padding-top: 6%;
+    padding-top: 5.5%;
+      font-family: 'GillSansLight';
 }
 
 .preferred_ambiance .select_item div{
@@ -700,14 +742,16 @@ a{
     letter-spacing: 0.1em;
     height: 13%;
     padding-top: 14px;
+        font-family: 'GillSansLight';
 }
 .preferred_ambiance .select_item img {
     height: 89%;
 }
 
 .bodytype img{
-        height: 69%;
+        height: 68%;
 }
+
 
 
 
@@ -740,11 +784,9 @@ a{
 
 
 
-.sport .img_block:first-child  {
-    width: 37.5%!important;
-}
+
 .sport .img_block {
-    width: 25%;
+    width: 33.3%;
     float: left;
     height: 100%;
     background-repeat: no-repeat!important;
@@ -753,9 +795,7 @@ a{
 }
 
 
-.sport .img_block:last-child  {
-    width: 37.5%!important;
-}
+
 .half_column
 {
     width: 50%;
@@ -763,22 +803,24 @@ a{
 }
 
 .col_height{
-        width: 35%;
-        float: left;
-            margin-right: 22%;
+           width: 35%;
+    float: left;
+    margin-right: 20.5%;
+    margin-left: 1.1%;
     }
 .col_weight{
-    width: 43%;
+    width: 40.5%;
     float: left;
     }
 .height_w_content{
-    padding: 0px 21%;
+    padding: 0px 20%;
 }
 
 .firstcol{
         width: 32%;
-    margin-right: 13%;
+    margin-right: 11%;
     float: left;
+    margin-left: 1%;
 }
 .secondcol{
     width: 53%;
@@ -793,7 +835,7 @@ a{
     letter-spacing: 0.035vw;
 }
 .brands .dknow_btn {
-    margin-top: 3.2% ;
+    margin-top: 19px !important ;
 }
 
 
@@ -817,7 +859,9 @@ a{
 
 @media(min-width:1196px) and (max-width:1377px){
 .navbar {
-    min-height: 49px!important;} 
+    min-height: 48px!important;} 
+    .sport .half_height {
+    padding: 0 124px 0 139px!important;}
 }
 
  /********----------****/
@@ -846,22 +890,22 @@ a{
     padding: 0vw 0vw 0 1vw;
 }   
 .sign_in {
-    padding-left: 4.7em !important;
+    padding-left: 4.8em !important;
     padding-right: 1.3em !important;
 }
 
 ul.nav.navbar-nav a {
-       font-size: 0.7em !important;
+    font-size: 0.8em !important;
     margin: 0em 0 !important;
-    padding: 17px 10.5px 13px 13.2px !important;
-    letter-spacing: 0.9px !important;
+    padding: 14px 9.7px 13px 12.8px !important;
+    letter-spacing: 0.4px !important;
     }
 footer a {
-    font-size: 0.8em;
-    padding: 0 0.5em 0 0.8em;
+          font-size: 0.8em;
+    padding: 0px 0.8em 0 0.9em;
     }  
 footer .row {
-       margin-bottom: 0.6em;
+       margin-bottom: 0.7em;
     line-height: 2.5em;
     }  
 footer {
@@ -870,11 +914,13 @@ footer {
         margin-top:-1px;
     } 
 .wizard > .steps > ul > li a {
-       margin-top: 12px;
-    padding-top: 19px;
-    margin-bottom: 22px;
-    font-size: 0.7em;
-    line-height: 12px;
+    margin-top: 12px;
+    padding-top: 21px;
+    margin-bottom: 26px;
+    font-size: 0.6em;
+    line-height: 9px;
+    font-family: 'GillSansSemiBold';
+    letter-spacing: 0.07em;
     }
 .wizard > .steps .number{
     width: 15px!important;
@@ -885,21 +931,23 @@ footer {
         top: 20px!important;
     }
 .wizard > .steps {
-    margin: 1.6% auto 0%!important;
+    margin: 1.55% auto 0%!important;
     }  
 h4.step_title {
         font-size: 1.7em;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.28vw;
     margin: 8px auto 33px !important;
     }
 .iam .step_title,  .skintone .step_title {
-    margin: 0.5% 0 4.1% !important;
+    margin: 0.1% 0 4% !important;
     }      
 .img_title {
-    font-size: 1.7em;
+    font-size: 1.8em;
+    margin-top: 2.6%;
+    letter-spacing: 0.15em;
     }
 .dknow_btn {
-    margin-top: 17px !important;
+    margin-top: 19px !important;
     }
 label {
     padding: 4px 0px;
@@ -923,14 +971,14 @@ section.shirt > div.row {
 
 .height .step_title {
         font-size: 1.6em;
-    letter-spacing: 0.05em;
-    margin: 6px auto 14px !important;
+    letter-spacing: 0.07em;
+    margin: 5px auto 14px !important;
 }
   
   .multiselect_item {
     display: inline-block;
-    border: 2px solid #000;
-    padding: 0.4% 0%;
+    border: 1px solid #000;
+    padding: 0.1% 0%;
     margin: 1.5% 0.85vw;
     cursor: pointer;
     width: 17%;
@@ -939,13 +987,13 @@ section.shirt > div.row {
     padding: 0px 6%;
     } 
 .brands .step_title {
-    margin: 0.2% auto 2% !important;
+    margin: 0.4% auto 2% !important;
     letter-spacing: 0.1em;
     }    
 }
 
 
-/*----------------------*/
+/*----------------------
 .iam .slider_content{
         height: 389px;
     }
@@ -975,4 +1023,4 @@ section.shirt > div.row {
     }                   
 .thankyou .slider_content{
       height: 405px;
-}    
+}    */

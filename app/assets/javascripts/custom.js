@@ -13,7 +13,7 @@ $(document).on('ready', function(){
 					
 				}, 
 				onInit: function () { 
-					
+					resizeSliderContent();
 				}
 				// onStepChanged:function (event, currentIndex, priorIndex) { 
 				//     var height= $(".steps").height() + $("footer").height() ;
@@ -86,8 +86,7 @@ $(document).on('ready', function(){
 
 
 				var ind=$("#wizard").steps("getCurrentIndex")+1;
-				$(	$("ul[role='tablist'] li")[ind]).removeClass("disabled");
-				$(	$("ul[role='tablist'] li")[ind]).addClass("done");
+				
 				
 				if($(this).hasClass("checked"))
 				{
@@ -101,9 +100,14 @@ $(document).on('ready', function(){
 					$(this).addClass("checked");
 					$("section.current input.fieldset-data").attr("value",cur_value);
 				}
+				$("#wizard").steps("next");
 			});
 			
-			
+			$("#dont_know_brand").click(function(){
+				$("#wizard").steps("next");
+				$("section.brands input.fieldset-data").attr("value","dont_know");
+				});
+
 			$(".select_item").click(function(){
 				var name=$(this).attr("name"), value=$(this).attr("value");				
 				$("section.current input.fieldset-data").attr("value",value);
@@ -145,7 +149,18 @@ function resizeSliderContent(){
 	
 	
 	$("#wizard .content section").each(function( index ) {
-		var height= Math.floor(win_height- steps - footer - nav - $(this).find("h4.step_title").outerHeight(true));
+		titleheight =  $(this).find("h4.step_title").outerHeight(true);
+		if(index!=0){
+			$(this).css({'visibility':'hidden', 'display':'block'});
+			titleheight =  $(this).find("h4.step_title").outerHeight(true);
+			if(index==5) 
+			{
+				titleheight =  $(this).find("h4.step_title").parent().outerHeight(true);
+			}
+			$(this).css({'visibility':'visible', 'display':'none'});
+		}
+
+		var height= Math.floor(win_height- steps - footer - nav - titleheight);
 		$(this).find("div.slider_content").height(height);	 
 	});
 }
