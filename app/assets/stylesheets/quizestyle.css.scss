@@ -51,7 +51,7 @@ margin: 0.7em 0;
     }
 
 body{
-        overflow: hidden;
+      
 }
 .nav_circle.active{background:#f4f7fa;}
 
@@ -156,9 +156,10 @@ footer{
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 2.8% 0 3%;
-        position: fixed;
+    padding: 2.9% 0 3%;
+
             z-index: 1000;
+            position: relative;
     }  
 
 
@@ -220,13 +221,21 @@ color:#fff;
     margin: 1.9em 1.3em;
 	cursor:pointer;
 }
+ @media(max-height:799px) 
+ {.woman_block .slider_content, .height_w_content .slider_content, .brands .slider_content, .personal_info .slider_content  {
+    height: auto!important;}
+    }
+@media(min-height:820px) 
+ {.woman_block .slider_content, .height_w_content .slider_content, .brands .slider_content, .personal_info .slider_content  {
+    height: auto!important;}
+    }
 
 .man_block
 {
 	display:none;
 }				
 .textsection  .select_item.checked {
-    outline: 2px solid #000;
+   /* outline: 2px solid #000;*/
     outline-offset: -2px;
 }
 
@@ -241,7 +250,7 @@ body{
     margin-top: 0.8em;
     padding: 3px 0px;
     font-size: 0.9em;
-    margin: 10px 0;
+    margin: 16px 0;
 }
 .height .thirdcol{    text-align: left;}
 .height .thirdcol label {
@@ -263,7 +272,7 @@ width: 36% !important;
 }
 .height .dknow_btn label {
        width: 51%;
-    margin: 27px 0px;
+    margin:32px 0px;
 }
 .height .firstcol h4.step_title, .height .secondcol h4.step_title{    margin: 0.5em 0 0.8em;}
 
@@ -302,7 +311,7 @@ h4.step_title {
 .shirt .step_title{  
     font-size: 1.6em;
     letter-spacing: 0.1em;
-    margin: 5px auto 34px !important;
+    margin: 8px auto 34px !important;
     }
 .brands .step_title{        
 margin: 0.2% auto 1.4% !important;
@@ -727,6 +736,7 @@ a{
 .sport .half_height{    
     padding: 0 11%;
     background-color: rgba(0,0,0,0.81);
+        position: relative;
 }
 
 .bodytype .select_item div{
@@ -749,7 +759,7 @@ a{
 }
 
 .bodytype img{
-        height: 68%;
+        height: 70%;
 }
 
 
@@ -828,9 +838,9 @@ a{
 }
 
 .brands .dknow_btn label {
-    width: 27%;
-    margin-top: 1%;
-    padding: 0.7% 0;
+       width: 27%;
+    margin-top: 3%;
+    padding: 0.6% 0;
     font-size: 1em;
     letter-spacing: 0.035vw;
 }
@@ -855,8 +865,20 @@ a{
     position: relative;
 }
 }
+@media(min-width:1900px){
+ .wizard > .steps > ul > li:before, .wizard > .steps > ul > li:after {
+    width: 42%!important;
+    }
+    }
 
-
+ @media(min-width:1661px){
+ .wizard > .steps > ul > li:before, .wizard > .steps > ul > li:after {
+    width: 40%;
+    }
+    .wizard > .steps .number {
+    margin-left: -10px;
+    }
+ }
 @media(min-width:1196px) and (max-width:1377px){
 .navbar {
     min-height: 48px!important;} 
@@ -939,11 +961,14 @@ h4.step_title {
     margin: 8px auto 33px !important;
     }
 .iam .step_title,  .skintone .step_title {
-    margin: 0.1% 0 4% !important;
-    }      
+      margin: 0.4% 0 4.3% !important;
+    }  
+    .sport .img_title {
+    margin-top: 2%!important;}
+
 .img_title {
     font-size: 1.8em;
-    margin-top: 2.6%;
+    margin-top:-0.4%;
     letter-spacing: 0.15em;
     }
 .dknow_btn {
@@ -972,7 +997,7 @@ section.shirt > div.row {
 .height .step_title {
         font-size: 1.6em;
     letter-spacing: 0.07em;
-    margin: 5px auto 14px !important;
+    margin: 7px auto 14px !important;
 }
   
   .multiselect_item {
@@ -1024,3 +1049,43 @@ section.shirt > div.row {
 .thankyou .slider_content{
       height: 405px;
 }    */
+
+@media(max-width: 1377px) and (min-width: 1196px){
+   .sport .left_picture{
+    left: -199px!important; }
+    .sport .right_picture{
+    right: -213px!important;}
+}
+.sport .left_picture{
+   position: absolute;
+    left: -15.2%;
+    width: 26.4%;
+    -o-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+.sport .right_picture{
+   position: absolute;
+    right: -15.2%;
+    width: 26.4%;
+    -o-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    z-index: 1000;
+}
+
+.left_picture .bg_effect , .right_picture .bg_effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.82);
+    top: 0;
+    z-index: 100000;
+
+}

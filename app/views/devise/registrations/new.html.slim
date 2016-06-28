@@ -16,6 +16,8 @@
     h4.step_title Where do you work out?
     .slider_content
       .row.half_height
+        .img_block.left_picture name="user[sport]" value="yoga_studio" style="background:url(#{image_path('q_yoga.jpg')})"
+          .bg_effect
         .img_block.select_item name="user[sport]" value="yoga_studio" style="background:url(#{image_path('q_yoga.jpg')})"
           .img_title yoga studio
           .hover_effect
@@ -25,10 +27,13 @@
         .img_block.select_item name="user[sport]" value="gym" style="background:url(#{image_path('q_gym.jpg')})"
           .img_title gym
           .hover_effect
+        .img_block.right_picture name="user[sport]" value="yoga_studio" style="background:url(#{image_path('q_gym.jpg')})"  
+          .bg_effect
       .row.half_height
+        .img_block.left_picture name="user[sport]" value="outdoor"  style="background:url(#{image_path('q_outdoor.jpg')})"
+          .bg_effect
         .img_block.select_item name="user[sport]" value="outdoor"  style="background:url(#{image_path('q_outdoor.jpg')})"
           .img_title outdoor
-          img src=asset_path('q_outdoor.jpg') /
           .hover_effect
         .img_block.select_item name="user[sport]" value="aquatic_area"  style="background:url(#{image_path('q_aquatic.jpg')})"
           .img_title aquatic area
@@ -36,6 +41,8 @@
         .img_block.select_item name="user[sport]" value="home"  style="background:url(#{image_path('q_home.jpg')})"
           .img_title home
           .hover_effect
+        .img_block.right_picture name="user[sport]" value="home" style="background:url(#{image_path('q_home.jpg')})"
+          .bg_effect  
   h1 Skin tone
   section.textsection.skintone
     input.fieldset-data name="" type="hidden" value="" /
